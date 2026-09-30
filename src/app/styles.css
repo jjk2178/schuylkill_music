@@ -155,6 +155,41 @@ h1 {
   cursor: pointer;
 }
 
+.mode-switch button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.player-view-controls {
+  display: grid;
+  gap: 8px;
+}
+
+.player-select {
+  display: grid;
+  gap: 5px;
+  color: #aeb7ce;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.player-select select {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 7px;
+  background: #111725;
+  color: #f4f7ff;
+  font: inherit;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 .mode-switch button.selected {
   background: #ff4f8b;
   color: #0f1018;
@@ -670,6 +705,16 @@ h1 {
   border-top: 0;
 }
 
+.score-row-nana-keys .score-label,
+.score-row-nana-keys .score-system {
+  min-height: 232px;
+}
+
+.score-row-string .score-label,
+.score-row-string .score-system {
+  min-height: 370px;
+}
+
 .master-row {
   grid-template-columns: 172px 1440px;
 }
@@ -689,7 +734,7 @@ h1 {
 }
 
 .master-row .score-label {
-  min-height: 152px;
+  min-height: 212px;
   border-left-color: #141820;
 }
 
@@ -715,8 +760,29 @@ h1 {
   background: #fbfaf3;
 }
 
+.string-notation-stack,
+.string-grand-staff,
+.string-tab-staff {
+  position: relative;
+}
+
+.string-notation-stack {
+  position: absolute;
+  inset: 0;
+}
+
+.string-grand-staff {
+  height: 216px;
+}
+
+.string-tab-staff {
+  height: 148px;
+  padding-top: 6px;
+  box-sizing: border-box;
+}
+
 .master-system {
-  min-height: 152px;
+  min-height: 212px;
 }
 
 .staff-layer,
@@ -844,7 +910,11 @@ h1 {
 }
 
 .grand-score-layer svg {
-  transform: translateY(-2px);
+  transform: translateY(0);
+}
+
+.score-row-nana-keys .grand-score-layer svg {
+  transform: none;
 }
 
 .trumpet-annotations,
@@ -852,6 +922,42 @@ h1 {
 .vocal-annotations {
   height: 48px;
   bottom: 18px;
+}
+
+.wind-annotations {
+  bottom: 8px;
+  height: 58px;
+}
+
+.wind-annotations > div {
+  position: absolute;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  transform: translateX(-50%);
+}
+
+.wind-annotations strong {
+  font-size: 0.62rem;
+  font-weight: 900;
+}
+
+.wind-hole-stack {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2px;
+}
+
+.wind-hole-stack i {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #141820;
+  border-radius: 50%;
+  background: #fbfaf3;
+}
+
+.wind-hole-stack i.pressed {
+  background: #141820;
 }
 
 .trumpet-annotations > div,

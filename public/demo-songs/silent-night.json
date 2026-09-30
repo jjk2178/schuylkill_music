@@ -1,0 +1,1825 @@
+{
+  "schemaVersion": 1,
+  "title": "Silent Night",
+  "artist": "Franz Xaver Gruber, text by Joseph Mohr",
+  "instrument": "piano",
+  "tuning": [
+    "E2",
+    "A2",
+    "D3",
+    "G3",
+    "B3",
+    "E4"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 60
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 6,
+      "beatUnit": 8
+    }
+  ],
+  "keySignatures": [
+    {
+      "timeMs": 0,
+      "key": "D",
+      "fifths": 2,
+      "mode": "major"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "melody",
+      "name": "Silent Night melody",
+      "instrument": "piano",
+      "clef": "treble",
+      "events": [
+        {
+          "id": "silent-night-1-1",
+          "label": "Silent night",
+          "timeMs": 0,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-2",
+          "label": "Silent night",
+          "timeMs": 750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-3",
+          "label": "Silent night",
+          "timeMs": 1000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-4",
+          "label": "Silent night",
+          "timeMs": 1500,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-6",
+          "label": "Silent night",
+          "timeMs": 3000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-7",
+          "label": "Silent night",
+          "timeMs": 3750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-8",
+          "label": "Silent night",
+          "timeMs": 4000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-9",
+          "label": "Silent night",
+          "timeMs": 4500,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-11",
+          "label": "Silent night",
+          "timeMs": 6000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-12",
+          "label": "Silent night",
+          "timeMs": 6750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-13",
+          "label": "Silent night",
+          "timeMs": 7000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-14",
+          "label": "Silent night",
+          "timeMs": 7500,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-16",
+          "label": "Silent night",
+          "timeMs": 9000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-17",
+          "label": "Silent night",
+          "timeMs": 9750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-18",
+          "label": "Silent night",
+          "timeMs": 10000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-19",
+          "label": "Silent night",
+          "timeMs": 10500,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-21",
+          "label": "Silent night",
+          "timeMs": 12000,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-22",
+          "label": "Silent night",
+          "timeMs": 13000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-23",
+          "label": "Silent night",
+          "timeMs": 13500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-24",
+          "label": "Silent night",
+          "timeMs": 14250,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-25",
+          "label": "Silent night",
+          "timeMs": 14500,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-26",
+          "label": "Silent night",
+          "timeMs": 15000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-27",
+          "label": "Silent night",
+          "timeMs": 15750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-28",
+          "label": "Silent night",
+          "timeMs": 16000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-29",
+          "label": "Silent night",
+          "timeMs": 16500,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-31",
+          "label": "Silent night",
+          "timeMs": 18000,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-32",
+          "label": "Silent night",
+          "timeMs": 19000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-33",
+          "label": "Silent night",
+          "timeMs": 19500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-34",
+          "label": "Silent night",
+          "timeMs": 20250,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-35",
+          "label": "Silent night",
+          "timeMs": 20500,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-36",
+          "label": "Silent night",
+          "timeMs": 21000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-37",
+          "label": "Silent night",
+          "timeMs": 21750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-38",
+          "label": "Silent night",
+          "timeMs": 22000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-39",
+          "label": "Silent night",
+          "timeMs": 22500,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-41",
+          "label": "Silent night",
+          "timeMs": 24000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-42",
+          "label": "Silent night",
+          "timeMs": 24750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-43",
+          "label": "Silent night",
+          "timeMs": 25000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-44",
+          "label": "Silent night",
+          "timeMs": 25500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-45",
+          "label": "Silent night",
+          "timeMs": 26250,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-46",
+          "label": "Silent night",
+          "timeMs": 26500,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-47",
+          "label": "Silent night",
+          "timeMs": 27000,
+          "durationMs": 1250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-48",
+          "label": "Silent night",
+          "timeMs": 28250,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-49",
+          "label": "Silent night",
+          "timeMs": 28750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-50",
+          "label": "Silent night",
+          "timeMs": 29500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-51",
+          "label": "Silent night",
+          "timeMs": 29750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-52",
+          "label": "Silent night",
+          "timeMs": 30250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-53",
+          "label": "Silent night",
+          "timeMs": 31000,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-54",
+          "label": "Silent night",
+          "timeMs": 31250,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-1-55",
+          "label": "Silent night",
+          "timeMs": 31750,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-1",
+          "label": "Holy night",
+          "timeMs": 34750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-2",
+          "label": "Holy night",
+          "timeMs": 35500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-3",
+          "label": "Holy night",
+          "timeMs": 35750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-4",
+          "label": "Holy night",
+          "timeMs": 36250,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-6",
+          "label": "Holy night",
+          "timeMs": 37750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-7",
+          "label": "Holy night",
+          "timeMs": 38500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-8",
+          "label": "Holy night",
+          "timeMs": 38750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-9",
+          "label": "Holy night",
+          "timeMs": 39250,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-11",
+          "label": "Holy night",
+          "timeMs": 40750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-12",
+          "label": "Holy night",
+          "timeMs": 41500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-13",
+          "label": "Holy night",
+          "timeMs": 41750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-14",
+          "label": "Holy night",
+          "timeMs": 42250,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-16",
+          "label": "Holy night",
+          "timeMs": 43750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-17",
+          "label": "Holy night",
+          "timeMs": 44500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-18",
+          "label": "Holy night",
+          "timeMs": 44750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-19",
+          "label": "Holy night",
+          "timeMs": 45250,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-21",
+          "label": "Holy night",
+          "timeMs": 46750,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-22",
+          "label": "Holy night",
+          "timeMs": 47750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-23",
+          "label": "Holy night",
+          "timeMs": 48250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-24",
+          "label": "Holy night",
+          "timeMs": 49000,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-25",
+          "label": "Holy night",
+          "timeMs": 49250,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-26",
+          "label": "Holy night",
+          "timeMs": 49750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-27",
+          "label": "Holy night",
+          "timeMs": 50500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-28",
+          "label": "Holy night",
+          "timeMs": 50750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-29",
+          "label": "Holy night",
+          "timeMs": 51250,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-31",
+          "label": "Holy night",
+          "timeMs": 52750,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-32",
+          "label": "Holy night",
+          "timeMs": 53750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-33",
+          "label": "Holy night",
+          "timeMs": 54250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-34",
+          "label": "Holy night",
+          "timeMs": 55000,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-35",
+          "label": "Holy night",
+          "timeMs": 55250,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-36",
+          "label": "Holy night",
+          "timeMs": 55750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-37",
+          "label": "Holy night",
+          "timeMs": 56500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-38",
+          "label": "Holy night",
+          "timeMs": 56750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-39",
+          "label": "Holy night",
+          "timeMs": 57250,
+          "durationMs": 1000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-41",
+          "label": "Holy night",
+          "timeMs": 58750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-42",
+          "label": "Holy night",
+          "timeMs": 59500,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-43",
+          "label": "Holy night",
+          "timeMs": 59750,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-44",
+          "label": "Holy night",
+          "timeMs": 60250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-45",
+          "label": "Holy night",
+          "timeMs": 61000,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-46",
+          "label": "Holy night",
+          "timeMs": 61250,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-47",
+          "label": "Holy night",
+          "timeMs": 61750,
+          "durationMs": 1250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-48",
+          "label": "Holy night",
+          "timeMs": 63000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-49",
+          "label": "Holy night",
+          "timeMs": 63500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-50",
+          "label": "Holy night",
+          "timeMs": 64250,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-51",
+          "label": "Holy night",
+          "timeMs": 64500,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-52",
+          "label": "Holy night",
+          "timeMs": 65000,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-53",
+          "label": "Holy night",
+          "timeMs": 65750,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-54",
+          "label": "Holy night",
+          "timeMs": 66000,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        },
+        {
+          "id": "silent-night-2-55",
+          "label": "Holy night",
+          "timeMs": 66500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 160,
+              "late": 240
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "silent-night",
+      "label": "Silent night",
+      "timeMs": 0
+    },
+    {
+      "id": "holy-night",
+      "label": "Holy night",
+      "timeMs": 34750
+    }
+  ],
+  "assets": {
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Silent_Nights_-_Concert_Band_-_United_States_Air_Force_Band_of_the_Rockies.mp3",
+    "license": "Public-domain melody arrangement; reference recording hosted by Wikimedia Commons"
+  }
+}

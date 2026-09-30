@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { ScoreboardApp } from "./ScoreboardApp";
 
@@ -25,5 +25,17 @@ describe("ScoreboardApp", () => {
     expect(screen.getAllByText(/backup guitar/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/Jack/i).length).toBeGreaterThan(0);
     expect(await screen.findByText(/0 shared songs loaded/i)).toBeInTheDocument();
+  });
+
+  it("can switch to a single player's music view", async () => {
+    render(<ScoreboardApp />);
+
+    await screen.findByText(/0 shared songs loaded/i);
+
+    fireEvent.click(screen.getByRole("button", { name: /player/i }));
+
+    expect(screen.getByText(/Nana's player view/i)).toBeInTheDocument();
+    expect(screen.getByRole("combobox", { name: /player/i })).toHaveValue("Nana");
+    expect(screen.queryByRole("heading", { name: /band score builder/i })).toBeInTheDocument();
   });
 });

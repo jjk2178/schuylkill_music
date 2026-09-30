@@ -9,6 +9,24 @@
     "sourcePageUrl": "https://www.mutopiaproject.org/"
   },
   {
+    "id": "jerusalem-parry",
+    "title": "And did those feet in ancient time (Jerusalem)",
+    "artist": "Hubert Parry, text by William Blake",
+    "instrument": "piano",
+    "license": "CC0 MIDI reference; arrangement generated for Schuylkill Music",
+    "chartUrl": "/demo-songs/jerusalem-parry.json",
+    "sourcePageUrl": "https://en.wikipedia.org/wiki/And_did_those_feet_in_ancient_time"
+  },
+  {
+    "id": "silent-night",
+    "title": "Silent Night",
+    "artist": "Franz Xaver Gruber, text by Joseph Mohr",
+    "instrument": "piano",
+    "license": "Public-domain melody arrangement; Wikimedia Commons reference recording",
+    "chartUrl": "/demo-songs/silent-night.json",
+    "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Silent_Nights_-_Concert_Band_-_United_States_Air_Force_Band_of_the_Rockies.mp3"
+  },
+  {
     "id": "olivia-rodrigo-drivers-license-purchased",
     "title": "drivers license",
     "artist": "Olivia Rodrigo",

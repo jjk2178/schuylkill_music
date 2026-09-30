@@ -7,6 +7,7 @@ import {
   type Chart,
 } from "../shared/musicLibraryBackend";
 import { MicAnalyzer, type AnalysisFrame, type MicAnalyzerState } from "../audio/micAnalyzer";
+import { useArrangementAudio } from "../audio/arrangementPlayer";
 import { midiToHz } from "../audio/noteMath";
 import {
   advanceGameplay,
@@ -41,6 +42,8 @@ export function App() {
   const totalEvents = getPrimaryTrack(chart).events.length;
   const hitCount = Object.values(snapshot.eventStates).filter((state) => state.result === "hit").length;
   const accuracy = totalEvents ? Math.round((hitCount / totalEvents) * 100) : 0;
+
+  useArrangementAudio(chart, snapshot.transport, snapshot.playheadMs);
 
   useGameLoop(snapshot.transport === "playing", (deltaMs) => {
     setSnapshot((current) => advanceGameplay(chart, current, deltaMs));

@@ -1,0 +1,2456 @@
+{
+  "schemaVersion": 1,
+  "title": "And did those feet in ancient time (Jerusalem)",
+  "artist": "Hubert Parry, text by William Blake",
+  "instrument": "piano",
+  "tuning": [
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "A"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 72
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 4,
+      "beatUnit": 4
+    }
+  ],
+  "keySignatures": [
+    {
+      "timeMs": 0,
+      "key": "D",
+      "fifths": 2,
+      "mode": "major"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "melody",
+      "name": "Jerusalem melody",
+      "instrument": "piano",
+      "clef": "treble",
+      "events": [
+        {
+          "id": "jerusalem-1",
+          "label": "melody",
+          "timeMs": 0,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-2",
+          "label": "melody",
+          "timeMs": 417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-3",
+          "label": "melody",
+          "timeMs": 833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-4",
+          "label": "melody",
+          "timeMs": 1250,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-5",
+          "label": "melody",
+          "timeMs": 2500,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-6",
+          "label": "melody",
+          "timeMs": 2917,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-7",
+          "label": "melody",
+          "timeMs": 3333,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-8",
+          "label": "melody",
+          "timeMs": 3542,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-9",
+          "label": "melody",
+          "timeMs": 3750,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-10",
+          "label": "melody",
+          "timeMs": 5417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-11",
+          "label": "melody",
+          "timeMs": 5833,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-12",
+          "label": "melody",
+          "timeMs": 6042,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-13",
+          "label": "melody",
+          "timeMs": 6250,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-14",
+          "label": "melody",
+          "timeMs": 6667,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-15",
+          "label": "melody",
+          "timeMs": 7083,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-16",
+          "label": "melody",
+          "timeMs": 7917,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-17",
+          "label": "melody",
+          "timeMs": 8750,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-18",
+          "label": "melody",
+          "timeMs": 10000,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-19",
+          "label": "melody",
+          "timeMs": 10417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-20",
+          "label": "melody",
+          "timeMs": 10833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-21",
+          "label": "melody",
+          "timeMs": 11250,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-22",
+          "label": "melody",
+          "timeMs": 12500,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-23",
+          "label": "melody",
+          "timeMs": 12917,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-24",
+          "label": "melody",
+          "timeMs": 13333,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-25",
+          "label": "melody",
+          "timeMs": 13542,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-26",
+          "label": "melody",
+          "timeMs": 13750,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-27",
+          "label": "melody",
+          "timeMs": 15000,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-28",
+          "label": "melody",
+          "timeMs": 15417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-29",
+          "label": "melody",
+          "timeMs": 15833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-30",
+          "label": "melody",
+          "timeMs": 16250,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-31",
+          "label": "melody",
+          "timeMs": 16667,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-32",
+          "label": "melody",
+          "timeMs": 17083,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-33",
+          "label": "melody",
+          "timeMs": 17917,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-34",
+          "label": "melody",
+          "timeMs": 18750,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-35",
+          "label": "melody",
+          "timeMs": 20000,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-36",
+          "label": "melody",
+          "timeMs": 20417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-37",
+          "label": "melody",
+          "timeMs": 20833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-38",
+          "label": "melody",
+          "timeMs": 21250,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-39",
+          "label": "melody",
+          "timeMs": 22500,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-40",
+          "label": "melody",
+          "timeMs": 22917,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-41",
+          "label": "melody",
+          "timeMs": 23542,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-42",
+          "label": "melody",
+          "timeMs": 23750,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-43",
+          "label": "melody",
+          "timeMs": 25000,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-44",
+          "label": "melody",
+          "timeMs": 25417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-45",
+          "label": "melody",
+          "timeMs": 25833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-46",
+          "label": "melody",
+          "timeMs": 26250,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-47",
+          "label": "melody",
+          "timeMs": 27500,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-48",
+          "label": "melody",
+          "timeMs": 27917,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              70
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-49",
+          "label": "melody",
+          "timeMs": 28333,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-50",
+          "label": "melody",
+          "timeMs": 28750,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-51",
+          "label": "melody",
+          "timeMs": 30000,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-52",
+          "label": "melody",
+          "timeMs": 30417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-53",
+          "label": "melody",
+          "timeMs": 30833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-54",
+          "label": "melody",
+          "timeMs": 31250,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-55",
+          "label": "melody",
+          "timeMs": 31875,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-56",
+          "label": "melody",
+          "timeMs": 32083,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-57",
+          "label": "melody",
+          "timeMs": 32917,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-58",
+          "label": "melody",
+          "timeMs": 33542,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-59",
+          "label": "melody",
+          "timeMs": 33750,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-60",
+          "label": "melody",
+          "timeMs": 35000,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-61",
+          "label": "melody",
+          "timeMs": 35417,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-62",
+          "label": "melody",
+          "timeMs": 35833,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-63",
+          "label": "melody",
+          "timeMs": 36250,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-64",
+          "label": "melody",
+          "timeMs": 36875,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-65",
+          "label": "melody",
+          "timeMs": 37083,
+          "durationMs": 857,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-66",
+          "label": "melody",
+          "timeMs": 37943,
+          "durationMs": 909,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-67",
+          "label": "melody",
+          "timeMs": 38854,
+          "durationMs": 2064,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-68",
+          "label": "melody",
+          "timeMs": 41771,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-69",
+          "label": "melody",
+          "timeMs": 42604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-70",
+          "label": "melody",
+          "timeMs": 43021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-71",
+          "label": "melody",
+          "timeMs": 43437,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-72",
+          "label": "melody",
+          "timeMs": 44687,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-73",
+          "label": "melody",
+          "timeMs": 45104,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-74",
+          "label": "melody",
+          "timeMs": 45521,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-75",
+          "label": "melody",
+          "timeMs": 45729,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-76",
+          "label": "melody",
+          "timeMs": 45937,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-77",
+          "label": "melody",
+          "timeMs": 47604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-78",
+          "label": "melody",
+          "timeMs": 48021,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-79",
+          "label": "melody",
+          "timeMs": 48229,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-80",
+          "label": "melody",
+          "timeMs": 48437,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-81",
+          "label": "melody",
+          "timeMs": 48854,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-82",
+          "label": "melody",
+          "timeMs": 49271,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-83",
+          "label": "melody",
+          "timeMs": 50104,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-84",
+          "label": "melody",
+          "timeMs": 50937,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-85",
+          "label": "melody",
+          "timeMs": 52187,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-86",
+          "label": "melody",
+          "timeMs": 52604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-87",
+          "label": "melody",
+          "timeMs": 53021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-88",
+          "label": "melody",
+          "timeMs": 53437,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-89",
+          "label": "melody",
+          "timeMs": 54271,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-90",
+          "label": "melody",
+          "timeMs": 55104,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-91",
+          "label": "melody",
+          "timeMs": 55521,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-92",
+          "label": "melody",
+          "timeMs": 55729,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-93",
+          "label": "melody",
+          "timeMs": 55937,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-94",
+          "label": "melody",
+          "timeMs": 57187,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-95",
+          "label": "melody",
+          "timeMs": 57604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-96",
+          "label": "melody",
+          "timeMs": 58021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-97",
+          "label": "melody",
+          "timeMs": 58437,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-98",
+          "label": "melody",
+          "timeMs": 59062,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-99",
+          "label": "melody",
+          "timeMs": 59271,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-100",
+          "label": "melody",
+          "timeMs": 60104,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-101",
+          "label": "melody",
+          "timeMs": 60937,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-102",
+          "label": "melody",
+          "timeMs": 62187,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-103",
+          "label": "melody",
+          "timeMs": 62604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-104",
+          "label": "melody",
+          "timeMs": 63021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-105",
+          "label": "melody",
+          "timeMs": 63437,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-106",
+          "label": "melody",
+          "timeMs": 64687,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-107",
+          "label": "melody",
+          "timeMs": 65104,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-108",
+          "label": "melody",
+          "timeMs": 65729,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-109",
+          "label": "melody",
+          "timeMs": 65937,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-110",
+          "label": "melody",
+          "timeMs": 67187,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-111",
+          "label": "melody",
+          "timeMs": 67604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-112",
+          "label": "melody",
+          "timeMs": 68021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-113",
+          "label": "melody",
+          "timeMs": 68437,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-114",
+          "label": "melody",
+          "timeMs": 69271,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-115",
+          "label": "melody",
+          "timeMs": 70104,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              82
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-116",
+          "label": "melody",
+          "timeMs": 70521,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-117",
+          "label": "melody",
+          "timeMs": 70937,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-118",
+          "label": "melody",
+          "timeMs": 72187,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-119",
+          "label": "melody",
+          "timeMs": 72604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-120",
+          "label": "melody",
+          "timeMs": 73021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-121",
+          "label": "melody",
+          "timeMs": 73437,
+          "durationMs": 1189,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-122",
+          "label": "melody",
+          "timeMs": 74687,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-123",
+          "label": "melody",
+          "timeMs": 75104,
+          "durationMs": 595,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-124",
+          "label": "melody",
+          "timeMs": 75729,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-125",
+          "label": "melody",
+          "timeMs": 75937,
+          "durationMs": 792,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-126",
+          "label": "melody",
+          "timeMs": 77187,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-127",
+          "label": "melody",
+          "timeMs": 77604,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-128",
+          "label": "melody",
+          "timeMs": 78021,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-129",
+          "label": "melody",
+          "timeMs": 78437,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-130",
+          "label": "melody",
+          "timeMs": 78854,
+          "durationMs": 397,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-131",
+          "label": "melody",
+          "timeMs": 79271,
+          "durationMs": 883,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-132",
+          "label": "melody",
+          "timeMs": 80156,
+          "durationMs": 983,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "jerusalem-133",
+          "label": "melody",
+          "timeMs": 81146,
+          "durationMs": 2261,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 220
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "verse-one",
+      "label": "Verse 1",
+      "timeMs": 0
+    },
+    {
+      "id": "verse-two",
+      "label": "Verse 2",
+      "timeMs": 42604
+    }
+  ],
+  "assets": {
+    "sourcePageUrl": "https://en.wikipedia.org/wiki/And_did_those_feet_in_ancient_time",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:And_Did_Those_Feet_In_Ancient_Time_(Jerusalem).mid",
+    "license": "CC0 MIDI reference; arrangement generated for Schuylkill Music"
+  }
+}

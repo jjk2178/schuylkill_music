@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Pause, Play, RotateCcw } from "lucide-react";
+import { Pause, Play, RotateCcw, UserRound, Users } from "lucide-react";
 import { ArrangementBoard } from "../arrangements/ArrangementBoard";
 import {
   demoChart,
@@ -12,10 +12,12 @@ import {
   type DemoSongIndexItem,
 } from "../shared/songDatabaseBackend";
 import { useGameLoop } from "../app/useGameLoop";
+import { useArrangementAudio } from "../audio/arrangementPlayer";
 import { bandMembers, rehearsalSongs } from "../band/rehearsalSet";
 import "../app/styles.css";
 
 type Transport = "idle" | "playing" | "paused";
+type ScoreView = "arrangement" | "player";
 
 export function ScoreboardApp() {
   const [chart, setChart] = useState<Chart>(demoChart);
@@ -24,8 +26,12 @@ export function ScoreboardApp() {
   const [libraryStatus, setLibraryStatus] = useState("Loading shared song database...");
   const [transport, setTransport] = useState<Transport>("idle");
   const [playheadMs, setPlayheadMs] = useState(0);
+  const [scoreView, setScoreView] = useState<ScoreView>("arrangement");
+  const [selectedPlayer, setSelectedPlayer] = useState("Nana");
 
   const durationMs = useMemo(() => getChartDurationMs(chart), [chart]);
+
+  useArrangementAudio(chart, transport, playheadMs);
 
   useGameLoop(transport === "playing", (deltaMs) => {
     setPlayheadMs((current) => {
@@ -155,6 +161,39 @@ export function ScoreboardApp() {
           </button>
         </div>
 
+        <section className="player-view-controls" aria-label="Score view">
+          <div className="library-head">
+            <strong>View</strong>
+            <small>{scoreView === "player" ? `${selectedPlayer}'s part` : "Full band"}</small>
+          </div>
+          <div className="mode-switch">
+            <button
+              className={scoreView === "arrangement" ? "selected" : ""}
+              type="button"
+              onClick={() => setScoreView("arrangement")}
+            >
+              <Users size={15} />
+              Band
+            </button>
+            <button
+              className={scoreView === "player" ? "selected" : ""}
+              type="button"
+              onClick={() => setScoreView("player")}
+            >
+              <UserRound size={15} />
+              Player
+            </button>
+          </div>
+          {scoreView === "player" ? (
+            <label className="player-select">
+              <span>Player</span>
+              <select value={selectedPlayer} onChange={(event) => setSelectedPlayer(event.target.value)}>
+                {bandMembers.map((member) => <option key={member.name} value={member.name}>{member.name}</option>)}
+              </select>
+            </label>
+          ) : null}
+        </section>
+
         <section className="band-roster" aria-label="Available band members">
           <div className="library-head">
             <strong>Band</strong>
@@ -178,7 +217,7 @@ export function ScoreboardApp() {
           <HudTile label="Time" value={`${Math.round(playheadMs / 100) / 10}s`} />
           <HudTile label="Songs" value={String(songIndex.length + 1)} />
         </header>
-        <section className="setlist-board" aria-label="Rehearsal song setup">
+        {scoreView === "arrangement" ? <section className="setlist-board" aria-label="Rehearsal song setup">
           {rehearsalSongs.map((song) => (
             <article key={song.id} className="setlist-card">
               <header>
@@ -200,8 +239,8 @@ export function ScoreboardApp() {
               </div>
             </article>
           ))}
-        </section>
-        <ArrangementBoard chart={chart} playheadMs={playheadMs} />
+        </section> : null}
+        <ArrangementBoard chart={chart} playheadMs={playheadMs} playerName={scoreView === "player" ? selectedPlayer : undefined} />
       </section>
     </main>
   );

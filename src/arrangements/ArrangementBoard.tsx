@@ -9,17 +9,22 @@ import {
   type ArrangementNote,
   type ArrangementPart,
 } from "./arranger";
+import { rehearsalSongs } from "../band/rehearsalSet";
 
 type Props = {
   chart: Chart;
   playheadMs: number;
+  playerName?: string;
 };
 
 const scoreWidth = 1440;
 const labelWidth = 172;
 const systemPadding = 32;
 const rowHeight = 144;
-const masterHeight = 152;
+const stringStaffHeight = 216;
+const stringRowHeight = 370;
+const keyboardRowHeight = 232;
+const masterHeight = 232;
 const rulerHeight = 34;
 
 const guitarTuning = [
@@ -60,9 +65,13 @@ const drumNames: Record<number, string> = {
   49: "Crash",
 };
 
-export function ArrangementBoard({ chart, playheadMs }: Props) {
+export function ArrangementBoard({ chart, playheadMs, playerName }: Props) {
   const arrangement = useMemo(() => arrangeForFivePlayers(chart), [chart]);
-  const timeline = useMemo(() => getTimeline(arrangement, chart), [arrangement, chart]);
+  const visibleParts = useMemo(
+    () => (playerName ? partsForPlayer(arrangement.parts, chart, playerName) : arrangement.parts),
+    [arrangement.parts, chart, playerName],
+  );
+  const timeline = useMemo(() => getTimeline({ ...arrangement, parts: visibleParts }, chart), [arrangement, chart, visibleParts]);
   const playheadX = timeToX(playheadMs, timeline);
 
   return (
@@ -70,7 +79,7 @@ export function ArrangementBoard({ chart, playheadMs }: Props) {
       <header className="arrangement-head">
         <div>
           <p className="eyebrow">Arrangement lab</p>
-          <h2>Stacked band score</h2>
+          <h2>{playerName ? `${playerName}'s player view` : "Stacked band score"}</h2>
         </div>
         <span>{arrangement.sourceTitle}</span>
       </header>
@@ -78,8 +87,8 @@ export function ArrangementBoard({ chart, playheadMs }: Props) {
         <div className="score-scroll" style={{ width: labelWidth + scoreWidth }}>
           <div className="score-playhead" style={{ transform: `translateX(${labelWidth + playheadX}px)` }} />
           <MeasureRuler timeline={timeline} />
-          <MasterRow arrangement={arrangement} timeline={timeline} chart={chart} />
-          {arrangement.parts.map((part) => (
+          {playerName ? null : <MasterRow arrangement={arrangement} timeline={timeline} chart={chart} />}
+          {visibleParts.map((part) => (
             <ScoreRow key={part.id} part={part} timeline={timeline} chart={chart} />
           ))}
         </div>
@@ -117,7 +126,7 @@ function MasterRow({ arrangement, timeline, chart }: { arrangement: Arrangement;
         <small>Conductor reduction</small>
       </header>
       <div className="score-system master-system">
-        <GrandStaff notes={events} height={masterHeight} timeline={timeline} keySignature={signature} />
+        <GrandStaff notes={events} height={masterHeight} timeline={timeline} keySignature={signature} timeSignature={chart.timeSignatures[0]} />
       </div>
     </article>
   );
@@ -126,7 +135,7 @@ function MasterRow({ arrangement, timeline, chart }: { arrangement: Arrangement;
 function ScoreRow({ part, timeline, chart }: { part: ArrangementPart; timeline: Timeline; chart: Chart }) {
   const signature = keySignatureAt(chart, part.notes[0]?.timeMs ?? 0);
   return (
-    <article className={`score-row score-row-${part.id}`} style={{ color: part.color }}>
+    <article className={`score-row score-row-${part.id}${part.presentation === "guitar-tab" || part.presentation === "bass-tab" ? " score-row-string" : ""}`} style={{ color: part.color }}>
       <header className="score-label">
         <strong>{part.name}</strong>
         <small>{part.instrument}</small>
@@ -136,35 +145,40 @@ function ScoreRow({ part, timeline, chart }: { part: ArrangementPart; timeline: 
         {part.presentation === "vocal-cues" ? <span className="score-hint">cue pitches</span> : null}
       </header>
       <div className="score-system">
-        <StaffLayer part={part} timeline={timeline} keySignature={signature} />
+        <StaffLayer part={part} timeline={timeline} chart={chart} keySignature={signature} />
         <AnnotationLayer part={part} timeline={timeline} />
       </div>
     </article>
   );
 }
 
-function StaffLayer({ part, timeline, keySignature }: { part: ArrangementPart; timeline: Timeline; keySignature: KeySignatureEvent }) {
+function StaffLayer({ part, timeline, chart, keySignature }: { part: ArrangementPart; timeline: Timeline; chart: Chart; keySignature: KeySignatureEvent }) {
+  const height = part.presentation === "keyboard-staff"
+      ? keyboardRowHeight
+    : part.presentation === "guitar-tab" || part.presentation === "bass-tab"
+      ? stringRowHeight
+      : rowHeight;
   if (part.presentation === "guitar-tab") {
-    return <TabStaff tuning={guitarTuning} height={rowHeight} timeline={timeline} />;
+    return <StringInstrumentStaff part={part} tuning={guitarTuning} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
   }
   if (part.presentation === "bass-tab") {
-    return <TabStaff tuning={bassTuning} height={rowHeight} timeline={timeline} />;
+    return <StringInstrumentStaff part={part} tuning={bassTuning} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
   }
   if (part.presentation === "keyboard-staff") {
-    return <GrandStaff notes={part.notes} height={rowHeight} timeline={timeline} keySignature={keySignature} />;
+    return <GrandStaff notes={part.notes} height={keyboardRowHeight} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
   }
   if (part.presentation === "melody-staff" || part.presentation === "vocal-cues") {
-    return <VexStaff notes={part.notes} clef={part.clef} height={rowHeight} timeline={timeline} keySignature={keySignature} />;
+    return <VexStaff notes={part.notes} clef={part.clef} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
   }
   if (part.presentation !== "drum-grid") {
-    return <VexStaff notes={part.notes} clef={part.clef} height={rowHeight} timeline={timeline} keySignature={keySignature} />;
+    return <VexStaff notes={part.notes} clef={part.clef} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
   }
   const staffTop = 24;
   const staffGap = 18;
 
   return (
-    <svg className="staff-layer" viewBox={`0 0 ${scoreWidth} ${rowHeight}`} aria-hidden="true">
-      <TimelineGuides timeline={timeline} height={rowHeight} />
+    <svg className="staff-layer" viewBox={`0 0 ${scoreWidth} ${height}`} aria-hidden="true">
+      <TimelineGuides timeline={timeline} height={height} />
       {[49, 42, 38, 36].map((_, index) => (
         <line
           key={index}
@@ -181,6 +195,58 @@ function StaffLayer({ part, timeline, keySignature }: { part: ArrangementPart; t
   );
 }
 
+function StringInstrumentStaff({
+  part,
+  tuning,
+  height,
+  timeline,
+  keySignature,
+  timeSignature,
+}: {
+  part: ArrangementPart;
+  tuning: Array<{ label: string; openMidi: number }>;
+  height: number;
+  timeline: Timeline;
+  keySignature: KeySignatureEvent;
+  timeSignature: { beats: number; beatUnit: number };
+}) {
+  return (
+    <div className="string-notation-stack">
+      <div className="string-grand-staff">
+        <GrandStaff notes={part.notes} height={stringStaffHeight} timeline={timeline} keySignature={keySignature} timeSignature={timeSignature} />
+      </div>
+      <div className="string-tab-staff">
+        <TabStaff tuning={tuning} height={height - stringStaffHeight} timeline={timeline} />
+      </div>
+    </div>
+  );
+}
+
+function partsForPlayer(parts: ArrangementPart[], chart: Chart, playerName: string): ArrangementPart[] {
+  const namedParts = parts.filter((part) => part.name === playerName);
+  const song = rehearsalSongs.find((candidate) => {
+    const songTitle = candidate.title.toLowerCase();
+    const chartTitle = chart.title.toLowerCase();
+    return chartTitle === songTitle || chartTitle.startsWith(`${songTitle} (`);
+  });
+  const role = song?.roles.find((candidate) => candidate.player === playerName);
+  if (!role) return namedParts;
+
+  const targetPresentation = presentationForInstrument(role.instrument);
+  return namedParts.filter((part) => part.presentation === targetPresentation);
+}
+
+function presentationForInstrument(instrument: string): ArrangementPart["presentation"] {
+  const value = instrument.toLowerCase();
+  if (value.includes("key")) return "keyboard-staff";
+  if (value.includes("bass")) return "bass-tab";
+  if (value.includes("drum")) return "drum-grid";
+  if (value.includes("guitar")) return "guitar-tab";
+  if (value.includes("trumpet")) return "trumpet-fingering";
+  if (value.includes("vocal")) return "vocal-cues";
+  return "melody-staff";
+}
+
 function TabStaff({
   tuning,
   height,
@@ -190,8 +256,8 @@ function TabStaff({
   height: number;
   timeline: Timeline;
 }) {
-  const lineTop = tuning.length === 6 ? 34 : 42;
-  const lineGap = tuning.length === 6 ? 15 : 21;
+  const lineTop = tuning.length === 6 ? 36 : 42;
+  const lineGap = tuning.length === 6 ? 17 : 23;
   return (
     <svg className="staff-layer tab-staff-layer" viewBox={`0 0 ${scoreWidth} ${height}`} aria-hidden="true">
       <TimelineGuides timeline={timeline} height={height} />
@@ -246,6 +312,7 @@ function VexStaff({
   height,
   timeline,
   keySignature,
+  timeSignature,
   compact = false,
 }: {
   notes: ArrangementNote[];
@@ -253,6 +320,7 @@ function VexStaff({
   height: number;
   timeline: Timeline;
   keySignature: KeySignatureEvent;
+  timeSignature: { beats: number; beatUnit: number };
   compact?: boolean;
 }) {
   const hostRef = useRef<HTMLDivElement | null>(null);
@@ -271,8 +339,9 @@ function VexStaff({
       staveY: compact ? 14 : 18,
       stavePadding: systemPadding * 2,
       formatPadding: systemPadding * 2 + 86,
+      timeSignature,
     });
-  }, [clef, compact, height, keySignature, notes]);
+  }, [clef, compact, height, keySignature, notes, timeSignature]);
 
   return (
     <>
@@ -289,11 +358,13 @@ function GrandStaff({
   height,
   timeline,
   keySignature,
+  timeSignature,
 }: {
   notes: ArrangementNote[];
   height: number;
   timeline: Timeline;
   keySignature: KeySignatureEvent;
+  timeSignature: { beats: number; beatUnit: number };
 }) {
   const hostRef = useRef<HTMLDivElement | null>(null);
 
@@ -323,6 +394,7 @@ function GrandStaff({
       staveY: 8,
       stavePadding: systemPadding * 2,
       formatPadding: systemPadding * 2 + 96,
+      timeSignature,
     });
     renderVexflowStaff(bassHost, {
       clef: "bass",
@@ -335,8 +407,9 @@ function GrandStaff({
       staveY: 4,
       stavePadding: systemPadding * 2,
       formatPadding: systemPadding * 2 + 96,
+      timeSignature,
     });
-  }, [height, keySignature, notes]);
+  }, [height, keySignature, notes, timeSignature]);
 
   return (
     <>
@@ -387,6 +460,10 @@ function AnnotationLayer({ part, timeline }: { part: ArrangementPart; timeline: 
     );
   }
 
+  if (part.instrument.toLowerCase().includes("flute") || part.instrument.toLowerCase().includes("recorder")) {
+    return <WindAnnotation notes={part.notes} instrument={part.instrument} timeline={timeline} />;
+  }
+
   if (part.presentation === "vocal-cues") {
     return (
       <div className="annotation-layer vocal-annotations">
@@ -409,6 +486,56 @@ function AnnotationLayer({ part, timeline }: { part: ArrangementPart; timeline: 
   );
 }
 
+function WindAnnotation({
+  notes,
+  instrument,
+  timeline,
+}: {
+  notes: ArrangementNote[];
+  instrument: string;
+  timeline: Timeline;
+}) {
+  const kind = instrument.toLowerCase().includes("flute") ? "flute" : "recorder";
+  return (
+    <div className={`annotation-layer wind-annotations ${kind}-annotations`}>
+      {notes.slice(0, 32).map((note) => {
+        const holes = windHoles(note.midi[0], kind);
+        return (
+        <div key={note.id} style={{ left: timeToX(note.timeMs, timeline) }}>
+            <strong>{midiName(note.midi[0])}</strong>
+            <span className="wind-hole-stack" aria-label={`${instrument} fingering`}>
+              {holes.map((pressed, index) => <i key={`${note.id}-${index}`} className={pressed ? "pressed" : ""} />)}
+            </span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function windHoles(midi: number, kind: "flute" | "recorder"): boolean[] {
+  const flutePatterns: Record<number, boolean[]> = {
+    0: [true, true, true, true, true, true, true],
+    2: [true, true, true, true, true, true, false],
+    4: [true, true, true, true, true, false, false],
+    5: [true, true, true, true, false, false, false],
+    7: [true, true, true, false, false, false, false],
+    9: [true, true, false, false, false, false, false],
+    11: [true, false, false, false, false, false, false],
+  };
+  const recorderPatterns: Record<number, boolean[]> = {
+    0: [true, true, true, true, true, true, true, true],
+    2: [true, true, true, true, true, true, true, false],
+    4: [true, true, true, true, true, true, false, false],
+    5: [true, true, true, true, true, false, false, false],
+    7: [true, true, true, true, false, false, false, false],
+    9: [true, true, true, false, false, false, false, false],
+    11: [true, true, false, false, false, false, false, false],
+  };
+  const patterns = kind === "flute" ? flutePatterns : recorderPatterns;
+  return patterns[((midi % 12) + 12) % 12] ?? patterns[0];
+}
+
 function TabAnnotation({
   notes,
   timeline,
@@ -428,7 +555,7 @@ function TabAnnotation({
         const lineGap = tuning.length === 6 ? 15 : 21;
         const x = timeToX(note.timeMs, timeline);
         return (
-          <span key={note.id} className="tab-event" style={{ left: x, top: lineTop + fret.stringIndex * lineGap }}>
+          <span key={note.id} className="tab-event" style={{ left: x, top: stringStaffHeight + lineTop + fret.stringIndex * lineGap }}>
             {showRoots ? <em>{midiName(note.midi[0]).replace(/\d+$/, "")}</em> : null}
             <b>{fret.fret}</b>
           </span>
@@ -479,7 +606,8 @@ function getTimeline(arrangement: Arrangement, chart: Chart): Timeline {
   const endMs = Math.max(times.at(-1) ?? 1, startMs + 1);
   const tempo = chart.tempoMap[0]?.bpm ?? 100;
   const signature = chart.timeSignatures[0]?.beats ?? 4;
-  const measureMs = (60000 / tempo) * signature;
+  const beatUnit = chart.timeSignatures[0]?.beatUnit ?? 4;
+  const measureMs = (60000 / tempo) * signature * (4 / beatUnit);
   const measures: number[] = [];
   for (let timeMs = 0; timeMs <= endMs + measureMs; timeMs += measureMs) {
     measures.push(Math.round(timeMs));

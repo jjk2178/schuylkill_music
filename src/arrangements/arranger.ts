@@ -220,7 +220,7 @@ export function arrangeForFivePlayers(chart: Chart): Arrangement {
     sourceTitle: chart.title,
     parts: partTemplates.map((template) => ({
       ...template,
-      notes: buckets[template.id].slice(0, 48),
+      notes: buckets[template.id],
     })),
   };
 }
@@ -288,7 +288,8 @@ export function keySignatureAt(chart: Chart, timeMs = 0): KeySignatureEvent {
   return (
     [...(chart.keySignatures ?? [])]
       .sort((a, b) => a.timeMs - b.timeMs)
-      .findLast((signature) => signature.timeMs <= timeMs) ?? defaultKeySignature()
+      .reverse()
+      .find((signature) => signature.timeMs <= timeMs) ?? defaultKeySignature()
   );
 }
 

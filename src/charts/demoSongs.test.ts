@@ -15,7 +15,10 @@ describe("generated demo songs", () => {
     for (const chartFile of chartFiles) {
       const chart = parseChart(JSON.parse(readFileSync(join(demoDir, chartFile), "utf8")));
       expect(chart.tracks[0].events.length, chartFile).toBeGreaterThan(0);
-      expect(chart.assets?.sourcePageUrl, chartFile).toContain("mutopiaproject.org");
+      expect(
+        chart.assets?.sourcePageUrl,
+        chartFile,
+      ).toMatch(/mutopiaproject\.org|wikipedia\.org|commons\.wikimedia\.org/);
     }
   });
 

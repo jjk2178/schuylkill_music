@@ -228,6 +228,118 @@
       ]
     },
     {
+      "id": "jerusalem-parry",
+      "title": "And did those feet in ancient time (Jerusalem)",
+      "artist": "Hubert Parry, text by William Blake",
+      "status": "CC0 melody reference arranged for the Schuylkill Music ensemble",
+      "roles": [
+        {
+          "player": "Jack",
+          "instrument": "guitar",
+          "part": "lead guitar",
+          "notes": "outline the D-major melody with open, singing voicings"
+        },
+        {
+          "player": "Pops",
+          "instrument": "drums",
+          "part": "drums",
+          "notes": "broad hymn pulse; cymbal lift into the second statement"
+        },
+        {
+          "player": "Nana",
+          "instrument": "keys",
+          "part": "grand staff reduction",
+          "notes": "carry the harmonic foundation and melody reference"
+        },
+        {
+          "player": "Laura",
+          "instrument": "flute",
+          "part": "flute",
+          "notes": "double selected melody phrases with a clear, lyrical tone"
+        },
+        {
+          "player": "Michael",
+          "instrument": "recorder",
+          "part": "recorder",
+          "notes": "optional octave-doubled melody in the second statement"
+        },
+        {
+          "player": "Bobby",
+          "instrument": "bass",
+          "part": "bass",
+          "notes": "ground the D-major roots and cadences"
+        },
+        {
+          "player": "Xinnia",
+          "instrument": "vocals",
+          "part": "lead vocal",
+          "notes": "lead the two Blake stanzas"
+        },
+        {
+          "player": "Tara",
+          "instrument": "vocals",
+          "part": "harmony vocal",
+          "notes": "join on the final lines and broaden the second statement"
+        }
+      ]
+    },
+    {
+      "id": "silent-night",
+      "title": "Silent Night",
+      "artist": "Franz Xaver Gruber, text by Joseph Mohr",
+      "status": "Public-domain melody arrangement for the holiday set",
+      "roles": [
+        {
+          "player": "Jack",
+          "instrument": "guitar",
+          "part": "guitar",
+          "notes": "gentle arpeggiated support in D major"
+        },
+        {
+          "player": "Pops",
+          "instrument": "drums",
+          "part": "drums",
+          "notes": "soft brushes and light cymbal lift; keep the 6/8 pulse quiet"
+        },
+        {
+          "player": "Nana",
+          "instrument": "keys",
+          "part": "grand staff accompaniment",
+          "notes": "warm sustained harmony and the home-key cadence"
+        },
+        {
+          "player": "Laura",
+          "instrument": "flute",
+          "part": "flute",
+          "notes": "double selected melody phrases above the recorder"
+        },
+        {
+          "player": "Michael",
+          "instrument": "recorder",
+          "part": "recorder melody",
+          "notes": "carry the Silent Night melody throughout; this is the featured recorder arrangement"
+        },
+        {
+          "player": "Bobby",
+          "instrument": "bass",
+          "part": "bass",
+          "notes": "slow D-major root movement under the 6/8 accompaniment"
+        },
+        {
+          "player": "Xinnia",
+          "instrument": "vocals",
+          "part": "lead vocal",
+          "notes": "lead the primary verse"
+        },
+        {
+          "player": "Tara",
+          "instrument": "vocals",
+          "part": "harmony vocal",
+          "notes": "soft harmony on the final phrases"
+        }
+      ]
+    },
+    {
       "id": "led-zeppelin-stairway-to-heaven",
       "title": "Stairway to Heaven",
       "artist": "Led Zeppelin",

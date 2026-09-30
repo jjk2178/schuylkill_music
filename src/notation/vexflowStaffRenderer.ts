@@ -22,6 +22,8 @@ export type RenderVexflowStaffOptions = {
   staveY?: number;
   stavePadding?: number;
   formatPadding?: number;
+  timeSignature?: { beats: number; beatUnit: number };
+  quarterMs?: number;
 };
 
 const naturalPitchClasses: Record<string, number> = { c: 0, d: 2, e: 4, f: 5, g: 7, a: 9, b: 11 };
@@ -38,22 +40,27 @@ export function renderVexflowStaff(host: HTMLElement, options: RenderVexflowStaf
     staveY = compact ? 10 : 18,
     stavePadding = 24,
     formatPadding = 120,
+    timeSignature = { beats: 4, beatUnit: 4 },
+    quarterMs = 600,
   } = options;
 
   host.innerHTML = "";
 
-  const renderer = new Renderer(host, Renderer.Backends.SVG);
+  const renderer = new Renderer(host as HTMLDivElement, Renderer.Backends.SVG);
   renderer.resize(width, height);
   const context = renderer.getContext();
   const stave = new Stave(staveX, staveY, width - stavePadding).addClef(clef).addKeySignature(keySignature.key);
+  stave.addTimeSignature(`${timeSignature.beats}/${timeSignature.beatUnit}`);
   stave.setContext(context).draw();
 
   const tickables = notes.map((note) => {
     const spellings = note.midi.slice(0, 4).map((midi) => spellMidiForKey(midi, keySignature));
+    const ratio = Math.max(0.125, note.durationMs / quarterMs);
+    const duration = ratio >= 1.75 ? "h" : ratio >= 0.875 ? "q" : ratio >= 0.4375 ? "8" : "16";
     const staveNote = new StaveNote({
       clef,
       keys: spellings.length ? spellings.map((spelling) => spelling.key) : [clef === "bass" ? "c/3" : "c/4"],
-      duration: note.durationMs >= 700 ? "q" : "8",
+      duration,
     });
     spellings.forEach((spelling, index) => {
       if (spelling.accidental) staveNote.addModifier(new Accidental(spelling.accidental), index);
@@ -63,9 +70,10 @@ export function renderVexflowStaff(host: HTMLElement, options: RenderVexflowStaf
 
   if (!tickables.length) return;
 
-  const voice = new Voice({ numBeats: Math.max(4, tickables.length), beatValue: 4 }).setStrict(false);
+  const voice = new Voice({ numBeats: timeSignature.beats, beatValue: timeSignature.beatUnit }).setStrict(false);
   voice.addTickables(tickables);
   new Formatter().joinVoices([voice]).format([voice], width - formatPadding);
+
   voice.draw(context, stave);
 }
 
