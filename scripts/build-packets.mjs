@@ -133,19 +133,20 @@ function dataAttr(value) {
   return escapeHtml(JSON.stringify(value));
 }
 
-function renderStaff(notes, { clef = "treble", height = 118, width = scoreWidth, compact = false, keySignature = defaultKeySignature(), timeSignature = { beats: 4, beatUnit: 4 } } = {}) {
-  return `<div class="vf-staff" data-clef="${escapeHtml(clef)}" data-height="${height}" data-width="${width}" data-compact="${compact ? "1" : "0"}" data-key="${dataAttr(keySignature)}" data-beats="${timeSignature.beats}" data-beat-unit="${timeSignature.beatUnit}" data-notes="${dataAttr(notes.slice(0, 24))}"></div>`;
+function renderStaff(notes, { clef = "treble", height = 118, width = scoreWidth, compact = false, keySignature = defaultKeySignature(), timeSignature = { beats: 4, beatUnit: 4 }, timeRange, timePositioned = false } = {}) {
+  const range = timeRange ?? { startMs: notes[0]?.timeMs ?? 0, endMs: notes.at(-1)?.timeMs ?? 1 };
+  return `<div class="vf-staff" data-clef="${escapeHtml(clef)}" data-height="${height}" data-width="${width}" data-compact="${compact ? "1" : "0"}" data-key="${dataAttr(keySignature)}" data-beats="${timeSignature.beats}" data-beat-unit="${timeSignature.beatUnit}" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-time-positioned="${timePositioned ? "1" : "0"}" data-notes="${dataAttr(notes.slice(0, 24))}"></div>`;
 }
 
-function renderGrandStaff(notes, keySignature = defaultKeySignature(), compact = false, timeSignature = { beats: 4, beatUnit: 4 }) {
+function renderGrandStaff(notes, keySignature = defaultKeySignature(), compact = false, timeSignature = { beats: 4, beatUnit: 4 }, timeRange, timePositioned = false) {
   const treble = notes
     .map((note) => ({ ...note, midi: note.midi.filter((midi) => midi >= 60) }))
     .filter((note) => note.midi.length);
   const bass = notes
     .map((note) => ({ ...note, midi: note.midi.filter((midi) => midi < 60) }))
     .filter((note) => note.midi.length);
-  const height = compact ? 104 : 124;
-  return `<div class="grand">${renderStaff(treble, { clef: "treble", height, compact: true, keySignature, timeSignature })}${renderStaff(bass, { clef: "bass", height, compact: true, keySignature, timeSignature })}</div>`;
+  const height = compact ? 88 : 124;
+  return `<div class="grand">${renderStaff(treble, { clef: "treble", height, compact: true, keySignature, timeSignature, timeRange, timePositioned })}${renderStaff(bass, { clef: "bass", height, compact: true, keySignature, timeSignature, timeRange, timePositioned })}</div>`;
 }
 
 function masterNotes(events) {
@@ -244,17 +245,20 @@ function trumpetFingering(midi) {
   return { 0: "0", 1: "123", 2: "13", 3: "23", 4: "12", 5: "1", 6: "2", 7: "0", 8: "23", 9: "12", 10: "1", 11: "2" }[((midi % 12) + 12) % 12] ?? "0";
 }
 
-function renderInstrumentAnnotation(notes, instrument) {
+function renderInstrumentAnnotation(notes, instrument, timeRange) {
   if (instrument.includes("guitar")) return renderTabAnnotation(notes, guitarTuning);
   if (instrument.includes("bass")) return renderTabAnnotation(notes, bassTuning);
   if (instrument.includes("trumpet")) {
-    return `<div class="valves">${notes.map((note) => {
+    const range = timeRange ?? { startMs: notes[0]?.timeMs ?? 0, endMs: notes.at(-1)?.timeMs ?? 1 };
+    const span = Math.max(1, range.endMs - range.startMs);
+    return `<div class="valves aligned-valves">${notes.map((note) => {
       const f = trumpetFingering(note.midi[0]);
-      return `<span><b>${midiName(note.midi[0])}</b><i class="${f.includes("1") ? "on" : ""}"></i><i class="${f.includes("2") ? "on" : ""}"></i><i class="${f.includes("3") ? "on" : ""}"></i></span>`;
+      const x = 84 + Math.max(0, Math.min(1, (note.timeMs - range.startMs) / span)) * 572;
+      return `<span style="left:${x}px"><b>${midiName(note.midi[0])}</b><i class="${f.includes("1") ? "on" : ""}"></i><i class="${f.includes("2") ? "on" : ""}"></i><i class="${f.includes("3") ? "on" : ""}"></i></span>`;
     }).join("")}</div>`;
   }
   if (instrument.includes("flute") || instrument.includes("recorder")) {
-    return renderWindAnnotation(notes, instrument);
+    return renderWindAnnotation(notes, instrument, timeRange);
   }
   if (instrument.includes("drums")) {
     return `<div class="drums">${notes.map((note) => `<span>${secondsLabel(note.timeMs)} ${note.midi.map((midi) => ({ 36: "kick", 38: "snare", 42: "hat", 49: "crash" }[midi] ?? "hit")).join("/")}</span>`).join("")}</div>`;
@@ -265,35 +269,44 @@ function renderInstrumentAnnotation(notes, instrument) {
   return `<div class="labels">${notes.map((note) => `<span>${secondsLabel(note.timeMs)} ${note.midi.map(midiName).join("/")}</span>`).join("")}</div>`;
 }
 
-function renderWindAnnotation(notes, instrument) {
+function renderWindAnnotation(notes, instrument, timeRange) {
   const kind = instrument.includes("flute") ? "flute" : "recorder";
-  return `<div class="wind-diagrams">${notes.map((note) => {
+  const range = timeRange ?? { startMs: notes[0]?.timeMs ?? 0, endMs: notes.at(-1)?.timeMs ?? 1 };
+  const activeStart = 84;
+  const activeEnd = 656;
+  const span = Math.max(1, range.endMs - range.startMs);
+  return `<div class="wind-diagrams ${kind}-diagrams">${notes.map((note) => {
     const holes = windHoles(note.midi[0], kind);
-    return `<span><b>${midiName(note.midi[0])}</b><i>${holes.map((pressed) => `<em class="${pressed ? "on" : ""}"></em>`).join("")}</i></span>`;
+    const x = activeStart + Math.max(0, Math.min(1, (note.timeMs - range.startMs) / span)) * (activeEnd - activeStart);
+    return `<span style="left:${x}px"><b>${midiName(note.midi[0])}</b><i class="wind-fingering"><em class="wind-thumb"></em><em class="wind-hole-stack">${holes.map((pressed) => `<em class="${pressed ? "on" : ""}"></em>`).join("")}</em></i></span>`;
   }).join("")}</div>`;
 }
 
 function windHoles(midi, kind) {
   const flutePatterns = {
-    0: [true, true, true, true, true, true, true],
-    2: [true, true, true, true, true, true, false],
-    4: [true, true, true, true, true, false, false],
-    5: [true, true, true, true, false, false, false],
-    7: [true, true, true, false, false, false, false],
-    9: [true, true, false, false, false, false, false],
-    11: [true, false, false, false, false, false, false],
+    59: [true, true, true, true, true, true, true, true, true],
+    60: [true, true, true, true, true, true, true, true, false],
+    61: [true, true, true, true, true, true, true, false, false],
+    62: [true, true, true, true, true, true, false, false, false],
+    64: [true, true, true, true, true, false, false, false, false],
+    65: [true, true, true, true, false, false, false, false, false],
+    67: [true, true, true, false, false, false, false, false, false],
+    69: [true, true, false, false, false, false, false, false, false],
+    71: [true, false, false, false, false, false, false, false, false],
   };
   const recorderPatterns = {
-    0: [true, true, true, true, true, true, true, true],
-    2: [true, true, true, true, true, true, true, false],
-    4: [true, true, true, true, true, true, false, false],
-    5: [true, true, true, true, true, false, false, false],
-    7: [true, true, true, true, false, false, false, false],
-    9: [true, true, true, false, false, false, false, false],
-    11: [true, true, false, false, false, false, false, false],
+    60: [true, true, true, true, true, true, true, true],
+    62: [true, true, true, true, true, true, true, false],
+    64: [true, true, true, true, true, true, false, false],
+    65: [true, true, true, true, true, false, false, false],
+    67: [true, true, true, true, false, false, false, false],
+    69: [true, true, true, false, false, false, false, false],
+    71: [true, true, false, false, false, false, false, false],
   };
   const patterns = kind === "flute" ? flutePatterns : recorderPatterns;
-  return patterns[((midi % 12) + 12) % 12] ?? patterns[0];
+  const first = kind === "flute" ? 59 : 60;
+  const normalized = first + (((midi - first) % 12) + 12) % 12;
+  return patterns[normalized] ?? patterns[first];
 }
 
 function roleFor(song, memberName) {
@@ -318,12 +331,13 @@ function renderScoreBlock(title, notes, instrument, keySignature = defaultKeySig
   return `<section class="score-block ensemble-block${selected ? " selected-part" : ""}"><h3>${escapeHtml(title)}</h3><span class="time-signature">${timeSignature.beats}/${timeSignature.beatUnit}</span>${staff}${renderInstrumentAnnotation(notes, instrument)}</section>`;
 }
 
-function renderMusicSystem(notes, instrument, keySignature, timeSignature) {
+function renderMusicSystem(notes, instrument, keySignature, timeSignature, timeRange) {
   const clef = instrument.includes("bass") || instrument.includes("drums") ? "bass" : "treble";
+  const aligned = instrument.includes("flute") || instrument.includes("recorder") || instrument.includes("trumpet");
   const staff = !instrument.includes("drums")
-    ? renderGrandStaff(notes, keySignature, true, timeSignature)
+    ? renderGrandStaff(notes, keySignature, true, timeSignature, timeRange, aligned)
     : renderStaff(notes, { clef, height: 78, keySignature, compact: true, timeSignature });
-  const annotation = instrument.includes("guitar") || instrument.includes("bass") ? "" : renderInstrumentAnnotation(notes, instrument);
+  const annotation = instrument.includes("guitar") || instrument.includes("bass") ? "" : renderInstrumentAnnotation(notes, instrument, timeRange);
   return `<div class="packet-system music-system">${staff}${annotation}</div>`;
 }
 
@@ -355,23 +369,27 @@ function css() {
     .ensemble-block { padding: 3px 6px; margin: 0; border-color: #b6b6b6; }
     .ensemble-block.selected-part { border: 2px solid #111; padding: 2px 5px; }
     .ensemble-block h3 { font-size: 9px; margin: 1px 0 0; letter-spacing: .03em; }
-    .ensemble-block .vf-staff { min-height: 104px; height: 104px; overflow: visible; }
-    .ensemble-block .grand { display: grid; grid-template-rows: 104px 104px; row-gap: 8px; min-height: 216px; }
+    .ensemble-block .vf-staff { min-height: 88px; height: 88px; overflow: visible; }
+    .ensemble-block .grand { display: grid; grid-template-rows: 88px 88px; row-gap: 6px; min-height: 182px; }
+    .ensemble-block .grand .vf-staff svg { transform: scale(0.86); transform-origin: left top; }
     .ensemble-block .grand svg + svg { margin-top: 0; }
     .packet-part-block { position: relative; padding-top: 5px; }
     .packet-part-block h3 { padding-right: 40px; }
     .packet-part-block .time-signature { position: absolute; top: 4px; right: 7px; font-size: 9px; font-weight: 700; }
     .packet-systems { display: grid; gap: 7px; }
     .packet-system { min-height: 54px; padding: 4px 0; box-sizing: border-box; }
-    .packet-system.music-system { min-height: 216px; }
+    .packet-system.music-system { min-height: 182px; }
     .packet-system .grand { margin-bottom: 2px; }
     .ensemble-block .tab-ann { margin: 0; padding: 3px 0; box-sizing: content-box; }
     .ensemble-block .valves, .ensemble-block .labels, .ensemble-block .vocal, .ensemble-block .drums { gap: 5px; font-size: 7px; margin-top: 0; max-height: 16px; overflow: hidden; }
-    .wind-diagrams { display:flex; flex-wrap:wrap; gap:5px; margin-top:2px; font-size:7px; max-height:54px; overflow:hidden; }
-    .wind-diagrams > span { display:grid; justify-items:center; gap:1px; }
-    .wind-diagrams i { display:grid; grid-auto-flow:row; gap:1px; font-style:normal; }
-    .wind-diagrams em { width:6px; height:6px; border:1px solid #111; border-radius:50%; display:block; }
-    .wind-diagrams em.on { background:#111; }
+    .wind-diagrams { position:relative; width:${scoreWidth}px; height:68px; margin-top:3px; font-size:8px; overflow:visible; }
+    .wind-diagrams > span { position:absolute; top:0; display:grid; justify-items:center; gap:2px; transform:translateX(-50%); }
+    .wind-diagrams .wind-fingering { display:grid; justify-items:center; gap:1px; font-style:normal; }
+    .wind-diagrams .wind-thumb { width:8px; height:8px; border:1px solid #111; border-radius:50%; display:block; }
+    .wind-diagrams .wind-hole-stack { display:grid; grid-auto-flow:row; gap:2px; padding:1px 4px; border-left:1px solid #111; border-right:1px solid #111; }
+    .wind-diagrams.flute-diagrams .wind-hole-stack { grid-auto-flow:column; gap:3px; padding:4px 5px; border-top:1px solid #111; border-bottom:1px solid #111; border-left:0; border-right:0; }
+    .wind-diagrams .wind-hole-stack em { width:8px; height:8px; border:1px solid #111; border-radius:50%; display:block; }
+    .wind-diagrams .wind-hole-stack em.on { background:#111; }
     svg { max-width: 100%; height: auto; display:block; }
     svg text { font-family: "Bravura", "Academico", Helvetica, Arial, sans-serif !important; }
     .vf-staff { width: ${scoreWidth}px; max-width: 100%; min-height: 104px; }
@@ -381,10 +399,15 @@ function css() {
     .tab-ann .tab-label { fill:#111; font-size:8px; font-weight:900; }
     .tab-ann .tab-fret { fill:#050505; stroke:#fff; stroke-width:3.4; paint-order:stroke fill; font-size:10px; font-weight:900; dominant-baseline:middle; }
     .valves, .labels, .vocal, .drums { display:flex; flex-wrap:wrap; gap:8px; font-size:9px; margin-top:4px; }
+    .aligned-valves { position:relative; display:block; width:${scoreWidth}px; height:34px; margin-top:2px; }
+    .aligned-valves span { position:absolute; top:0; transform:translateX(-50%); }
     .valves span { display:inline-grid; grid-template-rows:auto 9px 9px 9px; justify-items:center; gap:1px; }
     .valves i { width:7px; height:7px; border:1px solid #111; border-radius:50%; display:block; }
     .valves i.on { background:#111; }
     .overview { display:grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .instrument-set-list { margin-bottom: 9px; }
+    .instrument-set-list h3 { margin-bottom: 4px; }
+    .instrument-set-list .card { margin-bottom: 4px; min-height: 0; }
   `;
 }
 
@@ -422,6 +445,28 @@ function browserVexFlowScript() {
           const accidental = writtenAccidental === signatureAccidental ? null : writtenAccidental === 0 ? "n" : writtenAccidental > 0 ? "#" : "b";
           return { key: name + "/" + octave, accidental };
         }
+        function addMeasureBars(host, tickables, notes, stave, beats, beatUnit) {
+          const svg = host.querySelector("svg");
+          if (!svg) return;
+          const measureQuarters = beats * (4 / beatUnit);
+          let elapsedQuarters = 0;
+          tickables.forEach((tickable, index) => {
+            elapsedQuarters += Math.max(0.125, notes[index].durationMs / 600);
+            while (elapsedQuarters >= measureQuarters && index < tickables.length - 1) {
+              const x = tickable.getAbsoluteX() + tickable.getWidth();
+              const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+              line.setAttribute("class", "vex-measure-bar");
+              line.setAttribute("x1", String(x));
+              line.setAttribute("x2", String(x));
+              line.setAttribute("y1", String(stave.getTopLineTopY()));
+              line.setAttribute("y2", String(stave.getBottomLineBottomY()));
+              line.setAttribute("stroke", "#555");
+              line.setAttribute("stroke-width", "1");
+              svg.appendChild(line);
+              elapsedQuarters -= measureQuarters;
+            }
+          });
+        }
         function renderStaff(host) {
           const notes = JSON.parse(host.dataset.notes || "[]");
           const signature = JSON.parse(host.dataset.key || '{"key":"C","fifths":0}');
@@ -429,12 +474,14 @@ function browserVexFlowScript() {
           const compact = host.dataset.compact === "1";
           const width = Number(host.dataset.width || 680);
           const height = Number(host.dataset.height || 118);
+          const timePositioned = host.dataset.timePositioned === "1";
           host.innerHTML = "";
           const renderer = new VF.Renderer(host, VF.Renderer.Backends.SVG);
           renderer.resize(width, height);
           const context = renderer.getContext();
           const stave = new VF.Stave(12, compact ? 10 : 18, width - 24).addClef(clef).addKeySignature(signature.key || "C");
           stave.addTimeSignature((host.dataset.beats || "4") + "/" + (host.dataset.beatUnit || "4"));
+          if (timePositioned) stave.setNoteStartX(12 + 72);
           stave.setContext(context).draw();
           const tickables = notes.map((note) => {
             const spellings = (note.midi || []).slice(0, 4).map((midi) => spellMidi(midi, signature));
@@ -455,7 +502,19 @@ function browserVexFlowScript() {
           const voice = new VF.Voice({ numBeats: Number(host.dataset.beats || 4), beatValue: Number(host.dataset.beatUnit || 4) }).setStrict(false);
           voice.addTickables(tickables);
           new VF.Formatter().joinVoices([voice]).format([voice], width - 120);
+          if (timePositioned) {
+            const firstTime = Number(host.dataset.timeStart || notes[0]?.timeMs || 0);
+            const lastTime = Number(host.dataset.timeEnd || notes.at(-1)?.timeMs || firstTime + 1);
+            const timeSpan = Math.max(1, lastTime - firstTime);
+            const activeStart = stave.getNoteStartX();
+            const activeEnd = stave.getX() + stave.getWidth() - 12;
+            tickables.forEach((tickable, index) => {
+              const progress = Math.max(0, Math.min(1, ((notes[index]?.timeMs || firstTime) - firstTime) / timeSpan));
+              tickable.setX(activeStart + progress * (activeEnd - activeStart));
+            });
+          }
           voice.draw(context, stave);
+          addMeasureBars(host, tickables, notes, stave, Number(host.dataset.beats || 4), Number(host.dataset.beatUnit || 4));
         }
         async function renderAll() {
           if (document.fonts?.ready) await document.fonts.ready;
@@ -469,9 +528,24 @@ function browserVexFlowScript() {
 }
 
 function overviewPage(member) {
-  const roles = data.rehearsalSongs.map((song, index) => ({ song, role: roleFor(song, member.name), index: index + 1 }));
-  return `<div class="page"><div class="top"><div><h1>${escapeHtml(member.name)} Packet</h1><p>Roles, set list, equipment, and rendered parts</p></div><p>${escapeHtml(member.instruments.join(" / "))}</p></div>
-    <div class="overview"><section><h3>Your songs</h3>${roles.map(({ song, role, index }) => `<div class="card"><b>${index}. ${escapeHtml(song.title)}</b><p>${escapeHtml(song.artist)} - ${escapeHtml(role?.instrument ?? role?.part ?? "part")}</p><p>${escapeHtml(role?.notes ?? song.status)}</p></div>`).join("")}</section>
+  const instrumentOrder = ["guitar", "trumpet", "flute", "recorder", "bass", "keys", "drums", "vocals"];
+  const instrumentGroups = new Map();
+  data.rehearsalSongs.forEach((song, index) => {
+    song.roles.forEach((role) => {
+      const instrument = (role.instrument ?? role.part ?? "part").toLowerCase();
+      const key = instrumentOrder.find((name) => instrument.includes(name)) ?? instrument;
+      if (!instrumentGroups.has(key)) instrumentGroups.set(key, []);
+      instrumentGroups.get(key).push({ song, role, index: index + 1 });
+    });
+  });
+  const orderedGroups = [...instrumentGroups.entries()].sort(([a], [b]) => {
+    const ai = instrumentOrder.indexOf(a);
+    const bi = instrumentOrder.indexOf(b);
+    return (ai < 0 ? 99 : ai) - (bi < 0 ? 99 : bi);
+  });
+  const setLists = orderedGroups.map(([instrument, songs]) => `<section class="instrument-set-list"><h3>${escapeHtml(instrument)} set list</h3>${songs.map(({ song, role, index }) => `<div class="card"><b>${index}. ${escapeHtml(song.title)}</b><p>${escapeHtml(song.artist)} - ${escapeHtml(role.part ?? role.instrument ?? "part")}</p><p>${escapeHtml(role.notes ?? song.status)}</p></div>`).join("")}</section>`).join("");
+  return `<div class="page"><div class="top"><div><h1>${escapeHtml(member.name)} Packet</h1><p>Instrument set lists, equipment, and rendered parts</p></div><p>${escapeHtml(member.instruments.join(" / "))}</p></div>
+    <div class="overview"><section><h3>Instrument set lists</h3>${setLists}</section>
     <section><h3>Equipment</h3><ul>${member.equipment.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul><h3>Shared gear</h3><ul>${data.sharedEquipment.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section></div></div>`;
 }
 
@@ -517,7 +591,10 @@ function songPages(member) {
           const tuning = selectedLine.instrument === "bass" ? bassTuning : guitarTuning;
           return `<div class="packet-system tab-system">${renderTabAnnotation(notes, tuning)}</div>`;
         }
-        return renderMusicSystem(notes, selectedLine.instrument, signature, timeSignature);
+        return renderMusicSystem(notes, selectedLine.instrument, signature, timeSignature, {
+          startMs: eventSlice[0]?.timeMs ?? 0,
+          endMs: eventSlice.at(-1)?.timeMs ?? 1,
+        });
       }).join("");
       const block = isTabPage
         ? renderPacketBlock(`${member.name} - ${selectedLine.label} - tab`, content, timeSignature)
@@ -538,8 +615,58 @@ function instrumentMatchesLine(roleInstrument, lineInstrument) {
   return role.includes(lineInstrument);
 }
 
+function instrumentOverviewPage(instrument, label) {
+  const songs = data.rehearsalSongs
+    .map((song, index) => ({ song, index: index + 1, role: song.roles.find((role) => instrumentMatchesLine(role.instrument ?? role.part ?? "", instrument)) }))
+    .filter(({ role }) => role);
+  const cards = songs.map(({ song, index, role }) => `<div class="card"><b>${index}. ${escapeHtml(song.title)}</b><p>${escapeHtml(song.artist)} - ${escapeHtml(role.part ?? role.instrument ?? label)}</p><p>${escapeHtml(role.notes ?? song.status)}</p></div>`).join("");
+  return `<div class="page"><div class="top"><div><h1>${escapeHtml(label)} Packet</h1><p>Instrument set list and rendered parts</p></div><p>${songs.length} songs</p></div><section><h3>${escapeHtml(label)} set list</h3>${cards || "<p>No assigned songs yet.</p>"}</section><section><h3>Shared gear</h3><ul>${data.sharedEquipment.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul></section></div>`;
+}
+
+function instrumentSongPages(instrument, label) {
+  const pages = [];
+  const line = { label, instrument };
+  data.rehearsalSongs.forEach((song, songIndexNumber) => {
+    const role = song.roles.find((candidate) => instrumentMatchesLine(candidate.instrument ?? candidate.part ?? "", instrument));
+    if (!role) return;
+    const chart = loadChart(song);
+    const events = chartEvents(chart);
+    if (!events.length) return;
+    const tabPages = instrument === "guitar" || instrument === "bass" ? chunk(events, eventsPerSystem * 8) : [];
+    const musicPages = chunk(events, eventsPerSystem * systemsPerPage);
+    const totalPages = tabPages.length + musicPages.length;
+    for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
+      const isTabPage = pageIndex < tabPages.length;
+      const pageEvents = isTabPage ? tabPages[pageIndex] : musicPages[pageIndex - tabPages.length];
+      const timeSignature = chart.timeSignatures?.[0] ?? { beats: 4, beatUnit: 4 };
+      const content = chunk(pageEvents, eventsPerSystem).map((eventSlice, lineIndex) => {
+        const eventOffset = (isTabPage ? pageIndex * eventsPerSystem * 8 : (pageIndex - tabPages.length) * eventsPerSystem * systemsPerPage) + lineIndex * eventsPerSystem;
+        const signature = keySignatureAt(chart, eventSlice[0]?.timeMs ?? 0);
+        const notes = notesForInstrument(eventSlice, line.instrument, eventOffset);
+        if (isTabPage) {
+          const tuning = instrument === "bass" ? bassTuning : guitarTuning;
+          return `<div class="packet-system tab-system">${renderTabAnnotation(notes, tuning)}</div>`;
+        }
+        return renderMusicSystem(notes, line.instrument, signature, timeSignature, { startMs: eventSlice[0]?.timeMs ?? 0, endMs: eventSlice.at(-1)?.timeMs ?? 1 });
+      }).join("");
+      const block = isTabPage
+        ? renderPacketBlock(`${label} - tab`, content, timeSignature)
+        : renderPacketBlock(`${label} - music`, content, timeSignature);
+      pages.push(`<div class="page ensemble-page"><div class="top"><div><h1>${songIndexNumber + 1}. ${escapeHtml(song.title)}</h1><p>${escapeHtml(song.artist)} - ${escapeHtml(label)} - page ${pageIndex + 1} of ${totalPages}</p></div><p>${escapeHtml(label)}</p></div>
+        ${pageIndex === 0 ? `<p class="role-note"><b>${escapeHtml(role.part ?? role.instrument ?? label)}</b>: ${escapeHtml(role.notes ?? "")}</p>` : ""}
+        <div class="ensemble-score">${block}</div>
+      </div>`);
+    }
+  });
+  return pages.join("");
+}
+
 function packetHtml(member) {
   return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(member.name)} packet</title><style>${css()}</style></head><body>${overviewPage(member)}${songPages(member)}${browserVexFlowScript()}</body></html>`;
+}
+
+function instrumentPacketHtml(instrument, label) {
+  return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(label)} packet</title><style>${css()}</style></head><body>${instrumentOverviewPage(instrument, label)}${instrumentSongPages(instrument, label)}${browserVexFlowScript()}</body></html>`;
 }
 
 function masterHtml() {
@@ -572,4 +699,19 @@ for (const member of data.bandMembers) {
   printPdf(htmlPath, pdfPath);
 }
 
-console.log(`Wrote ${data.bandMembers.length + 1} VexFlow PDFs to ${outputDir}`);
+const instrumentPackets = [
+  ["guitar", "Guitar"],
+  ["bass", "Bass"],
+  ["keys", "Keys"],
+  ["trumpet", "Trumpet"],
+  ["flute", "Flute"],
+  ["recorder", "Recorder"],
+];
+for (const [instrument, label] of instrumentPackets) {
+  const htmlPath = join(htmlDir, `${slugify(instrument)}-packet.html`);
+  const pdfPath = join(outputDir, `${slugify(instrument)}-packet.pdf`);
+  writeFileSync(htmlPath, instrumentPacketHtml(instrument, label));
+  printPdf(htmlPath, pdfPath);
+}
+
+console.log(`Wrote ${data.bandMembers.length + instrumentPackets.length + 1} VexFlow PDFs to ${outputDir}`);

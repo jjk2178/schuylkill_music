@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 import type { Chart, KeySignatureEvent } from "../charts/schema";
-import { renderVexflowStaff } from "../notation/vexflowStaffRenderer";
+import { notationActiveEndInset, notationActiveStartOffset, renderVexflowStaff } from "../notation/vexflowStaffRenderer";
 import {
   arrangeForFivePlayers,
   keySignatureAt,
@@ -21,10 +21,10 @@ const scoreWidth = 1440;
 const labelWidth = 172;
 const systemPadding = 32;
 const rowHeight = 144;
-const stringStaffHeight = 216;
-const stringRowHeight = 370;
-const keyboardRowHeight = 232;
-const masterHeight = 232;
+const stringStaffHeight = 196;
+const stringRowHeight = 340;
+const keyboardRowHeight = 208;
+const masterHeight = 208;
 const rulerHeight = 34;
 
 const guitarTuning = [
@@ -168,10 +168,12 @@ function StaffLayer({ part, timeline, chart, keySignature }: { part: Arrangement
     return <GrandStaff notes={part.notes} height={keyboardRowHeight} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
   }
   if (part.presentation === "melody-staff" || part.presentation === "vocal-cues") {
-    return <VexStaff notes={part.notes} clef={part.clef} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
+    const timePositioned = part.instrument.toLowerCase().includes("flute") || part.instrument.toLowerCase().includes("recorder");
+    return <VexStaff notes={part.notes} clef={part.clef} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} timePositioned={timePositioned} />;
   }
   if (part.presentation !== "drum-grid") {
-    return <VexStaff notes={part.notes} clef={part.clef} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} />;
+    const timePositioned = part.instrument.toLowerCase().includes("trumpet");
+    return <VexStaff notes={part.notes} clef={part.clef} height={height} timeline={timeline} keySignature={keySignature} timeSignature={chart.timeSignatures[0]} timePositioned={timePositioned} />;
   }
   const staffTop = 24;
   const staffGap = 18;
@@ -313,6 +315,7 @@ function VexStaff({
   timeline,
   keySignature,
   timeSignature,
+  timePositioned = false,
   compact = false,
 }: {
   notes: ArrangementNote[];
@@ -321,6 +324,7 @@ function VexStaff({
   timeline: Timeline;
   keySignature: KeySignatureEvent;
   timeSignature: { beats: number; beatUnit: number };
+  timePositioned?: boolean;
   compact?: boolean;
 }) {
   const hostRef = useRef<HTMLDivElement | null>(null);
@@ -340,8 +344,10 @@ function VexStaff({
       stavePadding: systemPadding * 2,
       formatPadding: systemPadding * 2 + 86,
       timeSignature,
+      timePositioned,
+      timeRange: timePositioned ? timeline : undefined,
     });
-  }, [clef, compact, height, keySignature, notes, timeSignature]);
+  }, [clef, compact, height, keySignature, notes, timePositioned, timeSignature, timeline]);
 
   return (
     <>
@@ -446,7 +452,7 @@ function AnnotationLayer({ part, timeline }: { part: ArrangementPart; timeline: 
           const midi = note.midi[0];
           const fingering = trumpetFingerings[midi % 12] ?? "0";
           return (
-            <div key={note.id} style={{ left: timeToX(note.timeMs, timeline) }}>
+            <div key={note.id} style={{ left: windTimeToX(note.timeMs, timeline) }}>
               <strong>{midiName(midi)}</strong>
               <span className="valve-stack" aria-label={`Valves ${fingering}`}>
                 {[1, 2, 3].map((valve) => (
@@ -500,11 +506,15 @@ function WindAnnotation({
     <div className={`annotation-layer wind-annotations ${kind}-annotations`}>
       {notes.slice(0, 32).map((note) => {
         const holes = windHoles(note.midi[0], kind);
+        const x = windTimeToX(note.timeMs, timeline);
         return (
-        <div key={note.id} style={{ left: timeToX(note.timeMs, timeline) }}>
+          <div key={note.id} style={{ left: x }}>
             <strong>{midiName(note.midi[0])}</strong>
-            <span className="wind-hole-stack" aria-label={`${instrument} fingering`}>
-              {holes.map((pressed, index) => <i key={`${note.id}-${index}`} className={pressed ? "pressed" : ""} />)}
+            <span className={`wind-fingering ${kind}`} aria-label={`${instrument} fingering`}>
+              <i className="wind-thumb" />
+              <span className="wind-hole-stack">
+                {holes.map((pressed, index) => <i key={`${note.id}-${index}`} className={pressed ? "pressed" : ""} />)}
+              </span>
             </span>
           </div>
         );
@@ -515,25 +525,29 @@ function WindAnnotation({
 
 function windHoles(midi: number, kind: "flute" | "recorder"): boolean[] {
   const flutePatterns: Record<number, boolean[]> = {
-    0: [true, true, true, true, true, true, true],
-    2: [true, true, true, true, true, true, false],
-    4: [true, true, true, true, true, false, false],
-    5: [true, true, true, true, false, false, false],
-    7: [true, true, true, false, false, false, false],
-    9: [true, true, false, false, false, false, false],
-    11: [true, false, false, false, false, false, false],
+    59: [true, true, true, true, true, true, true, true, true],
+    60: [true, true, true, true, true, true, true, true, false],
+    61: [true, true, true, true, true, true, true, false, false],
+    62: [true, true, true, true, true, true, false, false, false],
+    64: [true, true, true, true, true, false, false, false, false],
+    65: [true, true, true, true, false, false, false, false, false],
+    67: [true, true, true, false, false, false, false, false, false],
+    69: [true, true, false, false, false, false, false, false, false],
+    71: [true, false, false, false, false, false, false, false, false],
   };
   const recorderPatterns: Record<number, boolean[]> = {
-    0: [true, true, true, true, true, true, true, true],
-    2: [true, true, true, true, true, true, true, false],
-    4: [true, true, true, true, true, true, false, false],
-    5: [true, true, true, true, true, false, false, false],
-    7: [true, true, true, true, false, false, false, false],
-    9: [true, true, true, false, false, false, false, false],
-    11: [true, true, false, false, false, false, false, false],
+    60: [true, true, true, true, true, true, true, true],
+    62: [true, true, true, true, true, true, true, false],
+    64: [true, true, true, true, true, true, false, false],
+    65: [true, true, true, true, true, false, false, false],
+    67: [true, true, true, true, false, false, false, false],
+    69: [true, true, true, false, false, false, false, false],
+    71: [true, true, false, false, false, false, false, false],
   };
   const patterns = kind === "flute" ? flutePatterns : recorderPatterns;
-  return patterns[((midi % 12) + 12) % 12] ?? patterns[0];
+  const first = kind === "flute" ? 59 : 60;
+  const normalized = first + (((midi - first) % 12) + 12) % 12;
+  return patterns[normalized] ?? patterns[first];
 }
 
 function TabAnnotation({
@@ -682,6 +696,14 @@ function timeToX(timeMs: number, timeline: Timeline): number {
   const range = Math.max(1, timeline.endMs - timeline.startMs);
   const progress = Math.max(0, Math.min(1, (timeMs - timeline.startMs) / range));
   return systemPadding + progress * (scoreWidth - systemPadding * 2);
+}
+
+function windTimeToX(timeMs: number, timeline: Timeline): number {
+  const range = Math.max(1, timeline.endMs - timeline.startMs);
+  const progress = Math.max(0, Math.min(1, (timeMs - timeline.startMs) / range));
+  const activeStart = systemPadding + notationActiveStartOffset;
+  const activeEnd = scoreWidth - systemPadding - notationActiveEndInset;
+  return activeStart + progress * (activeEnd - activeStart);
 }
 
 function drumY(midi: number): number {

@@ -24,7 +24,12 @@ export type RenderVexflowStaffOptions = {
   formatPadding?: number;
   timeSignature?: { beats: number; beatUnit: number };
   quarterMs?: number;
+  timePositioned?: boolean;
+  timeRange?: { startMs: number; endMs: number };
 };
+
+export const notationActiveStartOffset = 72;
+export const notationActiveEndInset = 12;
 
 const naturalPitchClasses: Record<string, number> = { c: 0, d: 2, e: 4, f: 5, g: 7, a: 9, b: 11 };
 
@@ -42,6 +47,8 @@ export function renderVexflowStaff(host: HTMLElement, options: RenderVexflowStaf
     formatPadding = 120,
     timeSignature = { beats: 4, beatUnit: 4 },
     quarterMs = 600,
+    timePositioned = false,
+    timeRange,
   } = options;
 
   host.innerHTML = "";
@@ -51,6 +58,7 @@ export function renderVexflowStaff(host: HTMLElement, options: RenderVexflowStaf
   const context = renderer.getContext();
   const stave = new Stave(staveX, staveY, width - stavePadding).addClef(clef).addKeySignature(keySignature.key);
   stave.addTimeSignature(`${timeSignature.beats}/${timeSignature.beatUnit}`);
+  if (timePositioned) stave.setNoteStartX(staveX + notationActiveStartOffset);
   stave.setContext(context).draw();
 
   const tickables = notes.map((note) => {
@@ -74,7 +82,49 @@ export function renderVexflowStaff(host: HTMLElement, options: RenderVexflowStaf
   voice.addTickables(tickables);
   new Formatter().joinVoices([voice]).format([voice], width - formatPadding);
 
+  if (timePositioned && timeRange) {
+    const firstTime = timeRange.startMs;
+    const timeSpan = Math.max(1, timeRange.endMs - firstTime);
+    const activeStart = stave.getNoteStartX();
+    const activeEnd = stave.getX() + stave.getWidth() - notationActiveEndInset;
+    tickables.forEach((tickable, index) => {
+      const progress = Math.max(0, Math.min(1, (notes[index].timeMs - firstTime) / timeSpan));
+      tickable.setX(activeStart + progress * (activeEnd - activeStart));
+    });
+  }
+
   voice.draw(context, stave);
+  addMeasureBarlines(host, tickables, notes, stave, timeSignature, quarterMs);
+}
+
+function addMeasureBarlines(
+  host: HTMLElement,
+  tickables: StaveNote[],
+  notes: RenderedStaffNote[],
+  stave: Stave,
+  timeSignature: { beats: number; beatUnit: number },
+  quarterMs: number,
+): void {
+  const svg = host.querySelector("svg");
+  if (!svg) return;
+  const measureQuarters = timeSignature.beats * (4 / timeSignature.beatUnit);
+  let elapsedQuarters = 0;
+  tickables.forEach((tickable, index) => {
+    elapsedQuarters += Math.max(0.125, notes[index].durationMs / quarterMs);
+    while (elapsedQuarters >= measureQuarters && index < tickables.length - 1) {
+      const x = tickable.getAbsoluteX() + tickable.getWidth();
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("class", "vex-measure-bar");
+      line.setAttribute("x1", String(x));
+      line.setAttribute("x2", String(x));
+      line.setAttribute("y1", String(stave.getTopLineTopY()));
+      line.setAttribute("y2", String(stave.getBottomLineBottomY()));
+      line.setAttribute("stroke", "#555");
+      line.setAttribute("stroke-width", "1");
+      svg.appendChild(line);
+      elapsedQuarters -= measureQuarters;
+    }
+  });
 }
 
 export function spellMidiForKey(

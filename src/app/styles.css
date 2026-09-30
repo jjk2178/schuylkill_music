@@ -707,12 +707,12 @@ h1 {
 
 .score-row-nana-keys .score-label,
 .score-row-nana-keys .score-system {
-  min-height: 232px;
+  min-height: 208px;
 }
 
 .score-row-string .score-label,
 .score-row-string .score-system {
-  min-height: 370px;
+  min-height: 340px;
 }
 
 .master-row {
@@ -772,11 +772,11 @@ h1 {
 }
 
 .string-grand-staff {
-  height: 216px;
+  height: 196px;
 }
 
 .string-tab-staff {
-  height: 148px;
+  height: 144px;
   padding-top: 6px;
   box-sizing: border-box;
 }
@@ -910,11 +910,13 @@ h1 {
 }
 
 .grand-score-layer svg {
-  transform: translateY(0);
+  transform: scale(0.86);
+  transform-origin: left top;
 }
 
 .score-row-nana-keys .grand-score-layer svg {
-  transform: none;
+  transform: scale(0.86);
+  transform-origin: left top;
 }
 
 .trumpet-annotations,
@@ -925,21 +927,51 @@ h1 {
 }
 
 .wind-annotations {
-  bottom: 8px;
-  height: 58px;
+  bottom: 4px;
+  height: 88px;
 }
 
 .wind-annotations > div {
   position: absolute;
   display: grid;
   justify-items: center;
-  gap: 2px;
+  gap: 3px;
+  top: 0;
   transform: translateX(-50%);
 }
 
 .wind-annotations strong {
   font-size: 0.62rem;
   font-weight: 900;
+}
+
+.wind-fingering {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+}
+
+.wind-thumb {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #141820;
+  border-radius: 50%;
+  background: #fbfaf3;
+}
+
+.wind-fingering.recorder .wind-hole-stack {
+  position: relative;
+  padding: 2px 4px;
+  border-left: 1px solid rgba(20, 24, 32, 0.55);
+  border-right: 1px solid rgba(20, 24, 32, 0.55);
+}
+
+.wind-fingering.flute .wind-hole-stack {
+  grid-auto-flow: column;
+  gap: 3px;
+  padding: 4px 5px;
+  border-top: 1px solid rgba(20, 24, 32, 0.55);
+  border-bottom: 1px solid rgba(20, 24, 32, 0.55);
 }
 
 .wind-hole-stack {
