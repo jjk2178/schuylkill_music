@@ -1,0 +1,107 @@
+[
+  {
+    "id": "star-spangled-banner-warmup",
+    "title": "The Star-Spangled Banner",
+    "artist": "Traditional",
+    "instrument": "piano",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/star-spangled-banner-warmup.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/"
+  },
+  {
+    "id": "olivia-rodrigo-drivers-license-purchased",
+    "title": "drivers license",
+    "artist": "Olivia Rodrigo",
+    "instrument": "piano",
+    "license": "Purchased local MusicXML",
+    "chartUrl": "/user-songs/olivia-rodrigo-drivers-license-purchased.json"
+  },
+  {
+    "id": "fleetwood-mac-go-your-own-way-purchased",
+    "title": "Go Your Own Way",
+    "artist": "Fleetwood Mac",
+    "instrument": "piano",
+    "license": "Purchased local MusicXML",
+    "chartUrl": "/user-songs/fleetwood-mac-go-your-own-way-purchased.json"
+  },
+  {
+    "id": "cranberries-linger-purchased",
+    "title": "Linger",
+    "artist": "The Cranberries",
+    "instrument": "piano",
+    "license": "Purchased local MusicXML",
+    "chartUrl": "/user-songs/cranberries-linger-purchased.json"
+  },
+  {
+    "id": "bach-menuet-g",
+    "title": "Menuet in G",
+    "artist": "J. S. Bach",
+    "instrument": "guitar",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/bach-menuet-g.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=102"
+  },
+  {
+    "id": "carcassi-etude-1",
+    "title": "Etude 1",
+    "artist": "M. Carcassi",
+    "instrument": "guitar",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/carcassi-etude-1.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=13"
+  },
+  {
+    "id": "carcassi-etude-3",
+    "title": "Etude 3",
+    "artist": "M. Carcassi",
+    "instrument": "guitar",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/carcassi-etude-3.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=14"
+  },
+  {
+    "id": "galilei-saltarello",
+    "title": "Saltarello",
+    "artist": "V. Galilei",
+    "instrument": "guitar",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/galilei-saltarello.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=110"
+  },
+  {
+    "id": "greensleeves-guitar",
+    "title": "Greensleeves",
+    "artist": "Traditional, arr. David Kastrup",
+    "instrument": "guitar",
+    "license": "Creative Commons Attribution-ShareAlike 4.0",
+    "chartUrl": "/demo-songs/greensleeves-guitar.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1943"
+  },
+  {
+    "id": "piano-bach-menuet-g",
+    "title": "Menuet in G",
+    "artist": "J. S. Bach",
+    "instrument": "piano",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/piano-bach-menuet-g.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=75"
+  },
+  {
+    "id": "piano-bach-menuet-g-minor",
+    "title": "Menuet in G Minor",
+    "artist": "J. S. Bach",
+    "instrument": "piano",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/piano-bach-menuet-g-minor.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=76"
+  },
+  {
+    "id": "piano-bach-menuet-bwv-anh-116",
+    "title": "Menuet BWV Anh. 116",
+    "artist": "J. S. Bach",
+    "instrument": "piano",
+    "license": "Public Domain",
+    "chartUrl": "/demo-songs/piano-bach-menuet-bwv-anh-116.json",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=77"
+  }
+]

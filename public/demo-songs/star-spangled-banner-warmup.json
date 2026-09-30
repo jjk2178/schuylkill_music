@@ -1,0 +1,806 @@
+{
+  "schemaVersion": 1,
+  "title": "The Star-Spangled Banner",
+  "artist": "Traditional",
+  "instrument": "piano",
+  "tuning": [
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "A"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 88
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 3,
+      "beatUnit": 4
+    }
+  ],
+  "keySignatures": [
+    {
+      "timeMs": 0,
+      "key": "Bb",
+      "fifths": -2,
+      "mode": "major"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "warmup-reduction",
+      "name": "Warmup ensemble reduction",
+      "instrument": "piano",
+      "clef": "grand",
+      "events": [
+        {
+          "id": "star-spangled-banner-warmup-1",
+          "label": "warmup",
+          "timeMs": 0,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              53,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-2",
+          "label": "warmup",
+          "timeMs": 682,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-3",
+          "label": "warmup",
+          "timeMs": 1023,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              39,
+              51
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-4",
+          "label": "warmup",
+          "timeMs": 1364,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-5",
+          "label": "warmup",
+          "timeMs": 2045,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              53,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-6",
+          "label": "warmup",
+          "timeMs": 2727,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-7",
+          "label": "warmup",
+          "timeMs": 3409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-8",
+          "label": "warmup",
+          "timeMs": 3750,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-9",
+          "label": "warmup",
+          "timeMs": 4091,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              53,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-10",
+          "label": "warmup",
+          "timeMs": 4773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-11",
+          "label": "warmup",
+          "timeMs": 5114,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              56
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-12",
+          "label": "warmup",
+          "timeMs": 5455,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-13",
+          "label": "warmup",
+          "timeMs": 6136,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              53,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-14",
+          "label": "warmup",
+          "timeMs": 6818,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-15",
+          "label": "warmup",
+          "timeMs": 7159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              51,
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-16",
+          "label": "warmup",
+          "timeMs": 7500,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-17",
+          "label": "warmup",
+          "timeMs": 8182,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-18",
+          "label": "warmup",
+          "timeMs": 8864,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-19",
+          "label": "warmup",
+          "timeMs": 9205,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-20",
+          "label": "warmup",
+          "timeMs": 9545,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-21",
+          "label": "warmup",
+          "timeMs": 10227,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              51,
+              58,
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-22",
+          "label": "warmup",
+          "timeMs": 10909,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-23",
+          "label": "warmup",
+          "timeMs": 11250,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-24",
+          "label": "warmup",
+          "timeMs": 11591,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-25",
+          "label": "warmup",
+          "timeMs": 12273,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              39,
+              46,
+              51
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-26",
+          "label": "warmup",
+          "timeMs": 12955,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-27",
+          "label": "warmup",
+          "timeMs": 13295,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-28",
+          "label": "warmup",
+          "timeMs": 13636,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-29",
+          "label": "warmup",
+          "timeMs": 14318,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              62,
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-30",
+          "label": "warmup",
+          "timeMs": 15000,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-31",
+          "label": "warmup",
+          "timeMs": 15341,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              51,
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-32",
+          "label": "warmup",
+          "timeMs": 15682,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-33",
+          "label": "warmup",
+          "timeMs": 16364,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-34",
+          "label": "warmup",
+          "timeMs": 17045,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-35",
+          "label": "warmup",
+          "timeMs": 17386,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              51,
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-36",
+          "label": "warmup",
+          "timeMs": 17727,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              63
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-37",
+          "label": "warmup",
+          "timeMs": 18409,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              46,
+              53,
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-38",
+          "label": "warmup",
+          "timeMs": 19091,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-39",
+          "label": "warmup",
+          "timeMs": 19432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              56
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "star-spangled-banner-warmup-40",
+          "label": "warmup",
+          "timeMs": 19773,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              58
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "warmup",
+      "label": "Warmup",
+      "timeMs": 0
+    }
+  ],
+  "assets": {
+    "sourcePageUrl": "https://www.mutopiaproject.org/",
+    "license": "Public Domain"
+  }
+}

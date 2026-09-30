@@ -19,11 +19,12 @@ export function createLinearTabLayout(chart: Chart, width: number): TabLayout {
   const events = getPrimaryTrack(chart).events;
   const height = 220;
   const padding = 72;
-  const usable = Math.max(320, width - padding * 2);
+  const layoutWidth = Math.max(width, events.length * 52 + padding * 2);
+  const usable = Math.max(320, layoutWidth - padding * 2);
   const lastTime = Math.max(...events.map((event) => event.timeMs), 1);
 
   return {
-    width,
+    width: layoutWidth,
     height,
     anchors: events.map((event) => ({
       id: event.id,

@@ -1,0 +1,2929 @@
+{
+  "schemaVersion": 1,
+  "title": "Linger",
+  "artist": "The Cranberries",
+  "instrument": "piano",
+  "tuning": [
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "A"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 80
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 4,
+      "beatUnit": 4
+    }
+  ],
+  "keySignatures": [
+    {
+      "timeMs": 0,
+      "key": "D",
+      "fifths": 2,
+      "mode": "major"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "piano-reduction",
+      "name": "Purchased MusicXML piano source",
+      "instrument": "piano",
+      "clef": "grand",
+      "events": [
+        {
+          "id": "cranberries-linger-purchased-mxl-1",
+          "timeMs": 0,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-2",
+          "timeMs": 3000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66,
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-3",
+          "timeMs": 3375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-4",
+          "timeMs": 3750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-5",
+          "timeMs": 4500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-6",
+          "timeMs": 4875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-7",
+          "timeMs": 5250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-8",
+          "timeMs": 6000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-9",
+          "timeMs": 6375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-10",
+          "timeMs": 6750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-11",
+          "timeMs": 7500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-12",
+          "timeMs": 7875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-13",
+          "timeMs": 8250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-14",
+          "timeMs": 9000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-15",
+          "timeMs": 9375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-16",
+          "timeMs": 9750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-17",
+          "timeMs": 10500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-18",
+          "timeMs": 10875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-19",
+          "timeMs": 11250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-20",
+          "timeMs": 12000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-21",
+          "timeMs": 12375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-22",
+          "timeMs": 12750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-23",
+          "timeMs": 13500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-24",
+          "timeMs": 13875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-25",
+          "timeMs": 14250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-26",
+          "timeMs": 15000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-27",
+          "timeMs": 15375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-28",
+          "timeMs": 15750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-29",
+          "timeMs": 16500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-30",
+          "timeMs": 16875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-31",
+          "timeMs": 17250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-32",
+          "timeMs": 18000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-33",
+          "timeMs": 18375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-34",
+          "timeMs": 18750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-35",
+          "timeMs": 19500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-36",
+          "timeMs": 19875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-37",
+          "timeMs": 20250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-38",
+          "timeMs": 21000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-39",
+          "timeMs": 21375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-40",
+          "timeMs": 21750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-41",
+          "timeMs": 22500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-42",
+          "timeMs": 22875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-43",
+          "timeMs": 23250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-44",
+          "timeMs": 24000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66,
+              67
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-45",
+          "timeMs": 24375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-46",
+          "timeMs": 24750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-47",
+          "timeMs": 25125,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-48",
+          "timeMs": 25500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-49",
+          "timeMs": 25875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-50",
+          "timeMs": 26250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-51",
+          "timeMs": 27000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              64,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-52",
+          "timeMs": 27375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-53",
+          "timeMs": 27750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-54",
+          "timeMs": 28125,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-55",
+          "timeMs": 28500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-56",
+          "timeMs": 28875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-57",
+          "timeMs": 29250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-58",
+          "timeMs": 30000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              62,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-59",
+          "timeMs": 30375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-60",
+          "timeMs": 30750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-61",
+          "timeMs": 31500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-62",
+          "timeMs": 31875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-63",
+          "timeMs": 32250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-64",
+          "timeMs": 33000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-65",
+          "timeMs": 33375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-66",
+          "timeMs": 33750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-67",
+          "timeMs": 34500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-68",
+          "timeMs": 34875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-69",
+          "timeMs": 35250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-70",
+          "timeMs": 36000,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-71",
+          "timeMs": 36375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-72",
+          "timeMs": 36750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-73",
+          "timeMs": 37500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-74",
+          "timeMs": 37875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-75",
+          "timeMs": 38250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-76",
+          "timeMs": 39000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-77",
+          "timeMs": 39375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-78",
+          "timeMs": 39750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-79",
+          "timeMs": 40500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-80",
+          "timeMs": 40875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-81",
+          "timeMs": 41250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-82",
+          "timeMs": 42000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-83",
+          "timeMs": 42375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-84",
+          "timeMs": 42750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-85",
+          "timeMs": 43500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-86",
+          "timeMs": 43875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-87",
+          "timeMs": 44250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-88",
+          "timeMs": 45000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-89",
+          "timeMs": 45375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-90",
+          "timeMs": 45750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-91",
+          "timeMs": 46500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-92",
+          "timeMs": 46875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-93",
+          "timeMs": 47250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-94",
+          "timeMs": 48000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              57,
+              66,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-95",
+          "timeMs": 48375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-96",
+          "timeMs": 48750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-97",
+          "timeMs": 49500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-98",
+          "timeMs": 49875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-99",
+          "timeMs": 50250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-100",
+          "timeMs": 51000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66,
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-101",
+          "timeMs": 51375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-102",
+          "timeMs": 51750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-103",
+          "timeMs": 52500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-104",
+          "timeMs": 52875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-105",
+          "timeMs": 53250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-106",
+          "timeMs": 54000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              55,
+              66,
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-107",
+          "timeMs": 54375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-108",
+          "timeMs": 54750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-109",
+          "timeMs": 55500,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              55
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-110",
+          "timeMs": 55875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-111",
+          "timeMs": 56250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-112",
+          "timeMs": 57000,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              57,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-113",
+          "timeMs": 57562,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-114",
+          "timeMs": 57750,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-115",
+          "timeMs": 58125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              57,
+              61,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-116",
+          "timeMs": 58500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              57,
+              61,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-117",
+          "timeMs": 59250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              57,
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-118",
+          "timeMs": 60000,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              57,
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-119",
+          "timeMs": 61125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              57,
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-120",
+          "timeMs": 61500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              57,
+              61,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-121",
+          "timeMs": 62250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-122",
+          "timeMs": 63000,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              52,
+              61,
+              69,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-123",
+          "timeMs": 63375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-124",
+          "timeMs": 63562,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-125",
+          "timeMs": 63750,
+          "durationMs": 2250,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-126",
+          "timeMs": 64125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              52,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-127",
+          "timeMs": 64500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              52,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-128",
+          "timeMs": 65250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-129",
+          "timeMs": 66000,
+          "durationMs": 2250,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              52,
+              55,
+              60,
+              69,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-130",
+          "timeMs": 66375,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-131",
+          "timeMs": 66562,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-132",
+          "timeMs": 66750,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-133",
+          "timeMs": 67125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              52,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-134",
+          "timeMs": 67500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              52,
+              55,
+              60,
+              69,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-135",
+          "timeMs": 67875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-136",
+          "timeMs": 68062,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-137",
+          "timeMs": 68250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              55,
+              60,
+              66,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-138",
+          "timeMs": 68438,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              67,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-139",
+          "timeMs": 68625,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              62,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-140",
+          "timeMs": 69000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              47,
+              55,
+              60,
+              62,
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-141",
+          "timeMs": 70125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              47,
+              50,
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-142",
+          "timeMs": 70500,
+          "durationMs": 1500,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              47,
+              50,
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-143",
+          "timeMs": 71250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              50,
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-144",
+          "timeMs": 72000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              47,
+              50,
+              59,
+              62,
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-145",
+          "timeMs": 72750,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              43
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-146",
+          "timeMs": 73125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              47,
+              50,
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-147",
+          "timeMs": 73312,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              43
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-148",
+          "timeMs": 73500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              47,
+              50,
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-149",
+          "timeMs": 74250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              50,
+              59
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-150",
+          "timeMs": 75000,
+          "durationMs": 3000,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              59,
+              66,
+              74
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-151",
+          "timeMs": 76125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              57,
+              62,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-152",
+          "timeMs": 76312,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-153",
+          "timeMs": 76500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              57,
+              62,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-154",
+          "timeMs": 76875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-155",
+          "timeMs": 77250,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              57,
+              62,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-156",
+          "timeMs": 78000,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              57,
+              62,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-157",
+          "timeMs": 79125,
+          "durationMs": 1125,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              57,
+              62,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-158",
+          "timeMs": 79312,
+          "durationMs": 188,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-159",
+          "timeMs": 79500,
+          "durationMs": 750,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              54,
+              57,
+              62,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "cranberries-linger-purchased-mxl-160",
+          "timeMs": 79875,
+          "durationMs": 375,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              66
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "import",
+      "label": "Imported MusicXML",
+      "timeMs": 0
+    }
+  ],
+  "assets": {
+    "license": "Purchased local MusicXML"
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "title": "Greensleeves",
+  "artist": "Traditional, arr. David Kastrup",
+  "instrument": "guitar",
+  "tuning": [
+    "E2",
+    "A2",
+    "D3",
+    "G3",
+    "B3",
+    "E4"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 120
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 3,
+      "beatUnit": 4
+    }
+  ],
+  "sections": [
+    {
+      "id": "excerpt",
+      "label": "Mutopia excerpt",
+      "timeMs": 0
+    }
+  ],
+  "assets": {
+    "sourceUrl": "/demo-songs/sources/greensleeves-guitar.ly",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=1943",
+    "license": "Creative Commons Attribution-ShareAlike 4.0"
+  },
+  "tracks": [
+    {
+      "id": "guitar",
+      "name": "Guitar",
+      "instrument": "guitar",
+      "events": [
+        {
+          "id": "m1",
+          "label": "D4",
+          "timeMs": 0,
+          "durationMs": 500,
+          "strings": [
+            {
+              "string": 3,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m2",
+          "label": "A4",
+          "timeMs": 750,
+          "durationMs": 250,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m3",
+          "label": "F4 D5",
+          "timeMs": 1000,
+          "durationMs": 250,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 6
+            },
+            {
+              "string": 1,
+              "fret": 10
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              65,
+              74
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m4",
+          "label": "A5",
+          "timeMs": 1250,
+          "durationMs": 250,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 17
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              81
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m5",
+          "label": "F5 D6",
+          "timeMs": 1500,
+          "durationMs": 250,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 13
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              77,
+              86
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

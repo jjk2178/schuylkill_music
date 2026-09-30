@@ -1,4 +1,4 @@
-import type { Chart, GuitarEvent } from "../charts/schema";
+import type { Chart, PlayableEvent } from "../charts/schema";
 import { getChartDurationMs, getPrimaryTrack } from "../charts/schema";
 import { judgeEvent, scoreForHit, type HitInput, type HitResult } from "./scoring";
 
@@ -36,7 +36,7 @@ export function createInitialSnapshot(mode: PlayMode): GameplaySnapshot {
   };
 }
 
-export function getActiveEvent(chart: Chart, playheadMs: number): GuitarEvent | null {
+export function getActiveEvent(chart: Chart, playheadMs: number): PlayableEvent | null {
   const events = getPrimaryTrack(chart).events;
   return (
     events.find((event) => {
@@ -115,7 +115,7 @@ export function reset(mode: PlayMode): GameplaySnapshot {
 
 function markHit(
   snapshot: GameplaySnapshot,
-  event: GuitarEvent,
+  event: PlayableEvent,
   atMs: number,
 ): GameplaySnapshot {
   const streak = snapshot.streak + 1;
@@ -134,7 +134,7 @@ function markHit(
 
 function markMiss(
   snapshot: GameplaySnapshot,
-  event: GuitarEvent,
+  event: PlayableEvent,
   atMs: number,
   result: Exclude<HitResult, "pending" | "hit"> = "miss",
 ): GameplaySnapshot {

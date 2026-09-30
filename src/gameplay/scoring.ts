@@ -1,4 +1,4 @@
-import type { GuitarEvent } from "../charts/schema";
+import type { PlayableEvent } from "../charts/schema";
 import { isPitchWithinTolerance } from "../audio/noteMath";
 
 export type HitInput = {
@@ -9,7 +9,7 @@ export type HitInput = {
 
 export type HitResult = "pending" | "hit" | "late" | "miss" | "wrong-note";
 
-export function judgeEvent(event: GuitarEvent, input: HitInput): HitResult {
+export function judgeEvent(event: PlayableEvent, input: HitInput): HitResult {
   if (event.expected.kind === "rest") return "pending";
   const earlyEdge = event.timeMs - event.expected.timingWindowMs.early;
   const lateEdge = event.timeMs + event.expected.timingWindowMs.late;

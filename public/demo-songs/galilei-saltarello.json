@@ -1,0 +1,1789 @@
+{
+  "schemaVersion": 1,
+  "title": "Saltarello",
+  "artist": "V. Galilei",
+  "instrument": "guitar",
+  "tuning": [
+    "E2",
+    "A2",
+    "D3",
+    "G3",
+    "B3",
+    "E4"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 126
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 3,
+      "beatUnit": 4
+    }
+  ],
+  "sections": [
+    {
+      "id": "excerpt",
+      "label": "Mutopia excerpt",
+      "timeMs": 0
+    }
+  ],
+  "assets": {
+    "sourceUrl": "/demo-songs/sources/galilei-saltarello.ly",
+    "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=110",
+    "license": "Public Domain"
+  },
+  "tracks": [
+    {
+      "id": "guitar",
+      "name": "Guitar",
+      "instrument": "guitar",
+      "events": [
+        {
+          "id": "m1",
+          "label": "A2 A3",
+          "timeMs": 0,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 4,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              57
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m2",
+          "label": "D4",
+          "timeMs": 476,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 3,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m3",
+          "label": "E4",
+          "timeMs": 714,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m4",
+          "label": "A2 F#4",
+          "timeMs": 952,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              66
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m5",
+          "label": "D3 G4",
+          "timeMs": 1429,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              67
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m6",
+          "label": "A4",
+          "timeMs": 1905,
+          "durationMs": 952,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m7",
+          "label": "A2",
+          "timeMs": 2381,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m8",
+          "label": "D3 B4",
+          "timeMs": 2857,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 1,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              71
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m9",
+          "label": "G4",
+          "timeMs": 3333,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m10",
+          "label": "A2 E4",
+          "timeMs": 3810,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              64
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m11",
+          "label": "D3 A4",
+          "timeMs": 4286,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 1,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              69
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m12",
+          "label": "F#4",
+          "timeMs": 4762,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m13",
+          "label": "A2",
+          "timeMs": 5238,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m14",
+          "label": "D3",
+          "timeMs": 5714,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m15",
+          "label": "E4",
+          "timeMs": 6190,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m16",
+          "label": "D4",
+          "timeMs": 6429,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 3,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m17",
+          "label": "A2 E4",
+          "timeMs": 6667,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              64
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m18",
+          "label": "F#4",
+          "timeMs": 6905,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m19",
+          "label": "D3 G4",
+          "timeMs": 7143,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              67
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m20",
+          "label": "E4",
+          "timeMs": 7381,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m21",
+          "label": "F#4",
+          "timeMs": 7619,
+          "durationMs": 952,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m22",
+          "label": "A2",
+          "timeMs": 8095,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m23",
+          "label": "D3 G4",
+          "timeMs": 8571,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              67
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m24",
+          "label": "G4",
+          "timeMs": 9048,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m25",
+          "label": "A2 E4",
+          "timeMs": 9524,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              64
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m26",
+          "label": "D3 E4",
+          "timeMs": 10000,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              64
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m27",
+          "label": "F#4",
+          "timeMs": 10238,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              66
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m28",
+          "label": "D4",
+          "timeMs": 10476,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 3,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m29",
+          "label": "A2",
+          "timeMs": 10952,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m30",
+          "label": "D3",
+          "timeMs": 11429,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m31",
+          "label": "A2",
+          "timeMs": 12381,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m32",
+          "label": "D3",
+          "timeMs": 12857,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m33",
+          "label": "E4",
+          "timeMs": 13333,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m34",
+          "label": "A2",
+          "timeMs": 13810,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m35",
+          "label": "D3",
+          "timeMs": 14286,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m36",
+          "label": "A2",
+          "timeMs": 15238,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m37",
+          "label": "D3",
+          "timeMs": 15714,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m38",
+          "label": "E4",
+          "timeMs": 16190,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m39",
+          "label": "A2",
+          "timeMs": 16667,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m40",
+          "label": "D3",
+          "timeMs": 17143,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m41",
+          "label": "A2",
+          "timeMs": 18095,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m42",
+          "label": "D3",
+          "timeMs": 18571,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m43",
+          "label": "A2",
+          "timeMs": 19524,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m44",
+          "label": "D3",
+          "timeMs": 20000,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m45",
+          "label": "A4",
+          "timeMs": 20476,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m46",
+          "label": "A2",
+          "timeMs": 20952,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m47",
+          "label": "D3",
+          "timeMs": 21429,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m48",
+          "label": "E4",
+          "timeMs": 21905,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m49",
+          "label": "A2",
+          "timeMs": 22381,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m50",
+          "label": "D3",
+          "timeMs": 22857,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m51",
+          "label": "A2",
+          "timeMs": 23810,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m52",
+          "label": "D3",
+          "timeMs": 24286,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m53",
+          "label": "G4",
+          "timeMs": 24762,
+          "durationMs": 1429,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m54",
+          "label": "A2",
+          "timeMs": 25238,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m55",
+          "label": "D3",
+          "timeMs": 25714,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m56",
+          "label": "A2",
+          "timeMs": 26667,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m57",
+          "label": "D3",
+          "timeMs": 27143,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m58",
+          "label": "D4",
+          "timeMs": 27619,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 3,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m59",
+          "label": "E4",
+          "timeMs": 27857,
+          "durationMs": 238,
+          "strings": [
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m60",
+          "label": "A2 F#4",
+          "timeMs": 28095,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              66
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m61",
+          "label": "D3 G4",
+          "timeMs": 28571,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 1,
+              "fret": 3
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              67
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m62",
+          "label": "A4",
+          "timeMs": 29048,
+          "durationMs": 952,
+          "strings": [
+            {
+              "string": 1,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m63",
+          "label": "A2",
+          "timeMs": 29524,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m64",
+          "label": "D3",
+          "timeMs": 30000,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m65",
+          "label": "A2 E4",
+          "timeMs": 30952,
+          "durationMs": 952,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 2,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              64
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m66",
+          "label": "D3",
+          "timeMs": 31429,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m67",
+          "label": "B3",
+          "timeMs": 31905,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 3,
+              "fret": 4
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              59
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m68",
+          "label": "A2 G3",
+          "timeMs": 32381,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            },
+            {
+              "string": 4,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              55
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m69",
+          "label": "D3 E3",
+          "timeMs": 32857,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 5,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              52
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m70",
+          "label": "A3",
+          "timeMs": 33333,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 4,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m71",
+          "label": "A2",
+          "timeMs": 33810,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 6,
+              "fret": 5
+            }
+          ],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 35,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        },
+        {
+          "id": "m72",
+          "label": "D3 E3",
+          "timeMs": 34286,
+          "durationMs": 476,
+          "strings": [
+            {
+              "string": 5,
+              "fret": 5
+            },
+            {
+              "string": 5,
+              "fret": 7
+            }
+          ],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              52
+            ],
+            "toleranceCents": 45,
+            "timingWindowMs": {
+              "early": 150,
+              "late": 220
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

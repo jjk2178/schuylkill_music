@@ -21,6 +21,13 @@ export const TimeSignatureEventSchema = z.object({
   beatUnit: z.number().int().positive(),
 });
 
+export const KeySignatureEventSchema = z.object({
+  timeMs: z.number().nonnegative(),
+  key: z.string().min(1),
+  fifths: z.number().int().min(-7).max(7),
+  mode: z.string().optional(),
+});
+
 export const GuitarStringEventSchema = z.object({
   string: z.union([
     z.literal(1),
@@ -51,9 +58,14 @@ export const GuitarEventSchema = z.object({
   }),
 });
 
+export const InstrumentSchema = z.enum(["guitar", "piano"]);
+export const ClefSchema = z.enum(["treble", "bass", "grand"]);
+
 export const GuitarTrackSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  instrument: InstrumentSchema.default("guitar"),
+  clef: ClefSchema.optional(),
   events: z.array(GuitarEventSchema),
 });
 
@@ -61,10 +73,12 @@ export const ChartSchema = z.object({
   schemaVersion: z.literal(1),
   title: z.string().min(1),
   artist: z.string().optional(),
+  instrument: InstrumentSchema.default("guitar"),
   tuning: z.array(z.string()).length(6),
   capo: z.number().int().nonnegative().optional(),
   tempoMap: z.array(TempoEventSchema).min(1),
   timeSignatures: z.array(TimeSignatureEventSchema).min(1),
+  keySignatures: z.array(KeySignatureEventSchema).default([]),
   tracks: z.array(GuitarTrackSchema).min(1),
   sections: z.array(
     z.object({
@@ -77,6 +91,9 @@ export const ChartSchema = z.object({
     .object({
       backingTrackUrl: z.string().optional(),
       artworkUrl: z.string().optional(),
+      sourceUrl: z.string().optional(),
+      sourcePageUrl: z.string().optional(),
+      license: z.string().optional(),
     })
     .optional(),
 });
@@ -84,10 +101,15 @@ export const ChartSchema = z.object({
 export type Technique = z.infer<typeof TechniqueSchema>;
 export type TempoEvent = z.infer<typeof TempoEventSchema>;
 export type TimeSignatureEvent = z.infer<typeof TimeSignatureEventSchema>;
+export type KeySignatureEvent = z.infer<typeof KeySignatureEventSchema>;
 export type GuitarStringEvent = z.infer<typeof GuitarStringEventSchema>;
 export type GuitarEvent = z.infer<typeof GuitarEventSchema>;
 export type GuitarTrack = z.infer<typeof GuitarTrackSchema>;
+export type Instrument = z.infer<typeof InstrumentSchema>;
 export type Chart = z.infer<typeof ChartSchema>;
+
+export type PlayableEvent = GuitarEvent;
+export type PlayableTrack = GuitarTrack;
 
 export function parseChart(input: unknown): Chart {
   const chart = ChartSchema.parse(input);
@@ -100,7 +122,7 @@ export function parseChart(input: unknown): Chart {
   };
 }
 
-export function getPrimaryTrack(chart: Chart): GuitarTrack {
+export function getPrimaryTrack(chart: Chart): PlayableTrack {
   return chart.tracks[0];
 }
 

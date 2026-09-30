@@ -1,7 +1,11 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Pause, Play, RotateCcw, SlidersHorizontal, Waves } from "lucide-react";
-import { demoChart } from "../charts/demoChart";
-import { getPrimaryTrack } from "../charts/schema";
+import {
+  demoChart,
+  getPrimaryTrack,
+  pianoDemoChart,
+  type Chart,
+} from "../shared/musicLibraryBackend";
 import { MicAnalyzer, type AnalysisFrame, type MicAnalyzerState } from "../audio/micAnalyzer";
 import { midiToHz } from "../audio/noteMath";
 import {
@@ -15,15 +19,25 @@ import {
   type PlayMode,
 } from "../gameplay/engine";
 import { VexTabView } from "../notation/VexTabView";
+import { PianoRollView } from "../notation/PianoRollView";
+import { ArrangementBoard } from "../arrangements/ArrangementBoard";
+import {
+  loadDemoSong,
+  loadDemoSongIndex,
+  type DemoSongIndexItem,
+} from "../shared/songDatabaseBackend";
 import { useGameLoop } from "./useGameLoop";
 import "./styles.css";
 
 export function App() {
   const [mode, setMode] = useState<PlayMode>("practice-sticky");
+  const [chart, setChart] = useState<Chart>(demoChart);
+  const [songIndex, setSongIndex] = useState<DemoSongIndexItem[]>([]);
+  const [selectedSongId, setSelectedSongId] = useState("built-in-demo");
+  const [libraryStatus, setLibraryStatus] = useState("Loading demo songs...");
   const [snapshot, setSnapshot] = useState<GameplaySnapshot>(() => createInitialSnapshot(mode));
   const [micState, setMicState] = useState<MicAnalyzerState>({ status: "idle" });
   const micRef = useRef<MicAnalyzer | null>(null);
-  const chart = demoChart;
   const totalEvents = getPrimaryTrack(chart).events.length;
   const hitCount = Object.values(snapshot.eventStates).filter((state) => state.result === "hit").length;
   const accuracy = totalEvents ? Math.round((hitCount / totalEvents) * 100) : 0;
@@ -31,6 +45,23 @@ export function App() {
   useGameLoop(snapshot.transport === "playing", (deltaMs) => {
     setSnapshot((current) => advanceGameplay(chart, current, deltaMs));
   });
+
+  useEffect(() => {
+    let mounted = true;
+    loadDemoSongIndex()
+      .then((songs) => {
+        if (!mounted) return;
+        setSongIndex(songs);
+        setLibraryStatus(`${songs.length} Mutopia demos loaded`);
+      })
+      .catch((error) => {
+        if (!mounted) return;
+        setLibraryStatus(error instanceof Error ? error.message : "Unable to load demo songs.");
+      });
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   const activeEvent = useMemo(
     () => getPrimaryTrack(chart).events.find((event) => event.id === snapshot.activeEventId),
@@ -40,6 +71,34 @@ export function App() {
   function setPlayMode(nextMode: PlayMode) {
     setMode(nextMode);
     setSnapshot(reset(nextMode));
+  }
+
+  async function selectSong(songId: string) {
+    if (songId === "built-in-demo") {
+      setSelectedSongId(songId);
+      setChart(demoChart);
+      setSnapshot(reset(mode));
+      return;
+    }
+    if (songId === "built-in-piano-demo") {
+      setSelectedSongId(songId);
+      setChart(pianoDemoChart);
+      setSnapshot(reset(mode));
+      return;
+    }
+
+    const song = songIndex.find((item) => item.id === songId);
+    if (!song) return;
+    setLibraryStatus(`Loading ${song.title}...`);
+    try {
+      const nextChart = await loadDemoSong(song.chartUrl);
+      setSelectedSongId(songId);
+      setChart(nextChart);
+      setSnapshot(reset(mode));
+      setLibraryStatus(`${songIndex.length} Mutopia demos loaded`);
+    } catch (error) {
+      setLibraryStatus(error instanceof Error ? error.message : "Unable to load selected song.");
+    }
   }
 
   function mockHit(eventId?: string) {
@@ -93,8 +152,8 @@ export function App() {
     <main className="app-shell">
       <aside className="side-panel">
         <div>
-          <p className="eyebrow">Pluck n Play</p>
-          <h1>Retro guitar trainer</h1>
+          <p className="eyebrow">Pluck and Play</p>
+          <h1>Retro play-along trainer</h1>
         </div>
 
         <div className="song-card">
@@ -104,6 +163,42 @@ export function App() {
             <small>{chart.artist}</small>
           </div>
         </div>
+
+        <section className="song-library" aria-label="Demo song library">
+          <div className="library-head">
+            <strong>Demo songs</strong>
+            <small>{libraryStatus}</small>
+          </div>
+          <button
+            className={selectedSongId === "built-in-demo" ? "selected" : ""}
+            type="button"
+            onClick={() => void selectSong("built-in-demo")}
+          >
+            <span>Neon Open Strings</span>
+            <small>Guitar - built-in fixture</small>
+          </button>
+          <button
+            className={selectedSongId === "built-in-piano-demo" ? "selected" : ""}
+            type="button"
+            onClick={() => void selectSong("built-in-piano-demo")}
+          >
+            <span>Tiny C Major Study</span>
+            <small>Piano - built-in fixture</small>
+          </button>
+          {songIndex.map((song) => (
+            <button
+              key={song.id}
+              className={selectedSongId === song.id ? "selected" : ""}
+              type="button"
+              onClick={() => void selectSong(song.id)}
+            >
+              <span>{song.title}</span>
+              <small>
+                {song.instrument} - {song.license}
+              </small>
+            </button>
+          ))}
+        </section>
 
         <div className="mode-switch" role="group" aria-label="Play mode">
           <button
@@ -156,7 +251,21 @@ export function App() {
           <HudTile label="Cursor" value={snapshot.stickyEventId ? "Stuck" : snapshot.transport} />
         </header>
 
-        <VexTabView chart={chart} snapshot={snapshot} onMockHit={mockHit} />
+        {chart.instrument === "piano" ? (
+          <PianoRollView chart={chart} snapshot={snapshot} onMockHit={mockHit} />
+        ) : (
+          <VexTabView chart={chart} snapshot={snapshot} onMockHit={mockHit} />
+        )}
+
+        {chart.assets?.sourcePageUrl && (
+          <p className="source-line">
+            Source:{" "}
+            <a href={chart.assets.sourcePageUrl} target="_blank" rel="noreferrer">
+              Mutopia Project
+            </a>
+            {chart.assets.license ? ` - ${chart.assets.license}` : ""}
+          </p>
+        )}
 
         <section className="practice-strip">
           {getPrimaryTrack(chart).events.map((event) => {
@@ -168,6 +277,8 @@ export function App() {
             );
           })}
         </section>
+
+        <ArrangementBoard chart={chart} playheadMs={snapshot.playheadMs} />
       </section>
     </main>
   );
