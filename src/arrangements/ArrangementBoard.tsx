@@ -240,7 +240,7 @@ function partsForPlayer(parts: ArrangementPart[], chart: Chart, playerName: stri
 
 function presentationForInstrument(instrument: string): ArrangementPart["presentation"] {
   const value = instrument.toLowerCase();
-  if (value.includes("key")) return "keyboard-staff";
+  if (value.includes("key") || value.includes("piano")) return "keyboard-staff";
   if (value.includes("bass")) return "bass-tab";
   if (value.includes("drum")) return "drum-grid";
   if (value.includes("guitar")) return "guitar-tab";

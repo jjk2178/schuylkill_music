@@ -1,5 +1,13 @@
 [
   {
+    "id": "how-far-ill-go",
+    "title": "How Far I'll Go",
+    "artist": "Lin-Manuel Miranda / Alessia Cara",
+    "instrument": "piano",
+    "license": "Purchased local MusicXML",
+    "chartUrl": "/user-songs/how-far-ill-go.json"
+  },
+  {
     "id": "star-spangled-banner-warmup",
     "title": "The Star-Spangled Banner",
     "artist": "Traditional",

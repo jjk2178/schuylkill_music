@@ -506,6 +506,62 @@
           "notes": "soft harmony support and chorus doubles"
         }
       ]
+    },
+    {
+      "id": "how-far-ill-go",
+      "title": "How Far I'll Go",
+      "artist": "Lin-Manuel Miranda / Alessia Cara",
+      "status": "Purchased local MusicXML imported; ensemble arrangement expanded",
+      "roles": [
+        {
+          "player": "Jack",
+          "instrument": "guitar",
+          "part": "guitar",
+          "notes": "acoustic guitar groove, chord accents, and melodic fills"
+        },
+        {
+          "player": "Bobby",
+          "instrument": "bass",
+          "part": "bass",
+          "notes": "low-register roots and transitions supporting the song form"
+        },
+        {
+          "player": "Nana",
+          "instrument": "piano",
+          "part": "piano / keys",
+          "notes": "grand-staff piano reduction with optional pad and chord-doubling keyboard color"
+        },
+        {
+          "player": "Pops",
+          "instrument": "drums",
+          "part": "drums",
+          "notes": "light pop groove with kick, snare, hats, and section lifts"
+        },
+        {
+          "player": "Xinnia",
+          "instrument": "vocals",
+          "part": "lead vocal",
+          "notes": "lead melody cues throughout the imported arrangement"
+        },
+        {
+          "player": "Tara",
+          "instrument": "vocals",
+          "part": "harmony vocal",
+          "notes": "supporting vocal cues and phrase-ending harmony"
+        },
+        {
+          "player": "Michael",
+          "instrument": "recorder",
+          "part": "recorder",
+          "notes": "selective melody doubling in a comfortable recorder range"
+        },
+        {
+          "player": "Laura",
+          "instrument": "flute",
+          "part": "flute",
+          "notes": "breathy upper melody doubles and connecting counter-lines"
+        }
+      ]
     }
   ]
 }

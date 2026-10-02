@@ -1,0 +1,7768 @@
+{
+  "schemaVersion": 1,
+  "title": "How Far I'll Go",
+  "artist": "Lin-Manuel Miranda / Alessia Cara",
+  "instrument": "piano",
+  "tuning": [
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "A"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 88
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 4,
+      "beatUnit": 4
+    }
+  ],
+  "keySignatures": [
+    {
+      "timeMs": 0,
+      "key": "E",
+      "fifths": 4,
+      "mode": "major"
+    },
+    {
+      "timeMs": 111818,
+      "key": "F",
+      "fifths": -1,
+      "mode": "major"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "piano-reduction",
+      "name": "Purchased MusicXML piano source",
+      "instrument": "piano",
+      "clef": "grand",
+      "events": [
+        {
+          "id": "how-far-ill-go-mxl-1",
+          "timeMs": 0,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-2",
+          "timeMs": 511,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-3",
+          "timeMs": 1023,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-4",
+          "timeMs": 1534,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-5",
+          "timeMs": 1705,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-6",
+          "timeMs": 1875,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-7",
+          "timeMs": 2045,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-8",
+          "timeMs": 2386,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-9",
+          "timeMs": 2557,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-10",
+          "timeMs": 2727,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              52,
+              56,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-11",
+          "timeMs": 3239,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-12",
+          "timeMs": 3750,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-13",
+          "timeMs": 4261,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-14",
+          "timeMs": 4773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-15",
+          "timeMs": 5114,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-16",
+          "timeMs": 5284,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-17",
+          "timeMs": 5455,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              54,
+              57,
+              61,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-18",
+          "timeMs": 5966,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              56,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-19",
+          "timeMs": 6477,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-20",
+          "timeMs": 6648,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-21",
+          "timeMs": 6818,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-22",
+          "timeMs": 7159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-23",
+          "timeMs": 7500,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-24",
+          "timeMs": 7841,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              56,
+              61,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-25",
+          "timeMs": 8182,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              56,
+              61,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-26",
+          "timeMs": 8693,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-27",
+          "timeMs": 9205,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-28",
+          "timeMs": 9545,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              49,
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-29",
+          "timeMs": 10909,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              49,
+              52,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-30",
+          "timeMs": 11420,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-31",
+          "timeMs": 12614,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-32",
+          "timeMs": 12784,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-33",
+          "timeMs": 12955,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-34",
+          "timeMs": 13125,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-35",
+          "timeMs": 13295,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-36",
+          "timeMs": 13466,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-37",
+          "timeMs": 13636,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              52,
+              56,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-38",
+          "timeMs": 14148,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-39",
+          "timeMs": 15000,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-40",
+          "timeMs": 15170,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-41",
+          "timeMs": 15341,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-42",
+          "timeMs": 15682,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-43",
+          "timeMs": 16023,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-44",
+          "timeMs": 16193,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-45",
+          "timeMs": 16364,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              54,
+              57,
+              61,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-46",
+          "timeMs": 16875,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              56,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-47",
+          "timeMs": 17386,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-48",
+          "timeMs": 17557,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-49",
+          "timeMs": 17727,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-50",
+          "timeMs": 18068,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-51",
+          "timeMs": 18409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-52",
+          "timeMs": 18750,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              56,
+              61,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-53",
+          "timeMs": 19091,
+          "durationMs": 2045,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              56,
+              61,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-54",
+          "timeMs": 19602,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-55",
+          "timeMs": 20114,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-56",
+          "timeMs": 20455,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              49,
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-57",
+          "timeMs": 21477,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-58",
+          "timeMs": 21648,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-59",
+          "timeMs": 21818,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              49,
+              52,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-60",
+          "timeMs": 22159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-61",
+          "timeMs": 22500,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-62",
+          "timeMs": 22841,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-63",
+          "timeMs": 23011,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-64",
+          "timeMs": 23182,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-65",
+          "timeMs": 23523,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-66",
+          "timeMs": 23864,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              52,
+              56,
+              61,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-67",
+          "timeMs": 24205,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-68",
+          "timeMs": 24375,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-69",
+          "timeMs": 24545,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              49,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-70",
+          "timeMs": 24886,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-71",
+          "timeMs": 25227,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-72",
+          "timeMs": 25568,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-73",
+          "timeMs": 25739,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-74",
+          "timeMs": 25909,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-75",
+          "timeMs": 26250,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-76",
+          "timeMs": 26591,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              51,
+              54,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-77",
+          "timeMs": 27102,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-78",
+          "timeMs": 27273,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              47,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-79",
+          "timeMs": 27614,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-80",
+          "timeMs": 27955,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-81",
+          "timeMs": 28295,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-82",
+          "timeMs": 28466,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-83",
+          "timeMs": 28636,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-84",
+          "timeMs": 28977,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-85",
+          "timeMs": 29318,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              56,
+              59,
+              64,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-86",
+          "timeMs": 29659,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-87",
+          "timeMs": 29830,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-88",
+          "timeMs": 30000,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-89",
+          "timeMs": 30682,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-90",
+          "timeMs": 31364,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-91",
+          "timeMs": 32386,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-92",
+          "timeMs": 32557,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-93",
+          "timeMs": 32727,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              48,
+              52,
+              57,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-94",
+          "timeMs": 33068,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-95",
+          "timeMs": 33239,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-96",
+          "timeMs": 33409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-97",
+          "timeMs": 33750,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-98",
+          "timeMs": 33920,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-99",
+          "timeMs": 34091,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-100",
+          "timeMs": 34432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-101",
+          "timeMs": 34773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-102",
+          "timeMs": 35114,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-103",
+          "timeMs": 35455,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-104",
+          "timeMs": 35795,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-105",
+          "timeMs": 36136,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              47
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-106",
+          "timeMs": 36477,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-107",
+          "timeMs": 36818,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              35
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-108",
+          "timeMs": 37159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              42
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-109",
+          "timeMs": 37330,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-110",
+          "timeMs": 37500,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              75,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-111",
+          "timeMs": 37841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              75,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-112",
+          "timeMs": 38182,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              73,
+              85
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-113",
+          "timeMs": 38523,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-114",
+          "timeMs": 38864,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-115",
+          "timeMs": 39205,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              78,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-116",
+          "timeMs": 39545,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              37
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-117",
+          "timeMs": 39886,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-118",
+          "timeMs": 40057,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-119",
+          "timeMs": 40227,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              75,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-120",
+          "timeMs": 40568,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              75,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-121",
+          "timeMs": 40909,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              33,
+              73,
+              85
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-122",
+          "timeMs": 41250,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              40
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-123",
+          "timeMs": 41591,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-124",
+          "timeMs": 41932,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              49,
+              52,
+              57,
+              78,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-125",
+          "timeMs": 42273,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              33
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-126",
+          "timeMs": 42614,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              40
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-127",
+          "timeMs": 42955,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-128",
+          "timeMs": 43295,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              49,
+              52,
+              57,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-129",
+          "timeMs": 43466,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-130",
+          "timeMs": 43636,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-131",
+          "timeMs": 43977,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-132",
+          "timeMs": 44148,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-133",
+          "timeMs": 44318,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-134",
+          "timeMs": 44659,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-135",
+          "timeMs": 44830,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-136",
+          "timeMs": 45000,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-137",
+          "timeMs": 45341,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-138",
+          "timeMs": 45682,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-139",
+          "timeMs": 46023,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-140",
+          "timeMs": 46364,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-141",
+          "timeMs": 46705,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-142",
+          "timeMs": 47045,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              47
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-143",
+          "timeMs": 47386,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-144",
+          "timeMs": 47727,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              35
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-145",
+          "timeMs": 48068,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              42
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-146",
+          "timeMs": 48239,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-147",
+          "timeMs": 48409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              75,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-148",
+          "timeMs": 48750,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              75,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-149",
+          "timeMs": 49091,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              73,
+              85
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-150",
+          "timeMs": 49432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-151",
+          "timeMs": 49773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-152",
+          "timeMs": 50114,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              78,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-153",
+          "timeMs": 50455,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              37
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-154",
+          "timeMs": 50795,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-155",
+          "timeMs": 51136,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-156",
+          "timeMs": 51477,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-157",
+          "timeMs": 51648,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-158",
+          "timeMs": 51818,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-159",
+          "timeMs": 52159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-160",
+          "timeMs": 52500,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-161",
+          "timeMs": 52841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-162",
+          "timeMs": 53182,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-163",
+          "timeMs": 53523,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-164",
+          "timeMs": 53693,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-165",
+          "timeMs": 53864,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-166",
+          "timeMs": 54205,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-167",
+          "timeMs": 54375,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-168",
+          "timeMs": 54545,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              48,
+              52,
+              57,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-169",
+          "timeMs": 55057,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-170",
+          "timeMs": 55227,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-171",
+          "timeMs": 55568,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-172",
+          "timeMs": 55909,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              56,
+              59,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-173",
+          "timeMs": 56080,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-174",
+          "timeMs": 56250,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-175",
+          "timeMs": 56420,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-176",
+          "timeMs": 56591,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-177",
+          "timeMs": 56932,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-178",
+          "timeMs": 57102,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-179",
+          "timeMs": 57273,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              30,
+              56,
+              59,
+              64,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-180",
+          "timeMs": 57784,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              69,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-181",
+          "timeMs": 57955,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              42
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-182",
+          "timeMs": 58295,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-183",
+          "timeMs": 58636,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              30,
+              45,
+              49,
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-184",
+          "timeMs": 58807,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              69,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-185",
+          "timeMs": 59318,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-186",
+          "timeMs": 59659,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-187",
+          "timeMs": 59830,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-188",
+          "timeMs": 60000,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              45,
+              49,
+              54,
+              73,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-189",
+          "timeMs": 60511,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-190",
+          "timeMs": 60682,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-191",
+          "timeMs": 61193,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-192",
+          "timeMs": 61364,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              52,
+              56,
+              61,
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-193",
+          "timeMs": 61705,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-194",
+          "timeMs": 62045,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-195",
+          "timeMs": 62386,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-196",
+          "timeMs": 62727,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              33,
+              52,
+              56,
+              61,
+              69,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-197",
+          "timeMs": 63409,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-198",
+          "timeMs": 64091,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              33,
+              49,
+              52,
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-199",
+          "timeMs": 64773,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-200",
+          "timeMs": 65455,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              49,
+              52,
+              57,
+              71,
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-201",
+          "timeMs": 65966,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-202",
+          "timeMs": 66136,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              52
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-203",
+          "timeMs": 66477,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-204",
+          "timeMs": 66818,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              56,
+              59,
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-205",
+          "timeMs": 66989,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-206",
+          "timeMs": 67159,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-207",
+          "timeMs": 67330,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-208",
+          "timeMs": 67500,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-209",
+          "timeMs": 67841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-210",
+          "timeMs": 68011,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-211",
+          "timeMs": 68182,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              30,
+              56,
+              59,
+              64,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-212",
+          "timeMs": 68693,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              69,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-213",
+          "timeMs": 68864,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              42
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-214",
+          "timeMs": 69205,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-215",
+          "timeMs": 69545,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              30,
+              45,
+              49,
+              54
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-216",
+          "timeMs": 69716,
+          "durationMs": 511,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              69,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-217",
+          "timeMs": 70227,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-218",
+          "timeMs": 70568,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-219",
+          "timeMs": 70739,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-220",
+          "timeMs": 70909,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              45,
+              49,
+              54,
+              73,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-221",
+          "timeMs": 71420,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-222",
+          "timeMs": 71591,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-223",
+          "timeMs": 72102,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-224",
+          "timeMs": 72273,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              52,
+              56,
+              61,
+              73,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-225",
+          "timeMs": 72614,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-226",
+          "timeMs": 72955,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-227",
+          "timeMs": 73295,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-228",
+          "timeMs": 73636,
+          "durationMs": 2045,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              33,
+              52,
+              56,
+              61,
+              69,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-229",
+          "timeMs": 74318,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-230",
+          "timeMs": 75000,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              33,
+              49,
+              52,
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-231",
+          "timeMs": 75682,
+          "durationMs": 2045,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-232",
+          "timeMs": 76023,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-233",
+          "timeMs": 76193,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-234",
+          "timeMs": 76364,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              49,
+              52,
+              57,
+              68
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-235",
+          "timeMs": 76705,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-236",
+          "timeMs": 77045,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-237",
+          "timeMs": 77386,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-238",
+          "timeMs": 77557,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-239",
+          "timeMs": 77727,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-240",
+          "timeMs": 78068,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-241",
+          "timeMs": 78409,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              52,
+              56,
+              61,
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-242",
+          "timeMs": 78750,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-243",
+          "timeMs": 78920,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              68,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-244",
+          "timeMs": 79091,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              49,
+              66,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-245",
+          "timeMs": 79432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-246",
+          "timeMs": 79773,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-247",
+          "timeMs": 80114,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-248",
+          "timeMs": 80284,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-249",
+          "timeMs": 80455,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              66,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-250",
+          "timeMs": 80795,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-251",
+          "timeMs": 81136,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              51,
+              54,
+              59,
+              71,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-252",
+          "timeMs": 81477,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-253",
+          "timeMs": 81648,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-254",
+          "timeMs": 81818,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              47,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-255",
+          "timeMs": 82159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-256",
+          "timeMs": 82500,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              76,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-257",
+          "timeMs": 82841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-258",
+          "timeMs": 83011,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-259",
+          "timeMs": 83182,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-260",
+          "timeMs": 83523,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-261",
+          "timeMs": 83864,
+          "durationMs": 1364,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              56,
+              59,
+              64,
+              76,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-262",
+          "timeMs": 84205,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              80,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-263",
+          "timeMs": 84375,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-264",
+          "timeMs": 84545,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              52,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-265",
+          "timeMs": 85227,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-266",
+          "timeMs": 85909,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-267",
+          "timeMs": 87273,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              48,
+              52,
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-268",
+          "timeMs": 88636,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              57
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-269",
+          "timeMs": 88807,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              61
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-270",
+          "timeMs": 88977,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-271",
+          "timeMs": 89148,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-272",
+          "timeMs": 89318,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-273",
+          "timeMs": 89489,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-274",
+          "timeMs": 89659,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-275",
+          "timeMs": 89830,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-276",
+          "timeMs": 90000,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              48,
+              52,
+              57,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-277",
+          "timeMs": 90341,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-278",
+          "timeMs": 90511,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-279",
+          "timeMs": 90682,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-280",
+          "timeMs": 91023,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-281",
+          "timeMs": 91193,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-282",
+          "timeMs": 91364,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-283",
+          "timeMs": 91705,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-284",
+          "timeMs": 92045,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-285",
+          "timeMs": 92386,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-286",
+          "timeMs": 92727,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-287",
+          "timeMs": 93068,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-288",
+          "timeMs": 93409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              47
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-289",
+          "timeMs": 93750,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-290",
+          "timeMs": 94091,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              35
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-291",
+          "timeMs": 94432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              42
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-292",
+          "timeMs": 94602,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-293",
+          "timeMs": 94773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              75,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-294",
+          "timeMs": 95114,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              75,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-295",
+          "timeMs": 95455,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              73,
+              85
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-296",
+          "timeMs": 95795,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-297",
+          "timeMs": 96136,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-298",
+          "timeMs": 96477,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              78,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-299",
+          "timeMs": 96818,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              37
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-300",
+          "timeMs": 97159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-301",
+          "timeMs": 97330,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-302",
+          "timeMs": 97500,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              49,
+              75,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-303",
+          "timeMs": 97841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              75,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-304",
+          "timeMs": 98182,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              33,
+              73,
+              85
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-305",
+          "timeMs": 98523,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              40
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-306",
+          "timeMs": 98864,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-307",
+          "timeMs": 99205,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              49,
+              52,
+              57,
+              78,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-308",
+          "timeMs": 99545,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              33
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-309",
+          "timeMs": 99886,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              40
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-310",
+          "timeMs": 100227,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-311",
+          "timeMs": 100568,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              49,
+              52,
+              57,
+              73
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-312",
+          "timeMs": 100739,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              73,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-313",
+          "timeMs": 100909,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-314",
+          "timeMs": 101250,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-315",
+          "timeMs": 101420,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-316",
+          "timeMs": 101591,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-317",
+          "timeMs": 101932,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-318",
+          "timeMs": 102102,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-319",
+          "timeMs": 102273,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              40,
+              76,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-320",
+          "timeMs": 102614,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              71,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-321",
+          "timeMs": 102955,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              71,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-322",
+          "timeMs": 103295,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              56,
+              59,
+              64,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-323",
+          "timeMs": 103636,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              35,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-324",
+          "timeMs": 103977,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-325",
+          "timeMs": 104318,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              47
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-326",
+          "timeMs": 104659,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-327",
+          "timeMs": 105000,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              35
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-328",
+          "timeMs": 105341,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              42
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-329",
+          "timeMs": 105511,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-330",
+          "timeMs": 105682,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              47,
+              75,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-331",
+          "timeMs": 106023,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              42,
+              51,
+              54,
+              59,
+              75,
+              83
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-332",
+          "timeMs": 106364,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              37,
+              73,
+              85
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-333",
+          "timeMs": 106705,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-334",
+          "timeMs": 107045,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-335",
+          "timeMs": 107386,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              78,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-336",
+          "timeMs": 107727,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              37
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-337",
+          "timeMs": 108068,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              44
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-338",
+          "timeMs": 108409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              49
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-339",
+          "timeMs": 108750,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              44,
+              52,
+              56,
+              61,
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-340",
+          "timeMs": 108920,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-341",
+          "timeMs": 109091,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-342",
+          "timeMs": 109432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-343",
+          "timeMs": 109773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-344",
+          "timeMs": 110114,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-345",
+          "timeMs": 110284,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              78
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-346",
+          "timeMs": 110455,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              80
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-347",
+          "timeMs": 110795,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-348",
+          "timeMs": 111136,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-349",
+          "timeMs": 111477,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-350",
+          "timeMs": 111648,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-351",
+          "timeMs": 111818,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              41,
+              48,
+              52,
+              57,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-352",
+          "timeMs": 112159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              72,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-353",
+          "timeMs": 112330,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              72,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-354",
+          "timeMs": 112500,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              53,
+              77,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-355",
+          "timeMs": 112841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              57,
+              60,
+              65,
+              72,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-356",
+          "timeMs": 113011,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              72,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-357",
+          "timeMs": 113182,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              41,
+              77,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-358",
+          "timeMs": 113523,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-359",
+          "timeMs": 113864,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              53,
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-360",
+          "timeMs": 114205,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              57,
+              60,
+              65,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-361",
+          "timeMs": 114545,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              36,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-362",
+          "timeMs": 114886,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-363",
+          "timeMs": 115227,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              48
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-364",
+          "timeMs": 115568,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              52,
+              55,
+              60,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-365",
+          "timeMs": 115909,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              36
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-366",
+          "timeMs": 116250,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              43
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-367",
+          "timeMs": 116420,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-368",
+          "timeMs": 116591,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              76,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-369",
+          "timeMs": 116932,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              52,
+              55,
+              60,
+              76,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-370",
+          "timeMs": 117273,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              38,
+              74,
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-371",
+          "timeMs": 117614,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-372",
+          "timeMs": 117955,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-373",
+          "timeMs": 118295,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              53,
+              57,
+              62,
+              79,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-374",
+          "timeMs": 118636,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              38
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-375",
+          "timeMs": 118977,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-376",
+          "timeMs": 119148,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-377",
+          "timeMs": 119318,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              76,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-378",
+          "timeMs": 119659,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              53,
+              57,
+              62,
+              76,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-379",
+          "timeMs": 120000,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              34,
+              72,
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-380",
+          "timeMs": 120341,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              41
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-381",
+          "timeMs": 120682,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              46
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-382",
+          "timeMs": 121023,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              41,
+              50,
+              53,
+              58,
+              79,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-383",
+          "timeMs": 121364,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              34
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-384",
+          "timeMs": 121705,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              41
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-385",
+          "timeMs": 122045,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              46
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-386",
+          "timeMs": 122386,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              41,
+              50,
+              53,
+              58,
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-387",
+          "timeMs": 122557,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              72,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-388",
+          "timeMs": 122727,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              41,
+              77,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-389",
+          "timeMs": 123068,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              72,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-390",
+          "timeMs": 123239,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              72,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-391",
+          "timeMs": 123409,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              53,
+              77,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-392",
+          "timeMs": 123750,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              57,
+              60,
+              65,
+              72,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-393",
+          "timeMs": 123920,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              72,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-394",
+          "timeMs": 124091,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              41,
+              77,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-395",
+          "timeMs": 124432,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              72,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-396",
+          "timeMs": 124773,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              53,
+              72,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-397",
+          "timeMs": 125114,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              57,
+              60,
+              65,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-398",
+          "timeMs": 125455,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              36,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-399",
+          "timeMs": 125795,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-400",
+          "timeMs": 126136,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              48
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-401",
+          "timeMs": 126477,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              52,
+              55,
+              60,
+              79
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-402",
+          "timeMs": 126818,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              36
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-403",
+          "timeMs": 127159,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              43
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-404",
+          "timeMs": 127330,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-405",
+          "timeMs": 127500,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              76,
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-406",
+          "timeMs": 127841,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              43,
+              52,
+              55,
+              60,
+              76,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-407",
+          "timeMs": 128182,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              38,
+              74,
+              86
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-408",
+          "timeMs": 128523,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-409",
+          "timeMs": 128864,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              50
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-410",
+          "timeMs": 129205,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              53,
+              57,
+              62,
+              79,
+              81
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-411",
+          "timeMs": 129545,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              38
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-412",
+          "timeMs": 129886,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              45
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-413",
+          "timeMs": 130057,
+          "durationMs": 170,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              77
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-414",
+          "timeMs": 130227,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              50,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-415",
+          "timeMs": 130568,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              45,
+              53,
+              57,
+              62,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-416",
+          "timeMs": 130909,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              36,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-417",
+          "timeMs": 131932,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              34,
+              48
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-418",
+          "timeMs": 132273,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              29,
+              46
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-419",
+          "timeMs": 132955,
+          "durationMs": 682,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              36,
+              41
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-420",
+          "timeMs": 133636,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              48,
+              84
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "how-far-ill-go-mxl-421",
+          "timeMs": 136364,
+          "durationMs": 2727,
+          "strings": [],
+          "expected": {
+            "kind": "chord",
+            "midi": [
+              52,
+              55,
+              60
+            ],
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "import",
+      "label": "Imported MusicXML",
+      "timeMs": 0
+    }
+  ],
+  "assets": {
+    "license": "Purchased local MusicXML"
+  }
+}

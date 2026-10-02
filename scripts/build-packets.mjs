@@ -182,7 +182,7 @@ function playerNote(event, instrument, index) {
   if (instrument.includes("recorder")) return index % 4 === 2 ? { ...base, midi: [transposeIntoRange(high, 60, 79)] } : null;
   if (instrument.includes("vocal")) return index % 2 === 0 ? { ...base, midi: [transposeIntoRange(high, 55, 76)] } : null;
   if (instrument.includes("drums")) return { ...base, midi: drumMidi(index, midi.length > 1, event.durationMs >= 700) };
-  if (instrument.includes("keys")) return { ...base, midi: midi.slice(0, 4).map((note) => transposeIntoRange(note, 48, 81)) };
+  if (instrument.includes("keys") || instrument.includes("piano")) return { ...base, midi: midi.slice(0, 4).map((note) => transposeIntoRange(note, 48, 81)) };
   return { ...base, midi: [transposeIntoRange(high, 45, 76)] };
 }
 
@@ -528,7 +528,7 @@ function browserVexFlowScript() {
 }
 
 function overviewPage(member) {
-  const instrumentOrder = ["guitar", "trumpet", "flute", "recorder", "bass", "keys", "drums", "vocals"];
+  const instrumentOrder = ["guitar", "bass", "piano", "keys", "drums", "vocals", "flute", "recorder", "trumpet"];
   const instrumentGroups = new Map();
   data.rehearsalSongs.forEach((song, index) => {
     song.roles.forEach((role) => {
@@ -552,6 +552,7 @@ function overviewPage(member) {
 function songPages(member) {
   const pages = [];
   const ensembleLines = [
+    { label: "Piano", instrument: "piano" },
     { label: "Keys", instrument: "keys" },
     { label: "Guitar", instrument: "guitar" },
     { label: "Bass", instrument: "bass" },
@@ -612,6 +613,8 @@ function instrumentMatchesLine(roleInstrument, lineInstrument) {
   const role = roleInstrument.toLowerCase();
   if (lineInstrument === "guitar") return role.includes("guitar");
   if (lineInstrument === "vocals") return role.includes("vocal");
+  if (lineInstrument === "piano") return role.includes("piano");
+  if (lineInstrument === "keys") return role.includes("keys") || role.includes("piano");
   return role.includes(lineInstrument);
 }
 
@@ -702,7 +705,10 @@ for (const member of data.bandMembers) {
 const instrumentPackets = [
   ["guitar", "Guitar"],
   ["bass", "Bass"],
+  ["piano", "Piano"],
   ["keys", "Keys"],
+  ["drums", "Drums"],
+  ["vocals", "Vocals"],
   ["trumpet", "Trumpet"],
   ["flute", "Flute"],
   ["recorder", "Recorder"],
