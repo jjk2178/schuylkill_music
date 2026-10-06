@@ -9,6 +9,14 @@ describe("chart schema", () => {
     expect(getPrimaryTrack(chart).events.length).toBeGreaterThan(4);
   });
 
+  it("retains source lyrics and explicit chord changes", () => {
+    const lyrics = [{ timeMs: 0, text: "A sung phrase", verse: 1 }];
+    const chordChanges = [{ timeMs: 0, chord: "Cmaj7", origin: "source" }];
+    const chart = parseChart({ ...demoChart, lyrics, chordChanges });
+    expect(chart.lyrics).toEqual(lyrics);
+    expect(chart.chordChanges).toEqual(chordChanges);
+  });
+
   it("reports duration from the last event", () => {
     expect(getChartDurationMs(demoChart)).toBe(8625);
   });

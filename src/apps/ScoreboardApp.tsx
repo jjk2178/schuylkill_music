@@ -99,6 +99,7 @@ export function ScoreboardApp() {
   return (
     <main className="app-shell scoreboard-shell">
       <aside className="side-panel">
+        <a className="score-player-link" href="/score-player">Browse & play instrument scores →</a>
         <div>
           <p className="eyebrow">Scoreboard</p>
           <h1>Band score builder</h1>
@@ -240,7 +241,7 @@ export function ScoreboardApp() {
             </article>
           ))}
         </section> : null}
-        <ArrangementBoard chart={chart} playheadMs={playheadMs} playerName={scoreView === "player" ? selectedPlayer : undefined} />
+        <ArrangementBoard chart={chart} playheadMs={playheadMs} onSeek={time=>{setTransport("paused");setPlayheadMs(time);}} playerName={scoreView === "player" ? selectedPlayer : undefined} />
       </section>
     </main>
   );

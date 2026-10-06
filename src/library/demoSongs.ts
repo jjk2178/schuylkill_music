@@ -1,13 +1,13 @@
-import { parseChart, type Chart } from "../charts/schema";
+import { parseChart, type Chart, type Instrument } from "../charts/schema";
 
 export type DemoSongIndexItem = {
   id: string;
   title: string;
   artist: string;
-  instrument: "guitar" | "piano";
+  instrument: Instrument;
   license: string;
   chartUrl: string;
-  sourcePageUrl: string;
+  sourcePageUrl?: string;
 };
 
 export async function loadDemoSongIndex(): Promise<DemoSongIndexItem[]> {

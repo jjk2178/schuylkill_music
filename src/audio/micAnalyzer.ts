@@ -19,21 +19,28 @@ export class MicAnalyzer {
   private node: AudioWorkletNode | null = null;
   private source: MediaStreamAudioSourceNode | null = null;
 
-  async start(onFrame: (frame: AnalysisFrame) => void): Promise<void> {
+  async start(
+    onFrame: (frame: AnalysisFrame) => void,
+    deviceId?: string,
+  ): Promise<void> {
     if (!navigator.mediaDevices?.getUserMedia || !window.AudioWorkletNode) {
-      throw new Error("Mic analysis requires getUserMedia and AudioWorklet support.");
+      throw new Error(
+        "Mic analysis requires getUserMedia and AudioWorklet support.",
+      );
     }
 
     this.context = new AudioContext({ latencyHint: "interactive" });
     await this.context.audioWorklet.addModule("/worklets/mic-analyzer.js");
     this.stream = await navigator.mediaDevices.getUserMedia({
       audio: {
+        ...(deviceId ? { deviceId: { exact: deviceId } } : {}),
         echoCancellation: false,
         noiseSuppression: false,
         autoGainControl: false,
       },
     });
 
+    await this.context.resume();
     this.source = this.context.createMediaStreamSource(this.stream);
     this.node = new AudioWorkletNode(this.context, "mic-analyzer");
     this.node.port.onmessage = (event: MessageEvent<AnalysisFrame>) => {

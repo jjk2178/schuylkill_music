@@ -1,6 +1,11 @@
 import type { Chart, PlayableEvent } from "../charts/schema";
 import { getChartDurationMs, getPrimaryTrack } from "../charts/schema";
-import { judgeEvent, scoreForHit, type HitInput, type HitResult } from "./scoring";
+import {
+  judgeEvent,
+  scoreForHit,
+  type HitInput,
+  type HitResult,
+} from "./scoring";
 
 export type PlayMode = "practice-sticky" | "performance";
 export type TransportState = "idle" | "playing" | "paused" | "complete";
@@ -36,13 +41,21 @@ export function createInitialSnapshot(mode: PlayMode): GameplaySnapshot {
   };
 }
 
-export function getActiveEvent(chart: Chart, playheadMs: number): PlayableEvent | null {
+export function getActiveEvent(
+  chart: Chart,
+  playheadMs: number,
+): PlayableEvent | null {
   const events = getPrimaryTrack(chart).events;
   return (
     events.find((event) => {
       const early = event.expected.timingWindowMs.early;
-      const late = Math.max(event.durationMs, event.expected.timingWindowMs.late);
-      return playheadMs >= event.timeMs - early && playheadMs <= event.timeMs + late;
+      const late = Math.max(
+        event.durationMs,
+        event.expected.timingWindowMs.late,
+      );
+      return (
+        playheadMs >= event.timeMs - early && playheadMs <= event.timeMs + late
+      );
     }) ?? null
   );
 }
@@ -54,27 +67,44 @@ export function advanceGameplay(
 ): GameplaySnapshot {
   if (snapshot.transport !== "playing") return snapshot;
 
+  const events = getPrimaryTrack(chart).events;
   const durationMs = getChartDurationMs(chart);
-  const stickyEvent = snapshot.stickyEventId
-    ? getPrimaryTrack(chart).events.find((event) => event.id === snapshot.stickyEventId)
-    : null;
+  const stickyEvent = events.find(
+    (event) => event.id === snapshot.stickyEventId,
+  );
   const playheadMs = stickyEvent
     ? stickyEvent.timeMs
     : Math.min(durationMs, snapshot.playheadMs + deltaMs);
-  const active = getActiveEvent(chart, playheadMs);
-  let next = {
-    ...snapshot,
-    playheadMs,
-    activeEventId: active?.id ?? null,
-    transport: (playheadMs >= durationMs ? "complete" : snapshot.transport) as TransportState,
-  };
-
-  if (active && !next.eventStates[active.id]) {
-    const lateEdge = active.timeMs + active.expected.timingWindowMs.late;
-    if (playheadMs > lateEdge) {
-      next = markMiss(next, active, playheadMs);
+  let next: GameplaySnapshot = { ...snapshot, playheadMs };
+  for (const event of events) {
+    if (event.expected.kind === "rest" || next.eventStates[event.id]) continue;
+    if (playheadMs <= event.timeMs + event.expected.timingWindowMs.late) break;
+    next = markMiss(next, event, playheadMs);
+    if (next.mode === "practice-sticky") {
+      next.playheadMs = event.timeMs;
+      break;
     }
   }
+  const active = next.stickyEventId
+    ? events.find((event) => event.id === next.stickyEventId)
+    : events
+        .filter(
+          (event) =>
+            !next.eventStates[event.id] && event.expected.kind !== "rest",
+        )
+        .find(
+          (event) =>
+            next.playheadMs >=
+              event.timeMs - event.expected.timingWindowMs.early &&
+            next.playheadMs <=
+              event.timeMs +
+                Math.max(event.durationMs, event.expected.timingWindowMs.late),
+        );
+  next.activeEventId = active?.id ?? null;
+  next.transport =
+    !next.stickyEventId && next.playheadMs >= durationMs
+      ? "complete"
+      : snapshot.transport;
 
   return next;
 }
@@ -85,11 +115,29 @@ export function receiveInput(
   input: HitInput,
 ): GameplaySnapshot {
   const active = snapshot.stickyEventId
-    ? getPrimaryTrack(chart).events.find((event) => event.id === snapshot.stickyEventId)
-    : getActiveEvent(chart, input.atMs);
-  if (!active || snapshot.eventStates[active.id]?.result === "hit") return snapshot;
+    ? getPrimaryTrack(chart).events.find(
+        (event) => event.id === snapshot.stickyEventId,
+      )
+    : getPrimaryTrack(chart)
+        .events.filter(
+          (event) =>
+            !snapshot.eventStates[event.id] && event.expected.kind !== "rest",
+        )
+        .filter(
+          (event) =>
+            input.atMs >= event.timeMs - event.expected.timingWindowMs.early &&
+            input.atMs <= event.timeMs + event.expected.timingWindowMs.late,
+        )
+        .sort(
+          (a, b) =>
+            Math.abs(a.timeMs - input.atMs) - Math.abs(b.timeMs - input.atMs),
+        )[0];
+  if (!active || snapshot.eventStates[active.id]?.result === "hit")
+    return snapshot;
 
-  const judgedInput = snapshot.stickyEventId ? { ...input, atMs: active.timeMs } : input;
+  const judgedInput = snapshot.stickyEventId
+    ? { ...input, atMs: active.timeMs }
+    : input;
   const result = judgeEvent(active, judgedInput);
   if (result === "pending") return snapshot;
   if (result === "hit") return markHit(snapshot, active, input.atMs);
@@ -121,7 +169,8 @@ function markHit(
   const streak = snapshot.streak + 1;
   return {
     ...snapshot,
-    stickyEventId: snapshot.stickyEventId === event.id ? null : snapshot.stickyEventId,
+    stickyEventId:
+      snapshot.stickyEventId === event.id ? null : snapshot.stickyEventId,
     score: snapshot.score + scoreForHit(streak),
     streak,
     bestStreak: Math.max(snapshot.bestStreak, streak),

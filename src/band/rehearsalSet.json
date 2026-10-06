@@ -31,7 +31,7 @@
     {
       "name": "Nana",
       "instruments": [
-        "keys"
+        "piano"
       ],
       "equipment": [
         "keyboard",
@@ -116,118 +116,6 @@
   ],
   "rehearsalSongs": [
     {
-      "id": "star-spangled-banner-warmup",
-      "title": "The Star-Spangled Banner",
-      "artist": "Traditional",
-      "status": "Public domain warmup arrangement",
-      "roles": [
-        {
-          "player": "Jack",
-          "instrument": "guitar",
-          "part": "lead guitar",
-          "notes": "states the melody cleanly as a warmup"
-        },
-        {
-          "player": "Pops",
-          "instrument": "drums",
-          "part": "drums",
-          "notes": "soft march pulse with light snare"
-        },
-        {
-          "player": "Nana",
-          "instrument": "keys",
-          "part": "keys",
-          "notes": "grand staff foundation and cadences"
-        },
-        {
-          "player": "Laura",
-          "instrument": "flute",
-          "part": "flute",
-          "notes": "doubles the upper melody line"
-        },
-        {
-          "player": "Michael",
-          "instrument": "recorder",
-          "part": "recorder",
-          "notes": "simple melody doubles on selected phrases"
-        },
-        {
-          "player": "Bobby",
-          "instrument": "bass",
-          "part": "bass",
-          "notes": "root motion and cadence anchors"
-        },
-        {
-          "player": "Xinnia",
-          "instrument": "vocals",
-          "part": "lead vocal",
-          "notes": "lead anthem melody"
-        },
-        {
-          "player": "Tara",
-          "instrument": "vocals",
-          "part": "harmony vocal",
-          "notes": "light harmony and phrase endings"
-        }
-      ]
-    },
-    {
-      "id": "cranberries-linger",
-      "title": "Linger",
-      "artist": "The Cranberries",
-      "status": "Purchased local MusicXML imported",
-      "roles": [
-        {
-          "player": "Jack",
-          "instrument": "guitar",
-          "part": "lead guitar",
-          "notes": "guitar foundation and lead hooks"
-        },
-        {
-          "player": "Pops",
-          "instrument": "drums",
-          "part": "drums",
-          "notes": "steady backbeat with light cymbal dynamics"
-        },
-        {
-          "player": "Nana",
-          "instrument": "keys",
-          "part": "keys",
-          "notes": "pad and chord support"
-        },
-        {
-          "player": "Laura",
-          "instrument": "rhythm guitar",
-          "part": "rhythm guitar",
-          "notes": "holds rhythm guitar texture"
-        },
-        {
-          "player": "Michael",
-          "instrument": "recorder",
-          "part": "recorder",
-          "notes": "soft counter-lines and hook doubling"
-        },
-        {
-          "player": "Bobby",
-          "instrument": "bass",
-          "part": "bass",
-          "notes": "root movement and transitions"
-        },
-        {
-          "player": "Xinnia",
-          "instrument": "vocals",
-          "part": "lead vocal",
-          "notes": "primary melody"
-        },
-        {
-          "player": "Tara",
-          "instrument": "vocals",
-          "part": "harmony vocal",
-          "notes": "chorus support and doubles"
-        }
-      ]
-    },
-    {
       "id": "jerusalem-parry",
       "title": "And did those feet in ancient time (Jerusalem)",
       "artist": "Hubert Parry, text by William Blake",
@@ -235,9 +123,9 @@
       "roles": [
         {
           "player": "Jack",
-          "instrument": "guitar",
-          "part": "lead guitar",
-          "notes": "outline the D-major melody with open, singing voicings"
+          "instrument": "trumpet",
+          "part": "B\u266d trumpet melody",
+          "notes": "play the full melody through both stanzas with a broad, lyrical hymn tone; bring the higher source octave down into the same comfortable register; written a whole step above concert pitch"
         },
         {
           "player": "Pops",
@@ -247,21 +135,21 @@
         },
         {
           "player": "Nana",
-          "instrument": "keys",
+          "instrument": "piano",
           "part": "grand staff reduction",
           "notes": "carry the harmonic foundation and melody reference"
         },
         {
           "player": "Laura",
           "instrument": "flute",
-          "part": "flute",
-          "notes": "double selected melody phrases with a clear, lyrical tone"
+          "part": "flute \u2014 full Jerusalem melody",
+          "notes": "play every note of the trumpet melody with identical rhythm, one octave above its concert pitch throughout both stanzas"
         },
         {
           "player": "Michael",
           "instrument": "recorder",
-          "part": "recorder",
-          "notes": "optional octave-doubled melody in the second statement"
+          "part": "recorder \u2014 full Jerusalem melody",
+          "notes": "play every note of the trumpet melody with identical rhythm, one octave above its concert pitch throughout both stanzas"
         },
         {
           "player": "Bobby",
@@ -284,230 +172,6 @@
       ]
     },
     {
-      "id": "silent-night",
-      "title": "Silent Night",
-      "artist": "Franz Xaver Gruber, text by Joseph Mohr",
-      "status": "Public-domain melody arrangement for the holiday set",
-      "roles": [
-        {
-          "player": "Jack",
-          "instrument": "guitar",
-          "part": "guitar",
-          "notes": "gentle arpeggiated support in D major"
-        },
-        {
-          "player": "Pops",
-          "instrument": "drums",
-          "part": "drums",
-          "notes": "soft brushes and light cymbal lift; keep the 6/8 pulse quiet"
-        },
-        {
-          "player": "Nana",
-          "instrument": "keys",
-          "part": "grand staff accompaniment",
-          "notes": "warm sustained harmony and the home-key cadence"
-        },
-        {
-          "player": "Laura",
-          "instrument": "flute",
-          "part": "flute",
-          "notes": "double selected melody phrases above the recorder"
-        },
-        {
-          "player": "Michael",
-          "instrument": "recorder",
-          "part": "recorder melody",
-          "notes": "carry the Silent Night melody throughout; this is the featured recorder arrangement"
-        },
-        {
-          "player": "Bobby",
-          "instrument": "bass",
-          "part": "bass",
-          "notes": "slow D-major root movement under the 6/8 accompaniment"
-        },
-        {
-          "player": "Xinnia",
-          "instrument": "vocals",
-          "part": "lead vocal",
-          "notes": "lead the primary verse"
-        },
-        {
-          "player": "Tara",
-          "instrument": "vocals",
-          "part": "harmony vocal",
-          "notes": "soft harmony on the final phrases"
-        }
-      ]
-    },
-    {
-      "id": "led-zeppelin-stairway-to-heaven",
-      "title": "Stairway to Heaven",
-      "artist": "Led Zeppelin",
-      "status": "Arrangement shell - needs licensed/imported chart",
-      "roles": [
-        {
-          "player": "Jack",
-          "instrument": "guitar",
-          "part": "guitar",
-          "notes": "main guitar part"
-        },
-        {
-          "player": "Pops",
-          "instrument": "drums",
-          "part": "drums",
-          "notes": "enter later; build dynamics by section"
-        },
-        {
-          "player": "Nana",
-          "instrument": "keys",
-          "part": "keys",
-          "notes": "organ/pad support and harmonic bed"
-        },
-        {
-          "player": "Laura",
-          "instrument": "flute",
-          "part": "flute",
-          "notes": "flute feature and sustained counter-line"
-        },
-        {
-          "player": "Michael",
-          "instrument": "recorder",
-          "part": "recorder",
-          "notes": "alternate flute line on recorder"
-        },
-        {
-          "player": "Bobby",
-          "instrument": "bass",
-          "part": "bass",
-          "notes": "enter with the build; keep lines simple and grounded"
-        },
-        {
-          "player": "Xinnia",
-          "instrument": "vocals",
-          "part": "lead vocal",
-          "notes": "verse and main melody"
-        },
-        {
-          "player": "Tara",
-          "instrument": "vocals",
-          "part": "harmony vocal",
-          "notes": "chorus and climactic support"
-        }
-      ]
-    },
-    {
-      "id": "fleetwood-mac-go-your-own-way",
-      "title": "Go Your Own Way",
-      "artist": "Fleetwood Mac",
-      "status": "Purchased local MusicXML imported",
-      "roles": [
-        {
-          "player": "Jack",
-          "instrument": "guitar",
-          "part": "lead guitar",
-          "notes": "drives guitar hooks"
-        },
-        {
-          "player": "Pops",
-          "instrument": "drums",
-          "part": "drums",
-          "notes": "up-tempo rock groove with strong chorus lift"
-        },
-        {
-          "player": "Nana",
-          "instrument": "keys",
-          "part": "keys",
-          "notes": "piano/organ chord support and chorus reinforcement"
-        },
-        {
-          "player": "Laura",
-          "instrument": "rhythm guitar",
-          "part": "rhythm guitar",
-          "notes": "keeps strum pattern steady"
-        },
-        {
-          "player": "Michael",
-          "instrument": "backup guitar",
-          "part": "backup guitar",
-          "notes": "supports guitar bed and doubles hooks"
-        },
-        {
-          "player": "Bobby",
-          "instrument": "bass",
-          "part": "bass",
-          "notes": "driving eighth-note pocket with clear chorus movement"
-        },
-        {
-          "player": "Xinnia",
-          "instrument": "vocals",
-          "part": "lead vocal",
-          "notes": "main vocal line"
-        },
-        {
-          "player": "Tara",
-          "instrument": "vocals",
-          "part": "harmony vocal",
-          "notes": "chorus harmonies and response lines"
-        }
-      ]
-    },
-    {
-      "id": "olivia-rodrigo-drivers-license",
-      "title": "drivers license",
-      "artist": "Olivia Rodrigo",
-      "status": "Purchased local MusicXML imported",
-      "roles": [
-        {
-          "player": "Jack",
-          "instrument": "guitar",
-          "part": "lead guitar",
-          "notes": "sparse guitar color and hook support"
-        },
-        {
-          "player": "Pops",
-          "instrument": "drums",
-          "part": "drums",
-          "notes": "restrained pulse; build carefully into bigger sections"
-        },
-        {
-          "player": "Nana",
-          "instrument": "keys",
-          "part": "keys",
-          "notes": "main piano foundation from imported source"
-        },
-        {
-          "player": "Laura",
-          "instrument": "flute",
-          "part": "flute",
-          "notes": "new flute counter-line and breathy doubles"
-        },
-        {
-          "player": "Michael",
-          "instrument": "backup guitar",
-          "part": "backup guitar",
-          "notes": "fills the guitar bed with Jack"
-        },
-        {
-          "player": "Bobby",
-          "instrument": "bass",
-          "part": "bass",
-          "notes": "simple sustained roots and section anchors"
-        },
-        {
-          "player": "Xinnia",
-          "instrument": "vocals",
-          "part": "lead vocal",
-          "notes": "main vocal line"
-        },
-        {
-          "player": "Tara",
-          "instrument": "vocals",
-          "part": "harmony vocal",
-          "notes": "soft harmony support and chorus doubles"
-        }
-      ]
-    },
-    {
       "id": "how-far-ill-go",
       "title": "How Far I'll Go",
       "artist": "Lin-Manuel Miranda / Alessia Cara",
@@ -524,12 +188,6 @@
           "instrument": "bass",
           "part": "bass",
           "notes": "low-register roots and transitions supporting the song form"
-        },
-        {
-          "player": "Nana",
-          "instrument": "piano",
-          "part": "piano / keys",
-          "notes": "grand-staff piano reduction with optional pad and chord-doubling keyboard color"
         },
         {
           "player": "Pops",
@@ -560,6 +218,112 @@
           "instrument": "flute",
           "part": "flute",
           "notes": "breathy upper melody doubles and connecting counter-lines"
+        }
+      ]
+    },
+    {
+      "id": "olivia-rodrigo-drivers-license",
+      "title": "drivers license",
+      "artist": "Olivia Rodrigo",
+      "status": "Purchased local MusicXML imported",
+      "roles": [
+        {
+          "player": "Jack",
+          "instrument": "guitar",
+          "part": "lead guitar",
+          "notes": "sparse guitar color and hook support"
+        },
+        {
+          "player": "Pops",
+          "instrument": "drums",
+          "part": "drums",
+          "notes": "restrained pulse; build carefully into bigger sections"
+        },
+        {
+          "player": "Nana",
+          "instrument": "piano",
+          "part": "piano accompaniment from supplied score",
+          "notes": "play the original right- and left-hand accompaniment from drivers_license_score.pdf, preserving the repeated figures, held bass notes and separate voices; leave the top melody to the singer"
+        },
+        {
+          "player": "Michael",
+          "instrument": "backup guitar",
+          "part": "backup guitar",
+          "notes": "fills the guitar bed with Jack"
+        },
+        {
+          "player": "Bobby",
+          "instrument": "bass",
+          "part": "bass",
+          "notes": "simple sustained roots and section anchors"
+        },
+        {
+          "player": "Xinnia",
+          "instrument": "vocals",
+          "part": "lead vocal",
+          "notes": "main vocal line"
+        },
+        {
+          "player": "Tara",
+          "instrument": "vocals",
+          "part": "harmony vocal",
+          "notes": "soft harmony support and chorus doubles"
+        }
+      ]
+    },
+    {
+      "id": "silent-night",
+      "title": "Silent Night",
+      "artist": "Franz Xaver Gruber, text by Joseph Mohr",
+      "status": "Public-domain melody arrangement for the holiday set",
+      "roles": [
+        {
+          "player": "Jack",
+          "instrument": "guitar",
+          "part": "guitar",
+          "notes": "gentle arpeggiated support in D major"
+        },
+        {
+          "player": "Pops",
+          "instrument": "drums",
+          "part": "drums",
+          "notes": "soft brushes and light cymbal lift; keep the 6/8 pulse quiet"
+        },
+        {
+          "player": "Nana",
+          "instrument": "piano",
+          "part": "grand staff accompaniment",
+          "notes": "warm sustained harmony and the home-key cadence"
+        },
+        {
+          "player": "Laura",
+          "instrument": "flute",
+          "part": "flute \u2014 main melody",
+          "notes": "carry the complete Silent Night melody throughout, preserving every note and the gentle 6/8 rhythm; one consistent octave above the encoded source to fit the flute range"
+        },
+        {
+          "player": "Michael",
+          "instrument": "recorder",
+          "part": "recorder melody",
+          "notes": "carry the Silent Night melody throughout; this is the featured recorder arrangement"
+        },
+        {
+          "player": "Bobby",
+          "instrument": "bass",
+          "part": "bass",
+          "notes": "slow D-major root movement under the 6/8 accompaniment"
+        },
+        {
+          "player": "Xinnia",
+          "instrument": "vocals",
+          "part": "lead vocal",
+          "notes": "lead the primary verse"
+        },
+        {
+          "player": "Tara",
+          "instrument": "vocals",
+          "part": "harmony vocal",
+          "notes": "soft harmony on the final phrases"
         }
       ]
     }

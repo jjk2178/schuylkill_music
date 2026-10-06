@@ -13,25 +13,36 @@ describe("generated demo songs", () => {
     expect(chartFiles.length).toBeGreaterThanOrEqual(4);
 
     for (const chartFile of chartFiles) {
-      const chart = parseChart(JSON.parse(readFileSync(join(demoDir, chartFile), "utf8")));
+      const chart = parseChart(
+        JSON.parse(readFileSync(join(demoDir, chartFile), "utf8")),
+      );
       expect(chart.tracks[0].events.length, chartFile).toBeGreaterThan(0);
-      expect(
-        chart.assets?.sourcePageUrl,
-        chartFile,
-      ).toMatch(/mutopiaproject\.org|wikipedia\.org|commons\.wikimedia\.org/);
+      expect(chart.assets?.sourcePageUrl, chartFile).toMatch(
+        /mutopiaproject\.org|wikipedia\.org|commons\.wikimedia\.org/,
+      );
     }
   });
 
   it("validates imported user charts", () => {
     const userDir = join(process.cwd(), "public", "user-songs");
-    const chartFiles = readdirSync(userDir).filter((fileName) => fileName.endsWith(".json"));
+    const chartFiles = readdirSync(userDir).filter((fileName) =>
+      fileName.endsWith(".json"),
+    );
 
     expect(chartFiles.length).toBeGreaterThanOrEqual(3);
 
     for (const chartFile of chartFiles) {
-      const chart = parseChart(JSON.parse(readFileSync(join(userDir, chartFile), "utf8")));
+      const chart = parseChart(
+        JSON.parse(readFileSync(join(userDir, chartFile), "utf8")),
+      );
       expect(chart.tracks[0].events.length, chartFile).toBeGreaterThan(0);
-      expect(chart.assets?.license, chartFile).toBe("Purchased local MusicXML");
+      expect(chart.assets?.license, chartFile).toBe(
+        chartFile === "god-bless-america.json"
+          ? "User-supplied MIDI; open license not established"
+          : chartFile === "olivia-rodrigo-drivers-license-purchased.json"
+            ? "User-supplied score reference; no open license claimed"
+            : "Purchased local MusicXML",
+      );
     }
   });
 });

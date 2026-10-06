@@ -17,6 +17,7 @@ export function judgeEvent(event: PlayableEvent, input: HitInput): HitResult {
   if (input.atMs < earlyEdge) return "pending";
   if (input.atMs > lateEdge) return "late";
   if (!input.onset) return "pending";
+  if (event.expected.scoring === "onset") return "hit";
 
   return isPitchWithinTolerance(
     input.pitchHz,

@@ -1,0 +1,16 @@
+{
+  "source": "public/user-songs/sources/drivers-license-reference-score.pdf",
+  "sha256": "a934e0b7e7306a18fbf03d7e2a40082a8a353e4f5d0fcc375e1129fd07b9ffa3",
+  "method": "Vector glyph recovery, full melody and piano",
+  "pages": 9,
+  "measures": 70,
+  "pianoNoteheads": 1216,
+  "eventsByHand": [
+    455,
+    168
+  ],
+  "tiedNotes": 78,
+  "durationMs": 231666.666667,
+  "validation": "All 210 melody and piano measures pass duration checks; explicit triplets and reduced-size cue chords preserved",
+  "melody": "Full supplied score melody recovered and validated"
+}

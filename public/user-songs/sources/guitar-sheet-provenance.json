@@ -1,0 +1,20 @@
+[
+  {
+    "file": "drivers-license-guitar-chords.pdf",
+    "originalPath": "/home/jjk/Downloads/drivers license chords.pdf",
+    "sha256": "f3f9eaae1db60c5ec833d708dab7fd70850a553b5f84b521a04ce3194ba293d2",
+    "capo": 3,
+    "chords": "Manually transcribed from all PDF pages, including section order and exact displayed shapes",
+    "timing": "Practice placements estimated from lyric cues; chord sheets do not specify all beat durations",
+    "license": "User-supplied reference; no open license claimed"
+  },
+  {
+    "file": "how-far-ill-go-guitar-official.pdf",
+    "originalPath": "/home/jjk/Downloads/moana - how far ill go official.pdf",
+    "sha256": "2631c1745cab050fe24045b155d1c4c750443e0dbc883bcf9a5310f6d1d9166a",
+    "capo": 4,
+    "chords": "Manually transcribed from all PDF pages, including section order and exact displayed shapes",
+    "timing": "Practice placements estimated from lyric cues; chord sheets do not specify all beat durations",
+    "license": "User-supplied reference; no open license claimed"
+  }
+]

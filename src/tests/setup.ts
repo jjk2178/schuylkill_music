@@ -1,3 +1,4 @@
+import { vi } from "vitest";
 import "@testing-library/jest-dom/vitest";
 
 class TestResizeObserver {
@@ -17,3 +18,6 @@ Object.defineProperty(HTMLCanvasElement.prototype, "getContext", {
     }),
   }),
 });
+
+// jsdom has no SVG geometry; verify VexChords engraving in Chromium.
+vi.mock("vexchords", () => ({ draw: vi.fn() }));

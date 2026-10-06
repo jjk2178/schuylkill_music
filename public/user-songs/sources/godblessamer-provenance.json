@@ -1,0 +1,24 @@
+{
+  "sourceFile": "godblessamer.mid",
+  "sha256": "588ed962b7ba1be4384746ccab3f2f10c3bc7298c9dec49db9451477c0f084b2",
+  "sourceTrack": 6,
+  "sourceTrackName": "TRUMPETS",
+  "sourceNoteCount": 243,
+  "arrangedNoteCount": 119,
+  "sourceTicksPerQuarter": 120,
+  "sourceTrackNames": [
+    "",
+    "SOUSAPHONES",
+    "DRUMS",
+    "BRASS",
+    "SAXAPHONES",
+    "FLUTES",
+    "TRUMPETS",
+    "GLOCKENSPEIL",
+    "GOD BLESS AMERICA",
+    "SEQUENCE - JIM HUFF",
+    "jhuff@arinc.com"
+  ],
+  "adaptation": "Upper voice of the named TRUMPETS section; chord attacks within 30 ms grouped; overlapping durations trimmed; original concert pitches, tempo, meter, and silent lead-in retained.",
+  "license": "User-supplied MIDI; open license not established"
+}

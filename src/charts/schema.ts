@@ -44,11 +44,19 @@ export const GuitarStringEventSchema = z.object({
 export const GuitarEventSchema = z.object({
   id: z.string().min(1),
   label: z.string().optional(),
+  tuplet: z.literal(3).nullable().optional(),
+  staff: z.enum(["treble", "bass"]).optional(),
+  voice: z.number().int().positive().optional(),
+  stemDirection: z.enum(["up", "down"]).nullable().optional(),
+  measure: z.number().int().positive().optional(),
+  tieNext: z.array(z.number().int().min(0).max(127)).optional(),
+  tiePrevious: z.array(z.number().int().min(0).max(127)).optional(),
   timeMs: z.number().nonnegative(),
   durationMs: z.number().nonnegative(),
   strings: z.array(GuitarStringEventSchema).min(0).max(6),
   expected: z.object({
     kind: z.enum(["note", "chord", "rest", "mute"]),
+    scoring: z.enum(["pitch", "onset"]).optional(),
     midi: z.array(z.number().int().min(0).max(127)),
     toleranceCents: z.number().positive(),
     timingWindowMs: z.object({
@@ -58,7 +66,17 @@ export const GuitarEventSchema = z.object({
   }),
 });
 
-export const InstrumentSchema = z.enum(["guitar", "piano"]);
+export const InstrumentSchema = z.enum([
+  "guitar",
+  "bass",
+  "piano",
+  "keys",
+  "drums",
+  "flute",
+  "recorder",
+  "trumpet",
+  "vocals",
+]);
 export const ClefSchema = z.enum(["treble", "bass", "grand"]);
 
 export const GuitarTrackSchema = z.object({
@@ -66,6 +84,7 @@ export const GuitarTrackSchema = z.object({
   name: z.string().min(1),
   instrument: InstrumentSchema.default("guitar"),
   clef: ClefSchema.optional(),
+  role: z.enum(["piano-accompaniment"]).optional(),
   events: z.array(GuitarEventSchema),
 });
 
@@ -77,9 +96,35 @@ export const ChartSchema = z.object({
   tuning: z.array(z.string()).length(6),
   capo: z.number().int().nonnegative().optional(),
   tempoMap: z.array(TempoEventSchema).min(1),
+  pickupQuarters: z.number().positive().optional(),
   timeSignatures: z.array(TimeSignatureEventSchema).min(1),
   keySignatures: z.array(KeySignatureEventSchema).default([]),
   tracks: z.array(GuitarTrackSchema).min(1),
+  lyrics: z
+    .array(
+      z.object({
+        timeMs: z.number().nonnegative(),
+        text: z.string(),
+        verse: z.number().int().positive().optional(),
+      }),
+    )
+    .optional(),
+  guitarArrangement: z.object({
+    capo: z.number().int().nonnegative(), bpm: z.number().positive(), startQuarter: z.number().nonnegative(), timing: z.literal("practice"), timingNotes:z.string().optional(), sourceUrl: z.string(), shapeKey: z.string(),
+    strumming: z.array(z.object({label:z.string(),pattern:z.string()})),
+    sections:z.array(z.object({label:z.string(),chords:z.array(z.object({chord:z.string(),beats:z.number().positive(),cue:z.string()}))})),
+    riffs:z.array(z.object({label:z.string(),tab:z.string()})),
+    shapes:z.record(z.string(),z.object({frets:z.array(z.number().int()).length(6),barres:z.array(z.object({fromString:z.number(),toString:z.number(),fret:z.number()}))})),
+  }).optional(),
+  chordChanges: z
+    .array(
+      z.object({
+        timeMs: z.number().nonnegative(),
+        chord: z.string(),
+        origin: z.string().optional(),
+      }),
+    )
+    .optional(),
   sections: z.array(
     z.object({
       id: z.string().min(1),
@@ -128,6 +173,7 @@ export function getPrimaryTrack(chart: Chart): PlayableTrack {
 
 export function getChartDurationMs(chart: Chart): number {
   return Math.max(
+    0,
     ...chart.tracks.flatMap((track) =>
       track.events.map((event) => event.timeMs + event.durationMs),
     ),

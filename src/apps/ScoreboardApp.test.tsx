@@ -18,10 +18,11 @@ describe("ScoreboardApp", () => {
 
     expect(screen.getByRole("heading", { name: /band score builder/i })).toBeInTheDocument();
     expect(screen.getByText(/stacked band score/i)).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /linger/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /stairway to heaven/i })).toBeInTheDocument();
-    expect(screen.getByRole("heading", { name: /go your own way/i })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: /star-spangled banner/i })).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /jerusalem/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /how far i.ll go/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /drivers license/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /silent night/i })).toBeInTheDocument();
     expect(screen.getAllByText(/backup guitar/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/Jack/i).length).toBeGreaterThan(0);
     expect(await screen.findByText(/0 shared songs loaded/i)).toBeInTheDocument();

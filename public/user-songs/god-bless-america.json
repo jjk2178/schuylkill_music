@@ -1,0 +1,2317 @@
+{
+  "schemaVersion": 1,
+  "title": "God Bless America",
+  "artist": "Irving Berlin",
+  "instrument": "trumpet",
+  "tuning": [
+    "E2",
+    "A2",
+    "D3",
+    "G3",
+    "B3",
+    "E4"
+  ],
+  "tempoMap": [
+    {
+      "timeMs": 0,
+      "bpm": 110.00011000011
+    }
+  ],
+  "timeSignatures": [
+    {
+      "timeMs": 0,
+      "beats": 4,
+      "beatUnit": 4
+    }
+  ],
+  "keySignatures": [
+    {
+      "timeMs": 0,
+      "key": "C",
+      "fifths": 0,
+      "mode": "major"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trumpet-upper-voice",
+      "name": "TRUMPETS \u2014 upper voice",
+      "instrument": "trumpet",
+      "clef": "treble",
+      "events": [
+        {
+          "id": "god-bless-america-1",
+          "label": "trumpet upper voice",
+          "timeMs": 7086,
+          "durationMs": 50,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-2",
+          "label": "trumpet upper voice",
+          "timeMs": 7236,
+          "durationMs": 50,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-3",
+          "label": "trumpet upper voice",
+          "timeMs": 7391,
+          "durationMs": 64,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-4",
+          "label": "trumpet upper voice",
+          "timeMs": 7582,
+          "durationMs": 173,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-5",
+          "label": "trumpet upper voice",
+          "timeMs": 7927,
+          "durationMs": 68,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-6",
+          "label": "trumpet upper voice",
+          "timeMs": 8132,
+          "durationMs": 559,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-7",
+          "label": "trumpet upper voice",
+          "timeMs": 11436,
+          "durationMs": 87,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-8",
+          "label": "trumpet upper voice",
+          "timeMs": 11614,
+          "durationMs": 72,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-9",
+          "label": "trumpet upper voice",
+          "timeMs": 11777,
+          "durationMs": 82,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-10",
+          "label": "trumpet upper voice",
+          "timeMs": 11968,
+          "durationMs": 282,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-11",
+          "label": "trumpet upper voice",
+          "timeMs": 12332,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-12",
+          "label": "trumpet upper voice",
+          "timeMs": 12527,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-13",
+          "label": "trumpet upper voice",
+          "timeMs": 13591,
+          "durationMs": 82,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-14",
+          "label": "trumpet upper voice",
+          "timeMs": 13759,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-15",
+          "label": "trumpet upper voice",
+          "timeMs": 13945,
+          "durationMs": 114,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-16",
+          "label": "trumpet upper voice",
+          "timeMs": 14145,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-17",
+          "label": "trumpet upper voice",
+          "timeMs": 14709,
+          "durationMs": 296,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-18",
+          "label": "trumpet upper voice",
+          "timeMs": 15764,
+          "durationMs": 95,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-19",
+          "label": "trumpet upper voice",
+          "timeMs": 15936,
+          "durationMs": 87,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-20",
+          "label": "trumpet upper voice",
+          "timeMs": 16114,
+          "durationMs": 104,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-21",
+          "label": "trumpet upper voice",
+          "timeMs": 16314,
+          "durationMs": 531,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-22",
+          "label": "trumpet upper voice",
+          "timeMs": 16905,
+          "durationMs": 200,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-23",
+          "label": "trumpet upper voice",
+          "timeMs": 18005,
+          "durationMs": 450,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-24",
+          "label": "trumpet upper voice",
+          "timeMs": 19086,
+          "durationMs": 305,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-25",
+          "label": "trumpet upper voice",
+          "timeMs": 20182,
+          "durationMs": 86,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-26",
+          "label": "trumpet upper voice",
+          "timeMs": 20341,
+          "durationMs": 73,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-27",
+          "label": "trumpet upper voice",
+          "timeMs": 20505,
+          "durationMs": 95,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-28",
+          "label": "trumpet upper voice",
+          "timeMs": 20705,
+          "durationMs": 372,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-29",
+          "label": "trumpet upper voice",
+          "timeMs": 22877,
+          "durationMs": 1278,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-30",
+          "label": "trumpet upper voice",
+          "timeMs": 24873,
+          "durationMs": 82,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-31",
+          "label": "trumpet upper voice",
+          "timeMs": 25077,
+          "durationMs": 1146,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-32",
+          "label": "trumpet upper voice",
+          "timeMs": 27036,
+          "durationMs": 132,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-33",
+          "label": "trumpet upper voice",
+          "timeMs": 27241,
+          "durationMs": 1186,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-34",
+          "label": "trumpet upper voice",
+          "timeMs": 28918,
+          "durationMs": 73,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-35",
+          "label": "trumpet upper voice",
+          "timeMs": 29077,
+          "durationMs": 78,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-36",
+          "label": "trumpet upper voice",
+          "timeMs": 29245,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-37",
+          "label": "trumpet upper voice",
+          "timeMs": 29432,
+          "durationMs": 113,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-38",
+          "label": "trumpet upper voice",
+          "timeMs": 29609,
+          "durationMs": 82,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-39",
+          "label": "trumpet upper voice",
+          "timeMs": 29768,
+          "durationMs": 87,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-40",
+          "label": "trumpet upper voice",
+          "timeMs": 29941,
+          "durationMs": 104,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-41",
+          "label": "trumpet upper voice",
+          "timeMs": 30132,
+          "durationMs": 86,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-42",
+          "label": "trumpet upper voice",
+          "timeMs": 30295,
+          "durationMs": 128,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-43",
+          "label": "trumpet upper voice",
+          "timeMs": 30559,
+          "durationMs": 905,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-44",
+          "label": "trumpet upper voice",
+          "timeMs": 31614,
+          "durationMs": 436,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-45",
+          "label": "trumpet upper voice",
+          "timeMs": 32145,
+          "durationMs": 400,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              65
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-46",
+          "label": "trumpet upper voice",
+          "timeMs": 32655,
+          "durationMs": 277,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-47",
+          "label": "trumpet upper voice",
+          "timeMs": 33000,
+          "durationMs": 127,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-48",
+          "label": "trumpet upper voice",
+          "timeMs": 33227,
+          "durationMs": 478,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-49",
+          "label": "trumpet upper voice",
+          "timeMs": 34336,
+          "durationMs": 269,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              67
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-50",
+          "label": "trumpet upper voice",
+          "timeMs": 34891,
+          "durationMs": 1023,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              64
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-51",
+          "label": "trumpet upper voice",
+          "timeMs": 35973,
+          "durationMs": 963,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              62
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-52",
+          "label": "trumpet upper voice",
+          "timeMs": 37059,
+          "durationMs": 1286,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              60
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-53",
+          "label": "trumpet upper voice",
+          "timeMs": 41959,
+          "durationMs": 77,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-54",
+          "label": "trumpet upper voice",
+          "timeMs": 42127,
+          "durationMs": 73,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-55",
+          "label": "trumpet upper voice",
+          "timeMs": 42318,
+          "durationMs": 32,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-56",
+          "label": "trumpet upper voice",
+          "timeMs": 42505,
+          "durationMs": 236,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-57",
+          "label": "trumpet upper voice",
+          "timeMs": 42877,
+          "durationMs": 55,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-58",
+          "label": "trumpet upper voice",
+          "timeMs": 43064,
+          "durationMs": 472,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-59",
+          "label": "trumpet upper voice",
+          "timeMs": 46345,
+          "durationMs": 59,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-60",
+          "label": "trumpet upper voice",
+          "timeMs": 46509,
+          "durationMs": 64,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-61",
+          "label": "trumpet upper voice",
+          "timeMs": 46664,
+          "durationMs": 90,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-62",
+          "label": "trumpet upper voice",
+          "timeMs": 46845,
+          "durationMs": 250,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-63",
+          "label": "trumpet upper voice",
+          "timeMs": 47223,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-64",
+          "label": "trumpet upper voice",
+          "timeMs": 47404,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-65",
+          "label": "trumpet upper voice",
+          "timeMs": 48545,
+          "durationMs": 96,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-66",
+          "label": "trumpet upper voice",
+          "timeMs": 48700,
+          "durationMs": 104,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-67",
+          "label": "trumpet upper voice",
+          "timeMs": 48868,
+          "durationMs": 86,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-68",
+          "label": "trumpet upper voice",
+          "timeMs": 49068,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-69",
+          "label": "trumpet upper voice",
+          "timeMs": 49609,
+          "durationMs": 455,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              69
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-70",
+          "label": "trumpet upper voice",
+          "timeMs": 50686,
+          "durationMs": 105,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-71",
+          "label": "trumpet upper voice",
+          "timeMs": 50854,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-72",
+          "label": "trumpet upper voice",
+          "timeMs": 51014,
+          "durationMs": 109,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-73",
+          "label": "trumpet upper voice",
+          "timeMs": 51209,
+          "durationMs": 505,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-74",
+          "label": "trumpet upper voice",
+          "timeMs": 51777,
+          "durationMs": 282,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-75",
+          "label": "trumpet upper voice",
+          "timeMs": 52895,
+          "durationMs": 487,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-76",
+          "label": "trumpet upper voice",
+          "timeMs": 53968,
+          "durationMs": 514,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-77",
+          "label": "trumpet upper voice",
+          "timeMs": 55059,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-78",
+          "label": "trumpet upper voice",
+          "timeMs": 55218,
+          "durationMs": 82,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-79",
+          "label": "trumpet upper voice",
+          "timeMs": 55382,
+          "durationMs": 104,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-80",
+          "label": "trumpet upper voice",
+          "timeMs": 55577,
+          "durationMs": 550,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-81",
+          "label": "trumpet upper voice",
+          "timeMs": 57245,
+          "durationMs": 137,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-82",
+          "label": "trumpet upper voice",
+          "timeMs": 57427,
+          "durationMs": 105,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-83",
+          "label": "trumpet upper voice",
+          "timeMs": 57591,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-84",
+          "label": "trumpet upper voice",
+          "timeMs": 57764,
+          "durationMs": 318,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-85",
+          "label": "trumpet upper voice",
+          "timeMs": 58132,
+          "durationMs": 127,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-86",
+          "label": "trumpet upper voice",
+          "timeMs": 58323,
+          "durationMs": 545,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-87",
+          "label": "trumpet upper voice",
+          "timeMs": 59423,
+          "durationMs": 104,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-88",
+          "label": "trumpet upper voice",
+          "timeMs": 59591,
+          "durationMs": 100,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-89",
+          "label": "trumpet upper voice",
+          "timeMs": 59754,
+          "durationMs": 128,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-90",
+          "label": "trumpet upper voice",
+          "timeMs": 59964,
+          "durationMs": 513,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-91",
+          "label": "trumpet upper voice",
+          "timeMs": 60527,
+          "durationMs": 277,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-92",
+          "label": "trumpet upper voice",
+          "timeMs": 61627,
+          "durationMs": 91,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-93",
+          "label": "trumpet upper voice",
+          "timeMs": 61791,
+          "durationMs": 86,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-94",
+          "label": "trumpet upper voice",
+          "timeMs": 61954,
+          "durationMs": 123,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-95",
+          "label": "trumpet upper voice",
+          "timeMs": 62168,
+          "durationMs": 500,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-96",
+          "label": "trumpet upper voice",
+          "timeMs": 62732,
+          "durationMs": 209,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              71
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-97",
+          "label": "trumpet upper voice",
+          "timeMs": 63818,
+          "durationMs": 77,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-98",
+          "label": "trumpet upper voice",
+          "timeMs": 63973,
+          "durationMs": 77,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-99",
+          "label": "trumpet upper voice",
+          "timeMs": 64136,
+          "durationMs": 73,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-100",
+          "label": "trumpet upper voice",
+          "timeMs": 64323,
+          "durationMs": 95,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-101",
+          "label": "trumpet upper voice",
+          "timeMs": 64491,
+          "durationMs": 95,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-102",
+          "label": "trumpet upper voice",
+          "timeMs": 64677,
+          "durationMs": 109,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-103",
+          "label": "trumpet upper voice",
+          "timeMs": 64877,
+          "durationMs": 96,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-104",
+          "label": "trumpet upper voice",
+          "timeMs": 65050,
+          "durationMs": 82,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-105",
+          "label": "trumpet upper voice",
+          "timeMs": 65204,
+          "durationMs": 96,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-106",
+          "label": "trumpet upper voice",
+          "timeMs": 65427,
+          "durationMs": 1637,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-107",
+          "label": "trumpet upper voice",
+          "timeMs": 67104,
+          "durationMs": 341,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-108",
+          "label": "trumpet upper voice",
+          "timeMs": 67614,
+          "durationMs": 940,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-109",
+          "label": "trumpet upper voice",
+          "timeMs": 68718,
+          "durationMs": 932,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-110",
+          "label": "trumpet upper voice",
+          "timeMs": 69804,
+          "durationMs": 919,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-111",
+          "label": "trumpet upper voice",
+          "timeMs": 70868,
+          "durationMs": 864,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-112",
+          "label": "trumpet upper voice",
+          "timeMs": 71945,
+          "durationMs": 1978,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-113",
+          "label": "trumpet upper voice",
+          "timeMs": 74141,
+          "durationMs": 1582,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-114",
+          "label": "trumpet upper voice",
+          "timeMs": 75759,
+          "durationMs": 386,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-115",
+          "label": "trumpet upper voice",
+          "timeMs": 76304,
+          "durationMs": 896,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-116",
+          "label": "trumpet upper voice",
+          "timeMs": 77377,
+          "durationMs": 914,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              72
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-117",
+          "label": "trumpet upper voice",
+          "timeMs": 78495,
+          "durationMs": 923,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-118",
+          "label": "trumpet upper voice",
+          "timeMs": 79600,
+          "durationMs": 923,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              74
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        },
+        {
+          "id": "god-bless-america-119",
+          "label": "trumpet upper voice",
+          "timeMs": 80727,
+          "durationMs": 1409,
+          "strings": [],
+          "expected": {
+            "kind": "note",
+            "midi": [
+              76
+            ],
+            "scoring": "pitch",
+            "toleranceCents": 40,
+            "timingWindowMs": {
+              "early": 140,
+              "late": 180
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "trumpet-entry",
+      "label": "Trumpet entry",
+      "timeMs": 7086
+    }
+  ],
+  "assets": {
+    "sourceUrl": "/user-songs/sources/godblessamer.mid",
+    "license": "User-supplied MIDI; open license not established"
+  }
+}

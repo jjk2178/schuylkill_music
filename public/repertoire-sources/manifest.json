@@ -1,0 +1,35 @@
+[
+  {
+    "id": "silent-night-mutopia",
+    "title": "Silent Night (original voice and guitar)",
+    "url": "https://www.mutopiaproject.org/ftp/GruberFX/stille-orig/stille-orig.mid",
+    "page": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=81",
+    "license": "Public Domain",
+    "file": "silent-night-original.mid",
+    "sha256": "9ed03f099e24fb77ffc3d575eb4551e6fbfe0958353777b4881dc94eed34b445",
+    "status": "Downloaded source candidate; not yet imported",
+    "verifiedOn": "2026-10-03"
+  },
+  {
+    "id": "greensleeves-mutopia",
+    "title": "Greensleeves (lute/guitar/vihuela)",
+    "url": "https://www.mutopiaproject.org/ftp/Traditional/Greensleaves/Greensleaves.mid",
+    "page": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=109",
+    "license": "Public Domain",
+    "file": "greensleeves.mid",
+    "sha256": "468c9878cff4709a7f369819313eea41eb38f90a043e377540ac66d8d2f937f7",
+    "status": "Downloaded source candidate; not yet imported",
+    "verifiedOn": "2026-10-03"
+  },
+  {
+    "id": "rule-britannia-openscore",
+    "title": "Rule, Britannia!",
+    "url": "https://raw.githubusercontent.com/OpenScore/Lieder/refs/heads/main/scores/Arne%2C_Thomas/_/Rule%2C_Britannia%21/lc29233346.mxl?raw=true",
+    "page": "https://fourscoreandmore.org/openscore/lieder/",
+    "license": "CC0-1.0",
+    "file": "rule-britannia.mxl",
+    "status": "Downloaded source candidate; not yet imported",
+    "verifiedOn": "2026-10-03",
+    "sha256": "6a6ca0f5319d8737cddb1554aaf0d9c8c5dbb2fcc09ae5d74ad5fb44f1db4fb3"
+  }
+]

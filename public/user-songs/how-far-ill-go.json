@@ -13,26 +13,26 @@
   ],
   "tempoMap": [
     {
-      "timeMs": 0,
-      "bpm": 88
+      "timeMs": 0.0,
+      "bpm": 90
     }
   ],
   "timeSignatures": [
     {
-      "timeMs": 0,
+      "timeMs": 0.0,
       "beats": 4,
       "beatUnit": 4
     }
   ],
   "keySignatures": [
     {
-      "timeMs": 0,
+      "timeMs": 0.0,
       "key": "E",
       "fifths": 4,
       "mode": "major"
     },
     {
-      "timeMs": 111818,
+      "timeMs": 109333.155556,
       "key": "F",
       "fifths": -1,
       "mode": "major"
@@ -47,8 +47,8 @@
       "events": [
         {
           "id": "how-far-ill-go-mxl-1",
-          "timeMs": 0,
-          "durationMs": 2727,
+          "timeMs": 0.0,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -65,8 +65,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-2",
-          "timeMs": 511,
-          "durationMs": 511,
+          "timeMs": 499.644444,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -82,8 +82,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-3",
-          "timeMs": 1023,
-          "durationMs": 511,
+          "timeMs": 1000.266667,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -99,8 +99,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-4",
-          "timeMs": 1534,
-          "durationMs": 170,
+          "timeMs": 1499.911111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -116,8 +116,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-5",
-          "timeMs": 1705,
-          "durationMs": 170,
+          "timeMs": 1667.111111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -133,8 +133,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-6",
-          "timeMs": 1875,
-          "durationMs": 170,
+          "timeMs": 1833.333333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -150,8 +150,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-7",
-          "timeMs": 2045,
-          "durationMs": 341,
+          "timeMs": 1999.555556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -167,8 +167,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-8",
-          "timeMs": 2386,
-          "durationMs": 170,
+          "timeMs": 2332.977778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -184,8 +184,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-9",
-          "timeMs": 2557,
-          "durationMs": 170,
+          "timeMs": 2500.177778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -201,8 +201,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-10",
-          "timeMs": 2727,
-          "durationMs": 2727,
+          "timeMs": 2666.4,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -222,8 +222,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-11",
-          "timeMs": 3239,
-          "durationMs": 511,
+          "timeMs": 3167.022222,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -239,8 +239,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-12",
-          "timeMs": 3750,
-          "durationMs": 511,
+          "timeMs": 3666.666667,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -256,8 +256,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-13",
-          "timeMs": 4261,
-          "durationMs": 511,
+          "timeMs": 4166.311111,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -273,8 +273,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-14",
-          "timeMs": 4773,
-          "durationMs": 341,
+          "timeMs": 4666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -290,8 +290,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-15",
-          "timeMs": 5114,
-          "durationMs": 170,
+          "timeMs": 5000.355556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -307,8 +307,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-16",
-          "timeMs": 5284,
-          "durationMs": 170,
+          "timeMs": 5166.577778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -324,8 +324,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-17",
-          "timeMs": 5455,
-          "durationMs": 2727,
+          "timeMs": 5333.777778,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -345,8 +345,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-18",
-          "timeMs": 5966,
-          "durationMs": 682,
+          "timeMs": 5833.422222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -363,8 +363,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-19",
-          "timeMs": 6477,
-          "durationMs": 1364,
+          "timeMs": 6333.066667,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -380,8 +380,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-20",
-          "timeMs": 6648,
-          "durationMs": 170,
+          "timeMs": 6500.266667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -397,8 +397,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-21",
-          "timeMs": 6818,
-          "durationMs": 341,
+          "timeMs": 6666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -414,8 +414,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-22",
-          "timeMs": 7159,
-          "durationMs": 341,
+          "timeMs": 6999.911111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -431,8 +431,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-23",
-          "timeMs": 7500,
-          "durationMs": 341,
+          "timeMs": 7333.333333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -448,8 +448,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-24",
-          "timeMs": 7841,
-          "durationMs": 1364,
+          "timeMs": 7666.755556,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -468,8 +468,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-25",
-          "timeMs": 8182,
-          "durationMs": 2727,
+          "timeMs": 8000.177778,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -488,8 +488,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-26",
-          "timeMs": 8693,
-          "durationMs": 511,
+          "timeMs": 8499.822222,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -505,8 +505,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-27",
-          "timeMs": 9205,
-          "durationMs": 341,
+          "timeMs": 9000.444444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -522,8 +522,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-28",
-          "timeMs": 9545,
-          "durationMs": 1364,
+          "timeMs": 9332.888889,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -541,8 +541,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-29",
-          "timeMs": 10909,
-          "durationMs": 2727,
+          "timeMs": 10666.577778,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -561,8 +561,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-30",
-          "timeMs": 11420,
-          "durationMs": 511,
+          "timeMs": 11166.222222,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -578,8 +578,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-31",
-          "timeMs": 12614,
-          "durationMs": 170,
+          "timeMs": 12333.688889,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -595,8 +595,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-32",
-          "timeMs": 12784,
-          "durationMs": 170,
+          "timeMs": 12499.911111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -612,8 +612,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-33",
-          "timeMs": 12955,
-          "durationMs": 170,
+          "timeMs": 12667.111111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -629,8 +629,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-34",
-          "timeMs": 13125,
-          "durationMs": 170,
+          "timeMs": 12833.333333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -646,8 +646,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-35",
-          "timeMs": 13295,
-          "durationMs": 170,
+          "timeMs": 12999.555556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -663,8 +663,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-36",
-          "timeMs": 13466,
-          "durationMs": 170,
+          "timeMs": 13166.755556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -680,8 +680,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-37",
-          "timeMs": 13636,
-          "durationMs": 2727,
+          "timeMs": 13332.977778,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -701,8 +701,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-38",
-          "timeMs": 14148,
-          "durationMs": 511,
+          "timeMs": 13833.6,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -718,8 +718,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-39",
-          "timeMs": 15000,
-          "durationMs": 170,
+          "timeMs": 14666.666667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -735,8 +735,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-40",
-          "timeMs": 15170,
-          "durationMs": 170,
+          "timeMs": 14832.888889,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -752,8 +752,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-41",
-          "timeMs": 15341,
-          "durationMs": 341,
+          "timeMs": 15000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -769,8 +769,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-42",
-          "timeMs": 15682,
-          "durationMs": 341,
+          "timeMs": 15333.511111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -786,8 +786,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-43",
-          "timeMs": 16023,
-          "durationMs": 170,
+          "timeMs": 15666.933333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -803,8 +803,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-44",
-          "timeMs": 16193,
-          "durationMs": 170,
+          "timeMs": 15833.155556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -820,8 +820,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-45",
-          "timeMs": 16364,
-          "durationMs": 2727,
+          "timeMs": 16000.355556,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -841,8 +841,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-46",
-          "timeMs": 16875,
-          "durationMs": 682,
+          "timeMs": 16500.0,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -859,8 +859,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-47",
-          "timeMs": 17386,
-          "durationMs": 1364,
+          "timeMs": 16999.644444,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -876,8 +876,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-48",
-          "timeMs": 17557,
-          "durationMs": 170,
+          "timeMs": 17166.844444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -893,8 +893,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-49",
-          "timeMs": 17727,
-          "durationMs": 341,
+          "timeMs": 17333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -910,8 +910,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-50",
-          "timeMs": 18068,
-          "durationMs": 341,
+          "timeMs": 17666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -927,8 +927,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-51",
-          "timeMs": 18409,
-          "durationMs": 341,
+          "timeMs": 17999.911111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -944,8 +944,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-52",
-          "timeMs": 18750,
-          "durationMs": 1364,
+          "timeMs": 18333.333333,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -964,8 +964,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-53",
-          "timeMs": 19091,
-          "durationMs": 2045,
+          "timeMs": 18666.755556,
+          "durationMs": 1999.555556,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -984,8 +984,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-54",
-          "timeMs": 19602,
-          "durationMs": 511,
+          "timeMs": 19166.4,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1001,8 +1001,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-55",
-          "timeMs": 20114,
-          "durationMs": 341,
+          "timeMs": 19667.022222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1018,8 +1018,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-56",
-          "timeMs": 20455,
-          "durationMs": 1364,
+          "timeMs": 20000.444444,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1037,8 +1037,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-57",
-          "timeMs": 21477,
-          "durationMs": 170,
+          "timeMs": 20999.733333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1054,8 +1054,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-58",
-          "timeMs": 21648,
-          "durationMs": 170,
+          "timeMs": 21166.933333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1071,8 +1071,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-59",
-          "timeMs": 21818,
-          "durationMs": 1364,
+          "timeMs": 21333.155556,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1091,8 +1091,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-60",
-          "timeMs": 22159,
-          "durationMs": 341,
+          "timeMs": 21666.577778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1108,8 +1108,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-61",
-          "timeMs": 22500,
-          "durationMs": 1364,
+          "timeMs": 22000.0,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1126,8 +1126,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-62",
-          "timeMs": 22841,
-          "durationMs": 170,
+          "timeMs": 22333.422222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1143,8 +1143,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-63",
-          "timeMs": 23011,
-          "durationMs": 170,
+          "timeMs": 22499.644444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1160,8 +1160,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-64",
-          "timeMs": 23182,
-          "durationMs": 341,
+          "timeMs": 22666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1177,8 +1177,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-65",
-          "timeMs": 23523,
-          "durationMs": 341,
+          "timeMs": 23000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1194,8 +1194,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-66",
-          "timeMs": 23864,
-          "durationMs": 1364,
+          "timeMs": 23333.688889,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1215,8 +1215,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-67",
-          "timeMs": 24205,
-          "durationMs": 170,
+          "timeMs": 23667.111111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1232,8 +1232,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-68",
-          "timeMs": 24375,
-          "durationMs": 170,
+          "timeMs": 23833.333333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1249,8 +1249,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-69",
-          "timeMs": 24545,
-          "durationMs": 682,
+          "timeMs": 23999.555556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1268,8 +1268,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-70",
-          "timeMs": 24886,
-          "durationMs": 341,
+          "timeMs": 24332.977778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1285,8 +1285,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-71",
-          "timeMs": 25227,
-          "durationMs": 1364,
+          "timeMs": 24666.4,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1303,8 +1303,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-72",
-          "timeMs": 25568,
-          "durationMs": 170,
+          "timeMs": 24999.822222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1320,8 +1320,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-73",
-          "timeMs": 25739,
-          "durationMs": 170,
+          "timeMs": 25167.022222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1337,8 +1337,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-74",
-          "timeMs": 25909,
-          "durationMs": 341,
+          "timeMs": 25333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1354,8 +1354,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-75",
-          "timeMs": 26250,
-          "durationMs": 341,
+          "timeMs": 25666.666667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1371,8 +1371,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-76",
-          "timeMs": 26591,
-          "durationMs": 1364,
+          "timeMs": 26000.088889,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1392,8 +1392,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-77",
-          "timeMs": 27102,
-          "durationMs": 170,
+          "timeMs": 26499.733333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1409,8 +1409,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-78",
-          "timeMs": 27273,
-          "durationMs": 682,
+          "timeMs": 26666.933333,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1428,8 +1428,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-79",
-          "timeMs": 27614,
-          "durationMs": 341,
+          "timeMs": 27000.355556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1445,8 +1445,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-80",
-          "timeMs": 27955,
-          "durationMs": 1364,
+          "timeMs": 27333.777778,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1463,8 +1463,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-81",
-          "timeMs": 28295,
-          "durationMs": 170,
+          "timeMs": 27666.222222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1480,8 +1480,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-82",
-          "timeMs": 28466,
-          "durationMs": 170,
+          "timeMs": 27833.422222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1497,8 +1497,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-83",
-          "timeMs": 28636,
-          "durationMs": 341,
+          "timeMs": 27999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1514,8 +1514,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-84",
-          "timeMs": 28977,
-          "durationMs": 341,
+          "timeMs": 28333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1531,8 +1531,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-85",
-          "timeMs": 29318,
-          "durationMs": 1364,
+          "timeMs": 28666.488889,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1552,8 +1552,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-86",
-          "timeMs": 29659,
-          "durationMs": 170,
+          "timeMs": 28999.911111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1569,8 +1569,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-87",
-          "timeMs": 29830,
-          "durationMs": 170,
+          "timeMs": 29167.111111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1586,8 +1586,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-88",
-          "timeMs": 30000,
-          "durationMs": 2727,
+          "timeMs": 29333.333333,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1605,8 +1605,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-89",
-          "timeMs": 30682,
-          "durationMs": 682,
+          "timeMs": 30000.177778,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1622,8 +1622,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-90",
-          "timeMs": 31364,
-          "durationMs": 682,
+          "timeMs": 30667.022222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1639,8 +1639,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-91",
-          "timeMs": 32386,
-          "durationMs": 170,
+          "timeMs": 31666.311111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1656,8 +1656,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-92",
-          "timeMs": 32557,
-          "durationMs": 170,
+          "timeMs": 31833.511111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1673,8 +1673,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-93",
-          "timeMs": 32727,
-          "durationMs": 2727,
+          "timeMs": 31999.733333,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1694,8 +1694,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-94",
-          "timeMs": 33068,
-          "durationMs": 341,
+          "timeMs": 32333.155556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1713,8 +1713,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-95",
-          "timeMs": 33239,
-          "durationMs": 170,
+          "timeMs": 32500.355556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1731,8 +1731,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-96",
-          "timeMs": 33409,
-          "durationMs": 341,
+          "timeMs": 32666.577778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1750,8 +1750,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-97",
-          "timeMs": 33750,
-          "durationMs": 341,
+          "timeMs": 33000.0,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1772,8 +1772,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-98",
-          "timeMs": 33920,
-          "durationMs": 170,
+          "timeMs": 33166.222222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1790,8 +1790,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-99",
-          "timeMs": 34091,
-          "durationMs": 341,
+          "timeMs": 33333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1809,8 +1809,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-100",
-          "timeMs": 34432,
-          "durationMs": 341,
+          "timeMs": 33666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1827,8 +1827,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-101",
-          "timeMs": 34773,
-          "durationMs": 341,
+          "timeMs": 34000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1845,8 +1845,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-102",
-          "timeMs": 35114,
-          "durationMs": 341,
+          "timeMs": 34333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1866,8 +1866,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-103",
-          "timeMs": 35455,
-          "durationMs": 341,
+          "timeMs": 34667.111111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1884,8 +1884,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-104",
-          "timeMs": 35795,
-          "durationMs": 682,
+          "timeMs": 34999.555556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1902,8 +1902,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-105",
-          "timeMs": 36136,
-          "durationMs": 341,
+          "timeMs": 35332.977778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1919,8 +1919,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-106",
-          "timeMs": 36477,
-          "durationMs": 682,
+          "timeMs": 35666.4,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -1940,8 +1940,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-107",
-          "timeMs": 36818,
-          "durationMs": 341,
+          "timeMs": 35999.822222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1957,8 +1957,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-108",
-          "timeMs": 37159,
-          "durationMs": 341,
+          "timeMs": 36333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1974,8 +1974,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-109",
-          "timeMs": 37330,
-          "durationMs": 170,
+          "timeMs": 36500.444444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -1991,8 +1991,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-110",
-          "timeMs": 37500,
-          "durationMs": 341,
+          "timeMs": 36666.666667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2010,8 +2010,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-111",
-          "timeMs": 37841,
-          "durationMs": 341,
+          "timeMs": 37000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2032,8 +2032,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-112",
-          "timeMs": 38182,
-          "durationMs": 1023,
+          "timeMs": 37333.511111,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2051,8 +2051,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-113",
-          "timeMs": 38523,
-          "durationMs": 341,
+          "timeMs": 37666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2068,8 +2068,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-114",
-          "timeMs": 38864,
-          "durationMs": 341,
+          "timeMs": 38000.355556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2085,8 +2085,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-115",
-          "timeMs": 39205,
-          "durationMs": 1023,
+          "timeMs": 38333.777778,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2107,8 +2107,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-116",
-          "timeMs": 39545,
-          "durationMs": 341,
+          "timeMs": 38666.222222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2124,8 +2124,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-117",
-          "timeMs": 39886,
-          "durationMs": 341,
+          "timeMs": 38999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2141,8 +2141,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-118",
-          "timeMs": 40057,
-          "durationMs": 170,
+          "timeMs": 39166.844444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2158,8 +2158,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-119",
-          "timeMs": 40227,
-          "durationMs": 341,
+          "timeMs": 39333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2177,8 +2177,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-120",
-          "timeMs": 40568,
-          "durationMs": 341,
+          "timeMs": 39666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2199,8 +2199,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-121",
-          "timeMs": 40909,
-          "durationMs": 1023,
+          "timeMs": 39999.911111,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2218,8 +2218,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-122",
-          "timeMs": 41250,
-          "durationMs": 341,
+          "timeMs": 40333.333333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2235,8 +2235,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-123",
-          "timeMs": 41591,
-          "durationMs": 341,
+          "timeMs": 40666.755556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2252,8 +2252,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-124",
-          "timeMs": 41932,
-          "durationMs": 1023,
+          "timeMs": 41000.177778,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2274,8 +2274,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-125",
-          "timeMs": 42273,
-          "durationMs": 341,
+          "timeMs": 41333.6,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2291,8 +2291,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-126",
-          "timeMs": 42614,
-          "durationMs": 341,
+          "timeMs": 41667.022222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2308,8 +2308,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-127",
-          "timeMs": 42955,
-          "durationMs": 341,
+          "timeMs": 42000.444444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2325,8 +2325,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-128",
-          "timeMs": 43295,
-          "durationMs": 341,
+          "timeMs": 42332.888889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2346,8 +2346,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-129",
-          "timeMs": 43466,
-          "durationMs": 170,
+          "timeMs": 42500.088889,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2364,8 +2364,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-130",
-          "timeMs": 43636,
-          "durationMs": 341,
+          "timeMs": 42666.311111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2383,8 +2383,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-131",
-          "timeMs": 43977,
-          "durationMs": 341,
+          "timeMs": 42999.733333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2402,8 +2402,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-132",
-          "timeMs": 44148,
-          "durationMs": 170,
+          "timeMs": 43166.933333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2420,8 +2420,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-133",
-          "timeMs": 44318,
-          "durationMs": 341,
+          "timeMs": 43333.155556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2439,8 +2439,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-134",
-          "timeMs": 44659,
-          "durationMs": 341,
+          "timeMs": 43666.577778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2461,8 +2461,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-135",
-          "timeMs": 44830,
-          "durationMs": 170,
+          "timeMs": 43833.777778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2479,8 +2479,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-136",
-          "timeMs": 45000,
-          "durationMs": 341,
+          "timeMs": 44000.0,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2498,8 +2498,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-137",
-          "timeMs": 45341,
-          "durationMs": 341,
+          "timeMs": 44333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2517,8 +2517,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-138",
-          "timeMs": 45682,
-          "durationMs": 341,
+          "timeMs": 44666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2536,8 +2536,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-139",
-          "timeMs": 46023,
-          "durationMs": 341,
+          "timeMs": 45000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2557,8 +2557,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-140",
-          "timeMs": 46364,
-          "durationMs": 341,
+          "timeMs": 45333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2575,8 +2575,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-141",
-          "timeMs": 46705,
-          "durationMs": 682,
+          "timeMs": 45667.111111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2593,8 +2593,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-142",
-          "timeMs": 47045,
-          "durationMs": 341,
+          "timeMs": 45999.555556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2610,8 +2610,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-143",
-          "timeMs": 47386,
-          "durationMs": 682,
+          "timeMs": 46332.977778,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2631,8 +2631,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-144",
-          "timeMs": 47727,
-          "durationMs": 341,
+          "timeMs": 46666.4,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2648,8 +2648,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-145",
-          "timeMs": 48068,
-          "durationMs": 341,
+          "timeMs": 46999.822222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2665,8 +2665,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-146",
-          "timeMs": 48239,
-          "durationMs": 170,
+          "timeMs": 47167.022222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2682,8 +2682,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-147",
-          "timeMs": 48409,
-          "durationMs": 341,
+          "timeMs": 47333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2701,8 +2701,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-148",
-          "timeMs": 48750,
-          "durationMs": 341,
+          "timeMs": 47666.666667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2723,8 +2723,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-149",
-          "timeMs": 49091,
-          "durationMs": 1023,
+          "timeMs": 48000.088889,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2742,8 +2742,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-150",
-          "timeMs": 49432,
-          "durationMs": 341,
+          "timeMs": 48333.511111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2759,8 +2759,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-151",
-          "timeMs": 49773,
-          "durationMs": 341,
+          "timeMs": 48666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2776,8 +2776,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-152",
-          "timeMs": 50114,
-          "durationMs": 1023,
+          "timeMs": 49000.355556,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2798,8 +2798,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-153",
-          "timeMs": 50455,
-          "durationMs": 341,
+          "timeMs": 49333.777778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2815,8 +2815,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-154",
-          "timeMs": 50795,
-          "durationMs": 341,
+          "timeMs": 49666.222222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2832,8 +2832,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-155",
-          "timeMs": 51136,
-          "durationMs": 341,
+          "timeMs": 49999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2849,8 +2849,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-156",
-          "timeMs": 51477,
-          "durationMs": 341,
+          "timeMs": 50333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2870,8 +2870,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-157",
-          "timeMs": 51648,
-          "durationMs": 170,
+          "timeMs": 50500.266667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2887,8 +2887,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-158",
-          "timeMs": 51818,
-          "durationMs": 2727,
+          "timeMs": 50666.488889,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -2905,8 +2905,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-159",
-          "timeMs": 52159,
-          "durationMs": 341,
+          "timeMs": 50999.911111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2922,8 +2922,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-160",
-          "timeMs": 52500,
-          "durationMs": 341,
+          "timeMs": 51333.333333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2939,8 +2939,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-161",
-          "timeMs": 52841,
-          "durationMs": 341,
+          "timeMs": 51666.755556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2956,8 +2956,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-162",
-          "timeMs": 53182,
-          "durationMs": 341,
+          "timeMs": 52000.177778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2973,8 +2973,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-163",
-          "timeMs": 53523,
-          "durationMs": 170,
+          "timeMs": 52333.6,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -2990,8 +2990,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-164",
-          "timeMs": 53693,
-          "durationMs": 170,
+          "timeMs": 52499.822222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3007,8 +3007,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-165",
-          "timeMs": 53864,
-          "durationMs": 341,
+          "timeMs": 52667.022222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3024,8 +3024,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-166",
-          "timeMs": 54205,
-          "durationMs": 170,
+          "timeMs": 53000.444444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3041,8 +3041,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-167",
-          "timeMs": 54375,
-          "durationMs": 170,
+          "timeMs": 53166.666667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3058,8 +3058,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-168",
-          "timeMs": 54545,
-          "durationMs": 2727,
+          "timeMs": 53332.888889,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3079,8 +3079,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-169",
-          "timeMs": 55057,
-          "durationMs": 511,
+          "timeMs": 53833.511111,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3097,8 +3097,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-170",
-          "timeMs": 55227,
-          "durationMs": 682,
+          "timeMs": 53999.733333,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3114,8 +3114,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-171",
-          "timeMs": 55568,
-          "durationMs": 511,
+          "timeMs": 54333.155556,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3131,8 +3131,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-172",
-          "timeMs": 55909,
-          "durationMs": 682,
+          "timeMs": 54666.577778,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3151,8 +3151,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-173",
-          "timeMs": 56080,
-          "durationMs": 511,
+          "timeMs": 54833.777778,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3169,8 +3169,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-174",
-          "timeMs": 56250,
-          "durationMs": 170,
+          "timeMs": 55000.0,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3186,8 +3186,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-175",
-          "timeMs": 56420,
-          "durationMs": 170,
+          "timeMs": 55166.222222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3204,8 +3204,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-176",
-          "timeMs": 56591,
-          "durationMs": 682,
+          "timeMs": 55333.422222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3222,8 +3222,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-177",
-          "timeMs": 56932,
-          "durationMs": 341,
+          "timeMs": 55666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3240,8 +3240,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-178",
-          "timeMs": 57102,
-          "durationMs": 170,
+          "timeMs": 55833.066667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3258,8 +3258,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-179",
-          "timeMs": 57273,
-          "durationMs": 682,
+          "timeMs": 56000.266667,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3279,8 +3279,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-180",
-          "timeMs": 57784,
-          "durationMs": 511,
+          "timeMs": 56499.911111,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3297,8 +3297,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-181",
-          "timeMs": 57955,
-          "durationMs": 682,
+          "timeMs": 56667.111111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3314,8 +3314,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-182",
-          "timeMs": 58295,
-          "durationMs": 511,
+          "timeMs": 56999.555556,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3331,8 +3331,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-183",
-          "timeMs": 58636,
-          "durationMs": 682,
+          "timeMs": 57332.977778,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3351,8 +3351,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-184",
-          "timeMs": 58807,
-          "durationMs": 511,
+          "timeMs": 57500.177778,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3369,8 +3369,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-185",
-          "timeMs": 59318,
-          "durationMs": 682,
+          "timeMs": 57999.822222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3387,8 +3387,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-186",
-          "timeMs": 59659,
-          "durationMs": 341,
+          "timeMs": 58333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3405,8 +3405,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-187",
-          "timeMs": 59830,
-          "durationMs": 170,
+          "timeMs": 58500.444444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3423,8 +3423,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-188",
-          "timeMs": 60000,
-          "durationMs": 682,
+          "timeMs": 58666.666667,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3445,8 +3445,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-189",
-          "timeMs": 60511,
-          "durationMs": 682,
+          "timeMs": 59166.311111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3463,8 +3463,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-190",
-          "timeMs": 60682,
-          "durationMs": 682,
+          "timeMs": 59333.511111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3480,8 +3480,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-191",
-          "timeMs": 61193,
-          "durationMs": 682,
+          "timeMs": 59833.155556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3498,8 +3498,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-192",
-          "timeMs": 61364,
-          "durationMs": 682,
+          "timeMs": 60000.355556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3520,8 +3520,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-193",
-          "timeMs": 61705,
-          "durationMs": 341,
+          "timeMs": 60333.777778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3538,8 +3538,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-194",
-          "timeMs": 62045,
-          "durationMs": 682,
+          "timeMs": 60666.222222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3557,8 +3557,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-195",
-          "timeMs": 62386,
-          "durationMs": 341,
+          "timeMs": 60999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3575,8 +3575,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-196",
-          "timeMs": 62727,
-          "durationMs": 2727,
+          "timeMs": 61333.066667,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3597,8 +3597,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-197",
-          "timeMs": 63409,
-          "durationMs": 682,
+          "timeMs": 61999.911111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3614,8 +3614,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-198",
-          "timeMs": 64091,
-          "durationMs": 682,
+          "timeMs": 62666.755556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3634,8 +3634,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-199",
-          "timeMs": 64773,
-          "durationMs": 682,
+          "timeMs": 63333.6,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3651,8 +3651,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-200",
-          "timeMs": 65455,
-          "durationMs": 2727,
+          "timeMs": 64000.444444,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3674,8 +3674,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-201",
-          "timeMs": 65966,
-          "durationMs": 511,
+          "timeMs": 64500.088889,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3692,8 +3692,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-202",
-          "timeMs": 66136,
-          "durationMs": 682,
+          "timeMs": 64666.311111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3709,8 +3709,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-203",
-          "timeMs": 66477,
-          "durationMs": 511,
+          "timeMs": 64999.733333,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3726,8 +3726,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-204",
-          "timeMs": 66818,
-          "durationMs": 682,
+          "timeMs": 65333.155556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3746,8 +3746,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-205",
-          "timeMs": 66989,
-          "durationMs": 511,
+          "timeMs": 65500.355556,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3764,8 +3764,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-206",
-          "timeMs": 67159,
-          "durationMs": 170,
+          "timeMs": 65666.577778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3781,8 +3781,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-207",
-          "timeMs": 67330,
-          "durationMs": 170,
+          "timeMs": 65833.777778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3799,8 +3799,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-208",
-          "timeMs": 67500,
-          "durationMs": 682,
+          "timeMs": 66000.0,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3817,8 +3817,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-209",
-          "timeMs": 67841,
-          "durationMs": 341,
+          "timeMs": 66333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3835,8 +3835,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-210",
-          "timeMs": 68011,
-          "durationMs": 170,
+          "timeMs": 66499.644444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3853,8 +3853,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-211",
-          "timeMs": 68182,
-          "durationMs": 682,
+          "timeMs": 66666.844444,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3874,8 +3874,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-212",
-          "timeMs": 68693,
-          "durationMs": 511,
+          "timeMs": 67166.488889,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3892,8 +3892,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-213",
-          "timeMs": 68864,
-          "durationMs": 682,
+          "timeMs": 67333.688889,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3909,8 +3909,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-214",
-          "timeMs": 69205,
-          "durationMs": 511,
+          "timeMs": 67667.111111,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -3926,8 +3926,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-215",
-          "timeMs": 69545,
-          "durationMs": 682,
+          "timeMs": 67999.555556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3946,8 +3946,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-216",
-          "timeMs": 69716,
-          "durationMs": 511,
+          "timeMs": 68166.755556,
+          "durationMs": 499.644444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3964,8 +3964,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-217",
-          "timeMs": 70227,
-          "durationMs": 682,
+          "timeMs": 68666.4,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -3982,8 +3982,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-218",
-          "timeMs": 70568,
-          "durationMs": 341,
+          "timeMs": 68999.822222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4000,8 +4000,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-219",
-          "timeMs": 70739,
-          "durationMs": 170,
+          "timeMs": 69167.022222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4018,8 +4018,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-220",
-          "timeMs": 70909,
-          "durationMs": 682,
+          "timeMs": 69333.244444,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4040,8 +4040,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-221",
-          "timeMs": 71420,
-          "durationMs": 682,
+          "timeMs": 69832.888889,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4058,8 +4058,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-222",
-          "timeMs": 71591,
-          "durationMs": 682,
+          "timeMs": 70000.088889,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4075,8 +4075,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-223",
-          "timeMs": 72102,
-          "durationMs": 682,
+          "timeMs": 70499.733333,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4093,8 +4093,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-224",
-          "timeMs": 72273,
-          "durationMs": 682,
+          "timeMs": 70666.933333,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4115,8 +4115,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-225",
-          "timeMs": 72614,
-          "durationMs": 341,
+          "timeMs": 71000.355556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4133,8 +4133,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-226",
-          "timeMs": 72955,
-          "durationMs": 682,
+          "timeMs": 71333.777778,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4152,8 +4152,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-227",
-          "timeMs": 73295,
-          "durationMs": 341,
+          "timeMs": 71666.222222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4170,8 +4170,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-228",
-          "timeMs": 73636,
-          "durationMs": 2045,
+          "timeMs": 71999.644444,
+          "durationMs": 1999.555556,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4192,8 +4192,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-229",
-          "timeMs": 74318,
-          "durationMs": 682,
+          "timeMs": 72666.488889,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4209,8 +4209,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-230",
-          "timeMs": 75000,
-          "durationMs": 682,
+          "timeMs": 73333.333333,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4229,8 +4229,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-231",
-          "timeMs": 75682,
-          "durationMs": 2045,
+          "timeMs": 74000.177778,
+          "durationMs": 1999.555556,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4248,8 +4248,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-232",
-          "timeMs": 76023,
-          "durationMs": 170,
+          "timeMs": 74333.6,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4265,8 +4265,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-233",
-          "timeMs": 76193,
-          "durationMs": 170,
+          "timeMs": 74499.822222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4282,8 +4282,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-234",
-          "timeMs": 76364,
-          "durationMs": 682,
+          "timeMs": 74667.022222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4303,8 +4303,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-235",
-          "timeMs": 76705,
-          "durationMs": 341,
+          "timeMs": 75000.444444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4320,8 +4320,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-236",
-          "timeMs": 77045,
-          "durationMs": 1364,
+          "timeMs": 75332.888889,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4339,8 +4339,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-237",
-          "timeMs": 77386,
-          "durationMs": 341,
+          "timeMs": 75666.311111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4357,8 +4357,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-238",
-          "timeMs": 77557,
-          "durationMs": 170,
+          "timeMs": 75833.511111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4375,8 +4375,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-239",
-          "timeMs": 77727,
-          "durationMs": 341,
+          "timeMs": 75999.733333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4393,8 +4393,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-240",
-          "timeMs": 78068,
-          "durationMs": 341,
+          "timeMs": 76333.155556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4410,8 +4410,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-241",
-          "timeMs": 78409,
-          "durationMs": 1364,
+          "timeMs": 76666.577778,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4432,8 +4432,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-242",
-          "timeMs": 78750,
-          "durationMs": 341,
+          "timeMs": 77000.0,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4450,8 +4450,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-243",
-          "timeMs": 78920,
-          "durationMs": 170,
+          "timeMs": 77166.222222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4468,8 +4468,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-244",
-          "timeMs": 79091,
-          "durationMs": 682,
+          "timeMs": 77333.422222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4488,8 +4488,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-245",
-          "timeMs": 79432,
-          "durationMs": 341,
+          "timeMs": 77666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4506,8 +4506,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-246",
-          "timeMs": 79773,
-          "durationMs": 1364,
+          "timeMs": 78000.266667,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4525,8 +4525,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-247",
-          "timeMs": 80114,
-          "durationMs": 341,
+          "timeMs": 78333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4543,8 +4543,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-248",
-          "timeMs": 80284,
-          "durationMs": 170,
+          "timeMs": 78499.911111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4561,8 +4561,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-249",
-          "timeMs": 80455,
-          "durationMs": 341,
+          "timeMs": 78667.111111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4579,8 +4579,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-250",
-          "timeMs": 80795,
-          "durationMs": 341,
+          "timeMs": 78999.555556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4597,8 +4597,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-251",
-          "timeMs": 81136,
-          "durationMs": 1364,
+          "timeMs": 79332.977778,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4619,8 +4619,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-252",
-          "timeMs": 81477,
-          "durationMs": 341,
+          "timeMs": 79666.4,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4636,8 +4636,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-253",
-          "timeMs": 81648,
-          "durationMs": 170,
+          "timeMs": 79833.6,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4653,8 +4653,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-254",
-          "timeMs": 81818,
-          "durationMs": 682,
+          "timeMs": 79999.822222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4672,8 +4672,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-255",
-          "timeMs": 82159,
-          "durationMs": 341,
+          "timeMs": 80333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4689,8 +4689,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-256",
-          "timeMs": 82500,
-          "durationMs": 1364,
+          "timeMs": 80666.666667,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4708,8 +4708,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-257",
-          "timeMs": 82841,
-          "durationMs": 341,
+          "timeMs": 81000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4726,8 +4726,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-258",
-          "timeMs": 83011,
-          "durationMs": 170,
+          "timeMs": 81166.311111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4744,8 +4744,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-259",
-          "timeMs": 83182,
-          "durationMs": 341,
+          "timeMs": 81333.511111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4762,8 +4762,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-260",
-          "timeMs": 83523,
-          "durationMs": 341,
+          "timeMs": 81666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4779,8 +4779,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-261",
-          "timeMs": 83864,
-          "durationMs": 1364,
+          "timeMs": 82000.355556,
+          "durationMs": 1333.688889,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4801,8 +4801,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-262",
-          "timeMs": 84205,
-          "durationMs": 341,
+          "timeMs": 82333.777778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4819,8 +4819,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-263",
-          "timeMs": 84375,
-          "durationMs": 170,
+          "timeMs": 82500.0,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4836,8 +4836,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-264",
-          "timeMs": 84545,
-          "durationMs": 2727,
+          "timeMs": 82666.222222,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4855,8 +4855,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-265",
-          "timeMs": 85227,
-          "durationMs": 682,
+          "timeMs": 83333.066667,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4872,8 +4872,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-266",
-          "timeMs": 85909,
-          "durationMs": 682,
+          "timeMs": 83999.911111,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4889,8 +4889,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-267",
-          "timeMs": 87273,
-          "durationMs": 2727,
+          "timeMs": 85333.6,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -4909,8 +4909,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-268",
-          "timeMs": 88636,
-          "durationMs": 170,
+          "timeMs": 86666.311111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4926,8 +4926,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-269",
-          "timeMs": 88807,
-          "durationMs": 170,
+          "timeMs": 86833.511111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4943,8 +4943,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-270",
-          "timeMs": 88977,
-          "durationMs": 170,
+          "timeMs": 86999.733333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4960,8 +4960,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-271",
-          "timeMs": 89148,
-          "durationMs": 170,
+          "timeMs": 87166.933333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4977,8 +4977,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-272",
-          "timeMs": 89318,
-          "durationMs": 170,
+          "timeMs": 87333.155556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -4994,8 +4994,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-273",
-          "timeMs": 89489,
-          "durationMs": 170,
+          "timeMs": 87500.355556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5011,8 +5011,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-274",
-          "timeMs": 89659,
-          "durationMs": 170,
+          "timeMs": 87666.577778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5028,8 +5028,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-275",
-          "timeMs": 89830,
-          "durationMs": 170,
+          "timeMs": 87833.777778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5045,8 +5045,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-276",
-          "timeMs": 90000,
-          "durationMs": 2727,
+          "timeMs": 88000.0,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5066,8 +5066,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-277",
-          "timeMs": 90341,
-          "durationMs": 341,
+          "timeMs": 88333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5085,8 +5085,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-278",
-          "timeMs": 90511,
-          "durationMs": 170,
+          "timeMs": 88499.644444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5103,8 +5103,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-279",
-          "timeMs": 90682,
-          "durationMs": 341,
+          "timeMs": 88666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5122,8 +5122,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-280",
-          "timeMs": 91023,
-          "durationMs": 341,
+          "timeMs": 89000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5144,8 +5144,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-281",
-          "timeMs": 91193,
-          "durationMs": 170,
+          "timeMs": 89166.488889,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5162,8 +5162,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-282",
-          "timeMs": 91364,
-          "durationMs": 341,
+          "timeMs": 89333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5181,8 +5181,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-283",
-          "timeMs": 91705,
-          "durationMs": 341,
+          "timeMs": 89667.111111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5199,8 +5199,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-284",
-          "timeMs": 92045,
-          "durationMs": 341,
+          "timeMs": 89999.555556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5217,8 +5217,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-285",
-          "timeMs": 92386,
-          "durationMs": 341,
+          "timeMs": 90332.977778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5238,8 +5238,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-286",
-          "timeMs": 92727,
-          "durationMs": 341,
+          "timeMs": 90666.4,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5256,8 +5256,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-287",
-          "timeMs": 93068,
-          "durationMs": 682,
+          "timeMs": 90999.822222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5274,8 +5274,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-288",
-          "timeMs": 93409,
-          "durationMs": 341,
+          "timeMs": 91333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5291,8 +5291,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-289",
-          "timeMs": 93750,
-          "durationMs": 682,
+          "timeMs": 91666.666667,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5312,8 +5312,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-290",
-          "timeMs": 94091,
-          "durationMs": 341,
+          "timeMs": 92000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5329,8 +5329,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-291",
-          "timeMs": 94432,
-          "durationMs": 341,
+          "timeMs": 92333.511111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5346,8 +5346,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-292",
-          "timeMs": 94602,
-          "durationMs": 170,
+          "timeMs": 92499.733333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5363,8 +5363,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-293",
-          "timeMs": 94773,
-          "durationMs": 341,
+          "timeMs": 92666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5382,8 +5382,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-294",
-          "timeMs": 95114,
-          "durationMs": 341,
+          "timeMs": 93000.355556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5404,8 +5404,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-295",
-          "timeMs": 95455,
-          "durationMs": 1023,
+          "timeMs": 93333.777778,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5423,8 +5423,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-296",
-          "timeMs": 95795,
-          "durationMs": 341,
+          "timeMs": 93666.222222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5440,8 +5440,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-297",
-          "timeMs": 96136,
-          "durationMs": 341,
+          "timeMs": 93999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5457,8 +5457,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-298",
-          "timeMs": 96477,
-          "durationMs": 1023,
+          "timeMs": 94333.066667,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5479,8 +5479,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-299",
-          "timeMs": 96818,
-          "durationMs": 341,
+          "timeMs": 94666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5496,8 +5496,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-300",
-          "timeMs": 97159,
-          "durationMs": 341,
+          "timeMs": 94999.911111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5513,8 +5513,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-301",
-          "timeMs": 97330,
-          "durationMs": 170,
+          "timeMs": 95167.111111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5530,8 +5530,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-302",
-          "timeMs": 97500,
-          "durationMs": 341,
+          "timeMs": 95333.333333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5549,8 +5549,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-303",
-          "timeMs": 97841,
-          "durationMs": 341,
+          "timeMs": 95666.755556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5571,8 +5571,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-304",
-          "timeMs": 98182,
-          "durationMs": 1023,
+          "timeMs": 96000.177778,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5590,8 +5590,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-305",
-          "timeMs": 98523,
-          "durationMs": 341,
+          "timeMs": 96333.6,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5607,8 +5607,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-306",
-          "timeMs": 98864,
-          "durationMs": 341,
+          "timeMs": 96667.022222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5624,8 +5624,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-307",
-          "timeMs": 99205,
-          "durationMs": 1023,
+          "timeMs": 97000.444444,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5646,8 +5646,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-308",
-          "timeMs": 99545,
-          "durationMs": 341,
+          "timeMs": 97332.888889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5663,8 +5663,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-309",
-          "timeMs": 99886,
-          "durationMs": 341,
+          "timeMs": 97666.311111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5680,8 +5680,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-310",
-          "timeMs": 100227,
-          "durationMs": 341,
+          "timeMs": 97999.733333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5697,8 +5697,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-311",
-          "timeMs": 100568,
-          "durationMs": 341,
+          "timeMs": 98333.155556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5718,8 +5718,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-312",
-          "timeMs": 100739,
-          "durationMs": 170,
+          "timeMs": 98500.355556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5736,8 +5736,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-313",
-          "timeMs": 100909,
-          "durationMs": 341,
+          "timeMs": 98666.577778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5755,8 +5755,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-314",
-          "timeMs": 101250,
-          "durationMs": 341,
+          "timeMs": 99000.0,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5774,8 +5774,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-315",
-          "timeMs": 101420,
-          "durationMs": 170,
+          "timeMs": 99166.222222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5792,8 +5792,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-316",
-          "timeMs": 101591,
-          "durationMs": 341,
+          "timeMs": 99333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5811,8 +5811,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-317",
-          "timeMs": 101932,
-          "durationMs": 341,
+          "timeMs": 99666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5833,8 +5833,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-318",
-          "timeMs": 102102,
-          "durationMs": 170,
+          "timeMs": 99833.066667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5851,8 +5851,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-319",
-          "timeMs": 102273,
-          "durationMs": 341,
+          "timeMs": 100000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5870,8 +5870,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-320",
-          "timeMs": 102614,
-          "durationMs": 341,
+          "timeMs": 100333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5889,8 +5889,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-321",
-          "timeMs": 102955,
-          "durationMs": 341,
+          "timeMs": 100667.111111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5908,8 +5908,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-322",
-          "timeMs": 103295,
-          "durationMs": 341,
+          "timeMs": 100999.555556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5929,8 +5929,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-323",
-          "timeMs": 103636,
-          "durationMs": 341,
+          "timeMs": 101332.977778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5947,8 +5947,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-324",
-          "timeMs": 103977,
-          "durationMs": 682,
+          "timeMs": 101666.4,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -5965,8 +5965,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-325",
-          "timeMs": 104318,
-          "durationMs": 341,
+          "timeMs": 101999.822222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -5982,8 +5982,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-326",
-          "timeMs": 104659,
-          "durationMs": 682,
+          "timeMs": 102333.244444,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6003,8 +6003,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-327",
-          "timeMs": 105000,
-          "durationMs": 341,
+          "timeMs": 102666.666667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6020,8 +6020,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-328",
-          "timeMs": 105341,
-          "durationMs": 341,
+          "timeMs": 103000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6037,8 +6037,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-329",
-          "timeMs": 105511,
-          "durationMs": 170,
+          "timeMs": 103166.311111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6054,8 +6054,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-330",
-          "timeMs": 105682,
-          "durationMs": 341,
+          "timeMs": 103333.511111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6073,8 +6073,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-331",
-          "timeMs": 106023,
-          "durationMs": 341,
+          "timeMs": 103666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6095,8 +6095,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-332",
-          "timeMs": 106364,
-          "durationMs": 1023,
+          "timeMs": 104000.355556,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6114,8 +6114,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-333",
-          "timeMs": 106705,
-          "durationMs": 341,
+          "timeMs": 104333.777778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6131,8 +6131,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-334",
-          "timeMs": 107045,
-          "durationMs": 341,
+          "timeMs": 104666.222222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6148,8 +6148,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-335",
-          "timeMs": 107386,
-          "durationMs": 1023,
+          "timeMs": 104999.644444,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6170,8 +6170,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-336",
-          "timeMs": 107727,
-          "durationMs": 341,
+          "timeMs": 105333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6187,8 +6187,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-337",
-          "timeMs": 108068,
-          "durationMs": 341,
+          "timeMs": 105666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6204,8 +6204,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-338",
-          "timeMs": 108409,
-          "durationMs": 341,
+          "timeMs": 105999.911111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6221,8 +6221,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-339",
-          "timeMs": 108750,
-          "durationMs": 341,
+          "timeMs": 106333.333333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6242,8 +6242,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-340",
-          "timeMs": 108920,
-          "durationMs": 170,
+          "timeMs": 106499.555556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6259,8 +6259,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-341",
-          "timeMs": 109091,
-          "durationMs": 2727,
+          "timeMs": 106666.755556,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6277,8 +6277,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-342",
-          "timeMs": 109432,
-          "durationMs": 341,
+          "timeMs": 107000.177778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6294,8 +6294,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-343",
-          "timeMs": 109773,
-          "durationMs": 341,
+          "timeMs": 107333.6,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6311,8 +6311,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-344",
-          "timeMs": 110114,
-          "durationMs": 170,
+          "timeMs": 107667.022222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6328,8 +6328,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-345",
-          "timeMs": 110284,
-          "durationMs": 170,
+          "timeMs": 107833.244444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6345,8 +6345,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-346",
-          "timeMs": 110455,
-          "durationMs": 341,
+          "timeMs": 108000.444444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6362,8 +6362,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-347",
-          "timeMs": 110795,
-          "durationMs": 341,
+          "timeMs": 108332.888889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6379,8 +6379,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-348",
-          "timeMs": 111136,
-          "durationMs": 341,
+          "timeMs": 108666.311111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6396,8 +6396,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-349",
-          "timeMs": 111477,
-          "durationMs": 170,
+          "timeMs": 108999.733333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6413,8 +6413,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-350",
-          "timeMs": 111648,
-          "durationMs": 170,
+          "timeMs": 109166.933333,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6430,8 +6430,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-351",
-          "timeMs": 111818,
-          "durationMs": 2727,
+          "timeMs": 109333.155556,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6451,8 +6451,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-352",
-          "timeMs": 112159,
-          "durationMs": 341,
+          "timeMs": 109666.577778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6470,8 +6470,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-353",
-          "timeMs": 112330,
-          "durationMs": 170,
+          "timeMs": 109833.777778,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6488,8 +6488,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-354",
-          "timeMs": 112500,
-          "durationMs": 341,
+          "timeMs": 110000.0,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6507,8 +6507,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-355",
-          "timeMs": 112841,
-          "durationMs": 341,
+          "timeMs": 110333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6529,8 +6529,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-356",
-          "timeMs": 113011,
-          "durationMs": 170,
+          "timeMs": 110499.644444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6547,8 +6547,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-357",
-          "timeMs": 113182,
-          "durationMs": 341,
+          "timeMs": 110666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6566,8 +6566,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-358",
-          "timeMs": 113523,
-          "durationMs": 341,
+          "timeMs": 111000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6584,8 +6584,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-359",
-          "timeMs": 113864,
-          "durationMs": 341,
+          "timeMs": 111333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6602,8 +6602,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-360",
-          "timeMs": 114205,
-          "durationMs": 341,
+          "timeMs": 111667.111111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6623,8 +6623,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-361",
-          "timeMs": 114545,
-          "durationMs": 341,
+          "timeMs": 111999.555556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6641,8 +6641,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-362",
-          "timeMs": 114886,
-          "durationMs": 682,
+          "timeMs": 112332.977778,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6659,8 +6659,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-363",
-          "timeMs": 115227,
-          "durationMs": 341,
+          "timeMs": 112666.4,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6676,8 +6676,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-364",
-          "timeMs": 115568,
-          "durationMs": 682,
+          "timeMs": 112999.822222,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6697,8 +6697,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-365",
-          "timeMs": 115909,
-          "durationMs": 341,
+          "timeMs": 113333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6714,8 +6714,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-366",
-          "timeMs": 116250,
-          "durationMs": 341,
+          "timeMs": 113666.666667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6731,8 +6731,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-367",
-          "timeMs": 116420,
-          "durationMs": 170,
+          "timeMs": 113832.888889,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6748,8 +6748,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-368",
-          "timeMs": 116591,
-          "durationMs": 341,
+          "timeMs": 114000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6767,8 +6767,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-369",
-          "timeMs": 116932,
-          "durationMs": 341,
+          "timeMs": 114333.511111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6789,8 +6789,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-370",
-          "timeMs": 117273,
-          "durationMs": 1023,
+          "timeMs": 114666.933333,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6808,8 +6808,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-371",
-          "timeMs": 117614,
-          "durationMs": 341,
+          "timeMs": 115000.355556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6825,8 +6825,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-372",
-          "timeMs": 117955,
-          "durationMs": 341,
+          "timeMs": 115333.777778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6842,8 +6842,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-373",
-          "timeMs": 118295,
-          "durationMs": 1023,
+          "timeMs": 115666.222222,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6864,8 +6864,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-374",
-          "timeMs": 118636,
-          "durationMs": 341,
+          "timeMs": 115999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6881,8 +6881,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-375",
-          "timeMs": 118977,
-          "durationMs": 341,
+          "timeMs": 116333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6898,8 +6898,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-376",
-          "timeMs": 119148,
-          "durationMs": 170,
+          "timeMs": 116500.266667,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6915,8 +6915,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-377",
-          "timeMs": 119318,
-          "durationMs": 341,
+          "timeMs": 116666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6934,8 +6934,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-378",
-          "timeMs": 119659,
-          "durationMs": 341,
+          "timeMs": 116999.911111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6956,8 +6956,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-379",
-          "timeMs": 120000,
-          "durationMs": 1023,
+          "timeMs": 117333.333333,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -6975,8 +6975,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-380",
-          "timeMs": 120341,
-          "durationMs": 341,
+          "timeMs": 117666.755556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -6992,8 +6992,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-381",
-          "timeMs": 120682,
-          "durationMs": 341,
+          "timeMs": 118000.177778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7009,8 +7009,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-382",
-          "timeMs": 121023,
-          "durationMs": 1023,
+          "timeMs": 118333.6,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7031,8 +7031,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-383",
-          "timeMs": 121364,
-          "durationMs": 341,
+          "timeMs": 118667.022222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7048,8 +7048,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-384",
-          "timeMs": 121705,
-          "durationMs": 341,
+          "timeMs": 119000.444444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7065,8 +7065,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-385",
-          "timeMs": 122045,
-          "durationMs": 341,
+          "timeMs": 119332.888889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7082,8 +7082,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-386",
-          "timeMs": 122386,
-          "durationMs": 341,
+          "timeMs": 119666.311111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7103,8 +7103,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-387",
-          "timeMs": 122557,
-          "durationMs": 170,
+          "timeMs": 119833.511111,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7121,8 +7121,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-388",
-          "timeMs": 122727,
-          "durationMs": 341,
+          "timeMs": 119999.733333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7140,8 +7140,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-389",
-          "timeMs": 123068,
-          "durationMs": 341,
+          "timeMs": 120333.155556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7159,8 +7159,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-390",
-          "timeMs": 123239,
-          "durationMs": 170,
+          "timeMs": 120500.355556,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7177,8 +7177,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-391",
-          "timeMs": 123409,
-          "durationMs": 341,
+          "timeMs": 120666.577778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7196,8 +7196,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-392",
-          "timeMs": 123750,
-          "durationMs": 341,
+          "timeMs": 121000.0,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7218,8 +7218,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-393",
-          "timeMs": 123920,
-          "durationMs": 170,
+          "timeMs": 121166.222222,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7236,8 +7236,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-394",
-          "timeMs": 124091,
-          "durationMs": 341,
+          "timeMs": 121333.422222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7255,8 +7255,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-395",
-          "timeMs": 124432,
-          "durationMs": 341,
+          "timeMs": 121666.844444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7274,8 +7274,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-396",
-          "timeMs": 124773,
-          "durationMs": 341,
+          "timeMs": 122000.266667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7293,8 +7293,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-397",
-          "timeMs": 125114,
-          "durationMs": 341,
+          "timeMs": 122333.688889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7314,8 +7314,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-398",
-          "timeMs": 125455,
-          "durationMs": 341,
+          "timeMs": 122667.111111,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7332,8 +7332,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-399",
-          "timeMs": 125795,
-          "durationMs": 682,
+          "timeMs": 122999.555556,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7350,8 +7350,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-400",
-          "timeMs": 126136,
-          "durationMs": 341,
+          "timeMs": 123332.977778,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7367,8 +7367,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-401",
-          "timeMs": 126477,
-          "durationMs": 682,
+          "timeMs": 123666.4,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7388,8 +7388,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-402",
-          "timeMs": 126818,
-          "durationMs": 341,
+          "timeMs": 123999.822222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7405,8 +7405,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-403",
-          "timeMs": 127159,
-          "durationMs": 341,
+          "timeMs": 124333.244444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7422,8 +7422,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-404",
-          "timeMs": 127330,
-          "durationMs": 170,
+          "timeMs": 124500.444444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7439,8 +7439,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-405",
-          "timeMs": 127500,
-          "durationMs": 341,
+          "timeMs": 124666.666667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7458,8 +7458,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-406",
-          "timeMs": 127841,
-          "durationMs": 341,
+          "timeMs": 125000.088889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7480,8 +7480,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-407",
-          "timeMs": 128182,
-          "durationMs": 1023,
+          "timeMs": 125333.511111,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7499,8 +7499,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-408",
-          "timeMs": 128523,
-          "durationMs": 341,
+          "timeMs": 125666.933333,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7516,8 +7516,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-409",
-          "timeMs": 128864,
-          "durationMs": 341,
+          "timeMs": 126000.355556,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7533,8 +7533,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-410",
-          "timeMs": 129205,
-          "durationMs": 1023,
+          "timeMs": 126333.777778,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7555,8 +7555,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-411",
-          "timeMs": 129545,
-          "durationMs": 341,
+          "timeMs": 126666.222222,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7572,8 +7572,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-412",
-          "timeMs": 129886,
-          "durationMs": 341,
+          "timeMs": 126999.644444,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7589,8 +7589,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-413",
-          "timeMs": 130057,
-          "durationMs": 170,
+          "timeMs": 127166.844444,
+          "durationMs": 166.222222,
           "strings": [],
           "expected": {
             "kind": "note",
@@ -7606,8 +7606,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-414",
-          "timeMs": 130227,
-          "durationMs": 341,
+          "timeMs": 127333.066667,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7624,8 +7624,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-415",
-          "timeMs": 130568,
-          "durationMs": 341,
+          "timeMs": 127666.488889,
+          "durationMs": 333.422222,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7645,8 +7645,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-416",
-          "timeMs": 130909,
-          "durationMs": 2727,
+          "timeMs": 127999.911111,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7663,8 +7663,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-417",
-          "timeMs": 131932,
-          "durationMs": 1023,
+          "timeMs": 129000.177778,
+          "durationMs": 1000.266667,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7681,8 +7681,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-418",
-          "timeMs": 132273,
-          "durationMs": 682,
+          "timeMs": 129333.6,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7699,8 +7699,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-419",
-          "timeMs": 132955,
-          "durationMs": 682,
+          "timeMs": 130000.444444,
+          "durationMs": 666.844444,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7717,8 +7717,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-420",
-          "timeMs": 133636,
-          "durationMs": 2727,
+          "timeMs": 130666.311111,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7735,8 +7735,8 @@
         },
         {
           "id": "how-far-ill-go-mxl-421",
-          "timeMs": 136364,
-          "durationMs": 2727,
+          "timeMs": 133333.688889,
+          "durationMs": 2666.4,
           "strings": [],
           "expected": {
             "kind": "chord",
@@ -7759,10 +7759,589 @@
     {
       "id": "import",
       "label": "Imported MusicXML",
-      "timeMs": 0
+      "timeMs": 0.0
     }
   ],
   "assets": {
     "license": "Purchased local MusicXML"
+  },
+  "guitarArrangement": {
+    "capo": 4,
+    "bpm": 90,
+    "startQuarter": 0,
+    "timing": "practice",
+    "sourceUrl": "/user-songs/sources/how-far-ill-go-guitar-official.pdf",
+    "shapeKey": "C",
+    "strumming": [
+      {
+        "label": "Whole song, sixteenth-note grid",
+        "pattern": "D \u2013 D U D \u2013 D \u2013 D \u2013 D U D \u2013 D U"
+      }
+    ],
+    "sections": [
+      {
+        "label": "Verse 1",
+        "chords": [
+          {
+            "chord": "C5",
+            "beats": 8,
+            "cue": "edge of the water"
+          },
+          {
+            "chord": "G5/D",
+            "beats": 4,
+            "cue": "water"
+          },
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "never really knowing why"
+          },
+          {
+            "chord": "Fsus2",
+            "beats": 4,
+            "cue": "why"
+          },
+          {
+            "chord": "C5",
+            "beats": 4,
+            "cue": "perfect daughter"
+          },
+          {
+            "chord": "G5/D",
+            "beats": 4,
+            "cue": "daughter"
+          },
+          {
+            "chord": "Am7",
+            "beats": 4,
+            "cue": "come back to the water"
+          },
+          {
+            "chord": "Fsus2",
+            "beats": 4,
+            "cue": "no matter how hard I try"
+          }
+        ]
+      },
+      {
+        "label": "Pre-chorus 1",
+        "chords": [
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "Every turn I take"
+          },
+          {
+            "chord": "G/B",
+            "beats": 4,
+            "cue": "Every path I make"
+          },
+          {
+            "chord": "C",
+            "beats": 4,
+            "cue": "the place I know"
+          },
+          {
+            "chord": "Fm",
+            "beats": 4,
+            "cue": "where I long to be"
+          }
+        ]
+      },
+      {
+        "label": "Chorus 1",
+        "chords": [
+          {
+            "chord": "C",
+            "beats": 4,
+            "cue": "line where the sky meets the sea"
+          },
+          {
+            "chord": "Gsus4",
+            "beats": 4,
+            "cue": "it calls me"
+          },
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "no one knows"
+          },
+          {
+            "chord": "Fsus2",
+            "beats": 4,
+            "cue": "how far it goes"
+          },
+          {
+            "chord": "C",
+            "beats": 4,
+            "cue": "wind in my sail"
+          },
+          {
+            "chord": "G/B",
+            "beats": 4,
+            "cue": "stays behind me"
+          },
+          {
+            "chord": "Am",
+            "beats": 2,
+            "cue": "One day I'll know"
+          },
+          {
+            "chord": "Fm",
+            "beats": 6,
+            "cue": "how far I will go"
+          }
+        ]
+      },
+      {
+        "label": "Verse 2",
+        "chords": [
+          {
+            "chord": "C5",
+            "beats": 3,
+            "cue": "everybody on this island"
+          },
+          {
+            "chord": "Gsus4/D",
+            "beats": 1,
+            "cue": "island"
+          },
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "happy on this island"
+          },
+          {
+            "chord": "Fsus2",
+            "beats": 8,
+            "cue": "Everything is by design"
+          },
+          {
+            "chord": "C5",
+            "beats": 3,
+            "cue": "everybody has a role"
+          },
+          {
+            "chord": "G5/D",
+            "beats": 1,
+            "cue": "role"
+          },
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "on this island"
+          },
+          {
+            "chord": "F",
+            "beats": 8,
+            "cue": "roll with mine"
+          }
+        ]
+      },
+      {
+        "label": "Pre-chorus 2",
+        "chords": [
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "lead with pride"
+          },
+          {
+            "chord": "G/B",
+            "beats": 4,
+            "cue": "play along"
+          },
+          {
+            "chord": "C",
+            "beats": 4,
+            "cue": "voice inside"
+          },
+          {
+            "chord": "Fm",
+            "beats": 4,
+            "cue": "What is wrong with me"
+          }
+        ]
+      },
+      {
+        "label": "Chorus 2",
+        "chords": [
+          {
+            "chord": "C",
+            "beats": 4,
+            "cue": "light as it shines on the sea"
+          },
+          {
+            "chord": "Gsus4",
+            "beats": 4,
+            "cue": "blinding"
+          },
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "no one knows"
+          },
+          {
+            "chord": "Fsus2",
+            "beats": 4,
+            "cue": "how deep it goes"
+          },
+          {
+            "chord": "C",
+            "beats": 4,
+            "cue": "calling out to me"
+          },
+          {
+            "chord": "G/B",
+            "beats": 4,
+            "cue": "come find me"
+          },
+          {
+            "chord": "Am",
+            "beats": 4,
+            "cue": "what is beyond that line"
+          },
+          {
+            "chord": "Fm",
+            "beats": 4,
+            "cue": "Will I cross that line"
+          }
+        ]
+      },
+      {
+        "label": "Final chorus \u2014 key lift",
+        "chords": [
+          {
+            "chord": "C#",
+            "beats": 4,
+            "cue": "line where the sky meets the sea"
+          },
+          {
+            "chord": "Ab/C",
+            "beats": 4,
+            "cue": "it calls me"
+          },
+          {
+            "chord": "A#m",
+            "beats": 4,
+            "cue": "no one knows"
+          },
+          {
+            "chord": "F#",
+            "beats": 4,
+            "cue": "how far it goes"
+          },
+          {
+            "chord": "C#",
+            "beats": 4,
+            "cue": "wind in my sail"
+          },
+          {
+            "chord": "Ab/C",
+            "beats": 4,
+            "cue": "stays behind me"
+          },
+          {
+            "chord": "A#m",
+            "beats": 4,
+            "cue": "One day I will know"
+          },
+          {
+            "chord": "E",
+            "beats": 1,
+            "cue": "how far"
+          },
+          {
+            "chord": "C#m",
+            "beats": 1,
+            "cue": "I will"
+          },
+          {
+            "chord": "A#m7b5",
+            "beats": 1,
+            "cue": "go"
+          },
+          {
+            "chord": "Ab",
+            "beats": 9,
+            "cue": "ending"
+          }
+        ]
+      }
+    ],
+    "riffs": [],
+    "shapes": {
+      "C5": {
+        "frets": [
+          -1,
+          3,
+          5,
+          -1,
+          -1,
+          -1
+        ],
+        "barres": []
+      },
+      "G5/D": {
+        "frets": [
+          -1,
+          -1,
+          0,
+          0,
+          3,
+          -1
+        ],
+        "barres": []
+      },
+      "Am": {
+        "frets": [
+          -1,
+          0,
+          2,
+          2,
+          1,
+          0
+        ],
+        "barres": []
+      },
+      "Fsus2": {
+        "frets": [
+          -1,
+          -1,
+          3,
+          0,
+          1,
+          1
+        ],
+        "barres": [
+          {
+            "fromString": 2,
+            "toString": 1,
+            "fret": 1
+          }
+        ]
+      },
+      "Am7": {
+        "frets": [
+          -1,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "barres": []
+      },
+      "G/B": {
+        "frets": [
+          -1,
+          2,
+          0,
+          0,
+          3,
+          -1
+        ],
+        "barres": []
+      },
+      "C": {
+        "frets": [
+          -1,
+          3,
+          2,
+          0,
+          1,
+          0
+        ],
+        "barres": []
+      },
+      "Fm": {
+        "frets": [
+          1,
+          3,
+          3,
+          1,
+          1,
+          1
+        ],
+        "barres": [
+          {
+            "fromString": 6,
+            "toString": 1,
+            "fret": 1
+          }
+        ]
+      },
+      "Gsus4": {
+        "frets": [
+          3,
+          -1,
+          0,
+          0,
+          1,
+          -1
+        ],
+        "barres": []
+      },
+      "Gsus4/D": {
+        "frets": [
+          -1,
+          -1,
+          0,
+          0,
+          1,
+          3
+        ],
+        "barres": []
+      },
+      "F": {
+        "frets": [
+          1,
+          3,
+          3,
+          2,
+          1,
+          1
+        ],
+        "barres": [
+          {
+            "fromString": 6,
+            "toString": 1,
+            "fret": 1
+          }
+        ]
+      },
+      "C#": {
+        "frets": [
+          -1,
+          4,
+          3,
+          1,
+          2,
+          1
+        ],
+        "barres": [
+          {
+            "fromString": 3,
+            "toString": 1,
+            "fret": 1
+          }
+        ]
+      },
+      "Ab/C": {
+        "frets": [
+          -1,
+          3,
+          1,
+          1,
+          4,
+          -1
+        ],
+        "barres": [
+          {
+            "fromString": 4,
+            "toString": 2,
+            "fret": 1
+          }
+        ]
+      },
+      "A#m": {
+        "frets": [
+          -1,
+          1,
+          3,
+          3,
+          2,
+          1
+        ],
+        "barres": [
+          {
+            "fromString": 5,
+            "toString": 1,
+            "fret": 1
+          }
+        ]
+      },
+      "F#": {
+        "frets": [
+          2,
+          4,
+          4,
+          3,
+          2,
+          2
+        ],
+        "barres": [
+          {
+            "fromString": 6,
+            "toString": 1,
+            "fret": 2
+          }
+        ]
+      },
+      "E": {
+        "frets": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          0
+        ],
+        "barres": []
+      },
+      "C#m": {
+        "frets": [
+          -1,
+          4,
+          6,
+          6,
+          5,
+          4
+        ],
+        "barres": [
+          {
+            "fromString": 5,
+            "toString": 1,
+            "fret": 4
+          }
+        ]
+      },
+      "A#m7b5": {
+        "frets": [
+          -1,
+          1,
+          2,
+          1,
+          2,
+          -1
+        ],
+        "barres": [
+          {
+            "fromString": 5,
+            "toString": 2,
+            "fret": 1
+          }
+        ]
+      },
+      "Ab": {
+        "frets": [
+          4,
+          6,
+          6,
+          5,
+          4,
+          -1
+        ],
+        "barres": [
+          {
+            "fromString": 6,
+            "toString": 2,
+            "fret": 4
+          }
+        ]
+      }
+    },
+    "timingNotes": "Practice chord holds align with the imported melody: first chord two bars; final Ab extended cadence; key lift at bar 42, 90 BPM."
   }
 }

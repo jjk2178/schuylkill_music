@@ -1,0 +1,22 @@
+[
+  {
+    "file": "recorder-fingering-reference.pdf",
+    "originalPath": "/home/jjk/Music/Fingering_Chart_for_Soprano_Recorder.pdf",
+    "sha256": "54892d0e297fd2b65581985222550f1948d06fbcddc13b8d88057b97cfaa06f1",
+    "license": "User-provided reference; no open license claimed"
+  },
+  {
+    "file": "drivers-license-reference-score.pdf",
+    "originalPath": "/home/jjk/Music/drivers_license_score.pdf",
+    "sha256": "a934e0b7e7306a18fbf03d7e2a40082a8a353e4f5d0fcc375e1129fd07b9ffa3",
+    "license": "User-provided reference; no open license claimed"
+  },
+  {
+    "file": "flute-fingering-reference.pdf",
+    "originalPath": "/home/jjk/Music/Basic Flute Fingering Chart - For Dummies - basic-flute-fingering-chart---for-dummies.pdf",
+    "sha256": "db6aef8ffc0e0d4536a56134b00e027ad225cf4f81394535465c579fceb27864",
+    "credit": "Basic Flute Fingering Chart, Karen Evans Moratz, Flute For Dummies / Wiley",
+    "license": "User-provided reference; no open license claimed",
+    "assets": "flute-chart-low.png and flute-chart-high.png extracted losslessly from PDF embedded images"
+  }
+]

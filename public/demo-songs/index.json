@@ -129,5 +129,13 @@
     "license": "Public Domain",
     "chartUrl": "/demo-songs/piano-bach-menuet-bwv-anh-116.json",
     "sourcePageUrl": "https://www.mutopiaproject.org/cgibin/piece-info.cgi?id=77"
+  },
+  {
+    "id": "god-bless-america",
+    "title": "God Bless America",
+    "artist": "Irving Berlin",
+    "instrument": "trumpet",
+    "license": "User-supplied MIDI; open license not established",
+    "chartUrl": "/user-songs/god-bless-america.json"
   }
 ]
