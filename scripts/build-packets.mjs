@@ -464,14 +464,24 @@ function renderScoreBlock(
 }
 
 function renderGuitarStrumSystem(chart,range,active) {
-  const left=28,right=652,span=Math.max(1,range.endMs-range.startMs);
+  const meter=meterAt(chart,range.startMs),beatMs=range.quarterMs*4/meter.beatUnit;
+  const left=28,right=652,span=Math.max(1,range.endMs-range.startMs,meter.beats*beatMs*4);
   const strums=active?guitarStrumsForChart(chart,range.endMs).filter(s=>s.timeMs>=range.startMs-.01):[];
   const x=time=>left+(time-range.startMs)/span*(right-left);
   const changes=active?chordChangesForChart(chart).filter(c=>c.timeMs>=range.startMs-.01 && c.timeMs<range.endMs-.01):[];
   const bars=range.measures.filter(t=>t>=range.startMs-.01 && t<=range.endMs+.01);
-  const diagramHtml=changes.map(c=>{const shape=guitarChordForChart(chart,c.chord);return `<div class="strum-change"><b>${escapeHtml(c.chord)}</b>${shape?`<div class="guitar-chord-box" data-small="1" data-chord="${dataAttr(shape)}"></div>`:""}</div>`;}).join("");
+  const unique=[...new Map(changes.map(c=>[c.chord,c])).values()];
+  const diagramHtml=unique.map(c=>{const shape=guitarChordForChart(chart,c.chord);return `<div class="strum-change"><b>${escapeHtml(c.chord)}</b>${shape?`<div class="guitar-chord-box" data-small="1" data-compact="1" data-chord="${dataAttr(shape)}"></div>`:""}</div>`;}).join("");
   const positions=strums.map(s=>[s.timeMs,x(s.timeMs)]);
-  return `<div class="packet-system music-system instrument-guitar"><div class="guitar-strum-grid" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-active-start="${left}" data-active-end="${right}" data-positions="${dataAttr(positions)}"><svg viewBox="0 0 680 72" role="img" aria-label="Guitar strumming chords">${bars.map(t=>`<line x1="${x(t)}" x2="${x(t)}" y1="2" y2="70" stroke="#aaa"/>`).join("")}${strums.map(s=>`<g data-time="${s.timeMs}" data-chord="${escapeHtml(s.chord??"")}" data-direction="${escapeHtml(s.direction)}"><text x="${x(s.timeMs)+9}" y="16" text-anchor="middle" font-size="8" fill="#666">${Number.isInteger(s.beat)?s.beat:"·"}</text><text x="${x(s.timeMs)+9}" y="39" text-anchor="middle" font-size="9" font-weight="bold">${escapeHtml(s.chord??"–")}</text><text x="${x(s.timeMs)+9}" y="60" text-anchor="middle" font-size="11">${s.direction==="D"?"↓":s.direction==="U"?"↑":"–"}</text></g>`).join("")}</svg></div><div class="strum-changes">${diagramHtml}</div></div>`;
+  const groups=[];
+  for(let time=range.startMs;time<range.startMs+span-.01;time+=beatMs){
+    const played=strums.filter(s=>s.timeMs>=time-.01&&s.timeMs<time+beatMs-.01);
+    const names=[...new Set(played.map(s=>s.chord).filter(Boolean))];
+    const barStart=time>=range.endMs-.01?range.startMs+Math.floor((time-range.startMs)/beatMs/meter.beats)*beatMs*meter.beats:bars.filter(t=>t<=time+.01).at(-1)??range.startMs;
+    groups.push({time,names:names.join("/"),beat:Math.round((time-barStart)/beatMs)+1,pattern:played.map(s=>s.direction==="D"?"↓":s.direction==="U"?"↑":"·").join("")});
+  }
+  const columns=groups.map(g=>{const center=x(g.time)+beatMs/span*(right-left)/2;return `<g data-time="${g.time}"><text x="${center}" y="11" text-anchor="middle" font-size="7" fill="#777">${g.beat}</text><text x="${center}" y="25" text-anchor="middle" font-size="9" font-weight="bold">${escapeHtml(g.names||"–")}</text><text x="${center}" y="39" text-anchor="middle" font-size="9">${g.pattern}</text></g>`;}).join("");
+  return `<div class="packet-system music-system instrument-guitar compact-guitar"><div class="guitar-strum-grid" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-active-start="${left}" data-active-end="${x(range.endMs)}" data-positions="${dataAttr(positions)}"><svg viewBox="0 0 680 46" role="img" aria-label="Guitar chords and condensed strumming">${bars.map(t=>`<line x1="${x(t)}" x2="${x(t)}" y1="1" y2="44" stroke="#aaa"/>`).join("")}${columns}</svg></div><div class="strum-changes">${diagramHtml}</div></div>`;
 }
 
 function renderMusicSystem(
@@ -609,6 +619,10 @@ function css() {
     .guitar-strum-grid { width:680px; height:76px; }
     .guitar-strum-grid svg { width:680px; height:72px; }
     .strum-changes { display:flex; justify-content:space-around; height:116px; }
+    .compact-guitar .guitar-strum-grid { height:48px; }
+    .compact-guitar .guitar-strum-grid svg { height:46px; }
+    .compact-guitar .strum-changes { height:86px; gap:3px; }
+    .packet-system.music-system.compact-guitar { height:140px; }
     .strum-change { text-align:center; font-size:9px; }
     .chord-transitions { position:relative; height:116px; width:680px; }
     .chord-transition { position:absolute; top:0; font-size:9px; text-align:center; transform:translateX(-50%); }
@@ -897,9 +911,10 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
   if(instrument === "guitar" && mode === "chords") {
     const end=suppliedGuitar?Math.max(...compiledAccompaniment.map(n=>n.timeMs+n.durationMs)):Math.max(...events.map(e=>e.timeMs+e.durationMs));
     const bars=measureBoundaries(chart,end).filter(t=>t<end-.01);bars.push(end);
-    const count=chart.guitarArrangement?.strumming[0]?.pattern.split(/\s+/).length===16?1:2;
-    systems=chunk(bars.slice(0,-1),count).map((times,index)=>{
-      const startMs=times[0],endMs=bars[index*count+times.length];
+    const count=4;
+    const slices=[];for(let index=0;index<bars.length-1;){const size=index===0&&chart.pickupQuarters?5:count;const stop=Math.min(index+size,bars.length-1);slices.push([index,stop]);index=stop;}
+    systems=slices.map(([index,stop])=>{
+      const startMs=bars[index],endMs=bars[stop];
       const slice=[{timeMs:startMs,durationMs:endMs-startMs,midi:[]}];slice.startMs=startMs;slice.endMs=endMs;return slice;
     });
   }
@@ -950,7 +965,7 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
         content.push(
           `<div class="packet-system music-system empty-system">${renderMusicSystem([], instrument, writtenKey(keySignatureAt(chart, 0), instrument), meterAt(chart, 0), { startMs: 0, endMs: 1, quarterMs: 60000 / tempoAt(chart, 0), measures: [] }, chart, mode).replace(/^<div[^>]*>|<\/div>$/g, "")}</div>`,
         );
-      const note = suppliedGuitar ? `Capo ${chart.capo} · chord names and TAB relative to capo · ${chart.guitarArrangement.bpm} BPM. Supplied PDF chords; estimated practice timing. Chord at each arrow = strum; – = skip. ${chart.guitarArrangement.timingNotes ?? ""} ${chart.guitarArrangement.strumming.map(s=>s.label+": "+s.pattern).join("; ")}` :
+      const note = suppliedGuitar ? `Capo ${chart.capo} · chord names and TAB relative to capo · ${chart.guitarArrangement.bpm} BPM. Supplied PDF chords; estimated practice timing. Chord names are grouped by beat; each ↓/↑ is a strum, · skips a subdivision. Four full measures per row; opening pickup included. ${chart.guitarArrangement.timingNotes ?? ""} ${chart.guitarArrangement.strumming.map(s=>s.label+": "+s.pattern).join("; ")}` :
         instrument === "guitar" && mode === "chords"
           ? chart.chordChanges?.length
             ? "Chord changes from the encoded chart."
@@ -1062,7 +1077,7 @@ function guitarChordScript() {
     globalName: "vexchords",
     minify: true,
   }).outputFiles[0].text;
-  return `<script>${library}</script><script>const vexChordData = ${vexChordData.toString()}; const vexChordOptions = ${vexChordOptions.toString()}; document.querySelectorAll('.guitar-chord-box').forEach(host => { const chord = JSON.parse(host.dataset.chord); vexchords.draw(host, vexChordData(chord), vexChordOptions(!!host.dataset.small)); });</script>`;
+  return `<script>${library}</script><script>const vexChordData = ${vexChordData.toString()}; const vexChordOptions = ${vexChordOptions.toString()}; document.querySelectorAll('.guitar-chord-box').forEach(host => { const chord = JSON.parse(host.dataset.chord); vexchords.draw(host, vexChordData(chord), host.dataset.compact ? {...vexChordOptions(true),width:58,height:70} : vexChordOptions(!!host.dataset.small)); });</script>`;
 }
 
 function packetHtml(member) {
@@ -1070,7 +1085,7 @@ function packetHtml(member) {
 }
 
 function instrumentPacketHtml(instrument, label, mode = instrument === "guitar" ? "chords" : "music") {
-  return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(label)} packet</title><style>${css()}</style></head><body>${instrumentOverviewPage(instrument, label)}${instrument === "guitar" ? guitarChordReferencePages() : ""}${instrumentSongPages(instrument, label, mode)}${browserVexFlowScript()}${guitarChordScript()}</body></html>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(label)} packet</title><style>${css()}</style></head><body>${instrumentOverviewPage(instrument, label)}${instrument === "guitar" && mode !== "chords" ? guitarChordReferencePages() : ""}${instrumentSongPages(instrument, label, mode)}${browserVexFlowScript()}${guitarChordScript()}</body></html>`;
 }
 
 function masterHtml() {
