@@ -649,6 +649,18 @@ function css() {
     svg { max-width: 100%; height: auto; display:block; }
     svg text.piano-note-name { font-family:Arial,sans-serif !important; font-size:11px; font-weight:600; fill:#222; paint-order:stroke; stroke:white; stroke-width:1.6px; stroke-linejoin:round; }
     .guitar-chord-box svg text { font-family:Helvetica,Arial,sans-serif !important; }
+    .simple-guitar-page { break-after: page; }
+    .simple-guitar-box { border:2px solid #111; padding:12px; }
+    .simple-guitar-box > p { margin:3px 0 8px; font-size:10px; }
+    .simple-guitar-section { border-top:1px solid #999; padding:7px 0 4px; }
+    .simple-guitar-section h2 { font-size:13px; margin:0 0 5px; }
+    .simple-loop { display:grid; grid-template-columns:18px repeat(4, minmax(0, 1fr)); gap:5px; align-items:start; margin:3px 0; }
+    .simple-loop-number { font-size:9px; padding-top:8px; text-align:right; }
+    .simple-chord-cell { border:1px solid #bbb; min-height:160px; text-align:center; padding:3px 2px 0; overflow:visible; }
+    .simple-chord-cell b { display:block; font-size:12px; }
+    .simple-chord-cell .guitar-chord-box { display:flex; justify-content:center; width:130px; height:150px; margin:0 auto; overflow:visible; }
+    .simple-chord-cell .guitar-chord-box svg { width:130px; height:150px; max-width:none; overflow:visible; }
+    .simple-guitar-note { font-size:9px; margin-top:7px; }
     svg text { font-family: "Bravura", "Academico", Helvetica, Arial, sans-serif !important; }
     .vf-staff { width: ${scoreWidth}px; max-width: 100%; min-height: 104px; }
     .grand svg + svg { margin-top: 0; }
@@ -983,6 +995,33 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
     })
     .join("");
 }
+
+function simplifiedGuitarChartPage(song, { capo = 0, titleSuffix = "" } = {}) {
+  const chart = loadChart(song);
+  const guide = chart?.simplifiedGuitarArrangement;
+  if (!guide) return "";
+  const shapeChart = capo === 4 && guide.capo4Shapes
+    ? { ...chart, guitarArrangement: { ...chart.guitarArrangement, shapes: { ...chart.guitarArrangement.shapes, ...guide.capo4Shapes } } }
+    : chart;
+  const sections = guide.sections.map((section) => {
+    const progression = section.progression.map((chord) => {
+      const shape = guitarChordForChart(shapeChart, chord);
+      return `<div class="simple-chord-cell"><b>${escapeHtml(chord)}</b>${shape ? `<div class="guitar-chord-box" data-chord="${dataAttr(shape)}"></div>` : ""}</div>`;
+    }).join("");
+    const loops = Array.from({ length: section.repeats }, (_, index) => `<div class="simple-loop"><span class="simple-loop-number">${section.repeats > 1 ? `${index + 1}.` : ""}</span>${progression}</div>`).join("");
+    return `<section class="simple-guitar-section"><h2>${escapeHtml(section.label)}</h2>${loops}</section>`;
+  }).join("");
+  return `<div class="page simple-guitar-page"><div class="top"><div><h1>${escapeHtml(song.title)} — simplified guitar chords${escapeHtml(titleSuffix)}</h1><p>Four-chord practice chart · capo ${capo} · ${guide.tempoBpm} BPM</p></div><p>Guitar</p></div><div class="simple-guitar-box"><p><b>Section loops:</b> verses and choruses use four simplified chords; pre-choruses use the alternate four-chord turn; the final chorus lifts.</p><p>${escapeHtml(guide.strumPattern)} All chord names and diagrams are relative to capo ${capo}.</p>${sections}</div><p class="simple-guitar-note">${escapeHtml(guide.note)}</p></div>`;
+}
+
+function writeSimplifiedMoanaPdf(filename, options = {}) {
+  const song = data.rehearsalSongs.find((candidate) => candidate.id === "how-far-ill-go");
+  if (!song) throw new Error("How Far I'll Go is not present in the rehearsal set");
+  const htmlPath = join(htmlDir, `${slugify(filename)}.html`);
+  writeFileSync(htmlPath, `<!doctype html><html><head><meta charset="utf-8"><style>${css()}</style></head><body>${simplifiedGuitarChartPage(song, options)}${guitarChordScript()}</body></html>`);
+  printPdf(htmlPath, join(outputDir, `${filename}.pdf`));
+}
+
 function songPages(member) {
   return data.rehearsalSongs
     .flatMap((song, index) => {
@@ -1123,6 +1162,11 @@ const instrumentPackets = [
   ["flute", "Flute"],
   ["recorder", "Recorder"],
 ];
+if (process.argv.includes("--simple-moana-capo4")) {
+  writeSimplifiedMoanaPdf("how-far-ill-go-simple-guitar-capo-4", { capo: 4, titleSuffix: " · capo 4" });
+  console.log(`Wrote ${join(outputDir, "how-far-ill-go-simple-guitar-capo-4.pdf")}`);
+  process.exit(0);
+}
 const selectedArg=process.argv.find(arg=>arg.startsWith("--instruments="));
 const selected=selectedArg?.split("=")[1].split(",");
 if(selected) {
@@ -1178,6 +1222,12 @@ writeFileSync(
   `<!doctype html><html><head><meta charset="utf-8"><style>${css()}</style></head><body>${instrumentOverviewPage("guitar", "Guitar chords")}${instrumentSongPages("guitar", "Guitar chords", "chords")}${browserVexFlowScript()}${guitarChordScript()}</body></html>`,
 );
 printPdf(chordHtmlPath, join(outputDir, "guitar-chords-packet.pdf"));
+const simpleMoana = data.rehearsalSongs.find((song) => song.id === "how-far-ill-go");
+if (simpleMoana) {
+  const simpleMoanaHtmlPath = join(htmlDir, "how-far-ill-go-simple-guitar-chords.html");
+  writeFileSync(simpleMoanaHtmlPath, `<!doctype html><html><head><meta charset="utf-8"><style>${css()}</style></head><body>${simplifiedGuitarChartPage(simpleMoana)}${guitarChordScript()}</body></html>`);
+  printPdf(simpleMoanaHtmlPath, join(outputDir, "how-far-ill-go-simple-guitar-chords.pdf"));
+}
 writeFileSync(
   masterPartsPath,
   masterPartsHtml.replace(

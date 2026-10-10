@@ -8343,5 +8343,34 @@
       }
     },
     "timingNotes": "Practice chord holds align with the imported melody: first chord two bars; final Ab extended cadence; key lift at bar 42, 90 BPM."
+  },
+  "simplifiedGuitarArrangement": {
+    "capo": 0,
+    "tempoBpm": 90,
+    "defaultProgression": ["C", "G", "Am", "F"],
+    "capo4Shapes": {
+      "C": { "frets": [-1, 3, 2, 0, 1, 0], "barres": [] },
+      "G": { "frets": [3, 2, 0, 0, 0, 3], "barres": [] },
+      "Am": { "frets": [-1, 0, 2, 2, 1, 0], "barres": [] },
+      "F": { "frets": [1, 3, 3, 2, 1, 1], "barres": [{ "fromString": 6, "toString": 1, "fret": 1 }] },
+      "Db": { "frets": [-1, 4, 3, 1, 2, 1], "barres": [] },
+      "Ab": { "frets": [4, 6, 6, 5, 4, 4], "barres": [{ "fromString": 6, "toString": 1, "fret": 4 }] },
+      "A#m": { "frets": [-1, 1, 3, 3, 2, 1], "barres": [{ "fromString": 5, "toString": 1, "fret": 1 }] },
+      "Bbm": { "frets": [-1, 1, 3, 3, 2, 1], "barres": [{ "fromString": 5, "toString": 1, "fret": 1 }] },
+      "Gb": { "frets": [2, 4, 4, 3, 2, 2], "barres": [{ "fromString": 6, "toString": 1, "fret": 2 }] },
+      "F#": { "frets": [2, 4, 4, 3, 2, 2], "barres": [{ "fromString": 6, "toString": 1, "fret": 2 }] }
+    },
+    "sections": [
+      { "label": "Intro", "progression": ["C", "G", "Am", "F"], "repeats": 1 },
+      { "label": "Verse 1", "progression": ["C", "G", "Am", "F"], "repeats": 2 },
+      { "label": "Pre-chorus 1", "progression": ["Am", "G", "C", "F"], "repeats": 1 },
+      { "label": "Chorus 1", "progression": ["C", "G", "Am", "F"], "repeats": 2 },
+      { "label": "Verse 2", "progression": ["C", "G", "Am", "F"], "repeats": 2 },
+      { "label": "Pre-chorus 2", "progression": ["Am", "G", "C", "F"], "repeats": 1 },
+      { "label": "Chorus 2", "progression": ["C", "G", "Am", "F"], "repeats": 2 },
+      { "label": "Chorus 3 — key lift", "progression": ["Db", "Ab", "Bbm", "Gb"], "repeats": 1 }
+    ],
+    "strumPattern": "Down on each beat; add Down-Up on the final beat when comfortable.",
+    "note": "Simplified practice adaptation using four open-position chords. Follow the detailed score for the original arrangement and key lift."
   }
 }
