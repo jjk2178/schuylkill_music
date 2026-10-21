@@ -18,6 +18,8 @@
     "test:watch": "vitest",
     "preview": "vite preview --host 0.0.0.0",
     "setlists:pdf": "node scripts/build-setlists.mjs",
+    "songs:import": "node scripts/import-guitar-songs.mjs",
+    "songs:pdf": "node scripts/render-guitar-pdf.mjs",
     "scores:web": "node scripts/build-packets.mjs --web",
     "predev": "npm run scores:web",
     "predev:scoreboard": "npm run scores:web",
