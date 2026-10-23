@@ -26,7 +26,14 @@ class AppErrorBoundary extends React.Component<
   }
 }
 
-const RootApp = window.location.pathname === "/rehearsal-player" ? RehearsalPlayerApp : window.location.pathname === "/score-player" ? ScorePlayerApp : import.meta.env.VITE_APP === "scoreboard" ? ScoreboardApp : PluckAndPlayApp;
+const app = import.meta.env.VITE_APP;
+const RootApp = app === "rehearsal" || window.location.pathname === "/rehearsal-player"
+  ? RehearsalPlayerApp
+  : window.location.pathname === "/score-player"
+    ? ScorePlayerApp
+    : app === "scoreboard"
+      ? ScoreboardApp
+      : PluckAndPlayApp;
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

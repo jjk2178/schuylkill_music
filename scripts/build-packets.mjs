@@ -575,6 +575,14 @@ function referenceChordChanges(chart) {
   });
 }
 
+function chordLaneTheme(chart) {
+  const title = chart.title.toLowerCase();
+  if (title.includes("how far")) return { tone: "#0f766e", tint: "#ccfbf1" };
+  if (title.includes("drivers")) return { tone: "#6d28d9", tint: "#ede9fe" };
+  if (title.includes("landslide")) return { tone: "#b45309", tint: "#fef3c7" };
+  return { tone: "#1d4ed8", tint: "#dbeafe" };
+}
+
 function renderCompleteChordLane(chart, range, width = completeScoreWidth) {
   // The user-supplied chord sheets contain horizontal chord placement above
   // each lyric. Prefer those cues in Complete view; fall back to the arranged
@@ -584,8 +592,8 @@ function renderCompleteChordLane(chart, range, width = completeScoreWidth) {
     (change) => change.timeMs >= range.startMs - 0.01 && change.timeMs < range.endMs - 0.01,
   );
   if (!changes.length) return `<div class="complete-chord-lane complete-chord-empty"><span>—</span></div>`;
-  const span = Math.max(1, range.endMs - range.startMs);
-  return `<div class="complete-chord-lane">${changes.map((change) => {
+  const theme = chordLaneTheme(chart);
+  const cues = changes.map((change) => {
     const index = source.indexOf(change);
     const beat = change.beat ?? timeToBeat(chart, change.timeMs);
     const next = source[index + 1];
@@ -600,8 +608,10 @@ function renderCompleteChordLane(chart, range, width = completeScoreWidth) {
       ? `<div class="guitar-chord-box" data-complete="1" data-chord="${dataAttr(shape)}"></div>`
       : "";
     const endMs = next?.timeMs ?? change.timeMs + durationBeats * (60000 / tempoAt(chart, change.timeMs));
-    return `<div class="complete-chord" data-beat="${beat}" data-duration-beats="${durationBeats}" data-start-time="${change.timeMs}" data-end-time="${endMs}" style="left:0"><div class="complete-chord-marker"><b>${escapeHtml(change.chord)}</b>${symbol}</div><div class="complete-chord-hold" title="${escapeHtml(durationLabel)}"><i class="complete-chord-progress"></i><span>${durationLabel}</span></div></div>`;
-  }).join("")}</div>`;
+    return { diagram: `<div class="complete-chord-cue"><b>${escapeHtml(change.chord)}</b>${symbol}</div>`, block: `<div class="complete-chord-block" data-beat="${beat}" data-duration-beats="${durationBeats}" data-start-time="${change.timeMs}" data-end-time="${endMs}"><i class="complete-chord-progress"></i><b>${escapeHtml(change.chord)}</b><span>${durationLabel}</span></div>` };
+  });
+  const measures = range.measures.slice(0, -1).map((time, index) => `<i class="complete-measure-line" data-beat="${timeToBeat(chart, time)}"><span>${Math.floor(timeToBeat(chart, time) / 4) + 1}</span></i>`).join("");
+  return `<div class="complete-chord-lane" style="--chord-tone:${theme.tone};--chord-tint:${theme.tint}"><div class="complete-cue-row" data-cue-row style="grid-template-columns:repeat(${cues.length},minmax(0,1fr))">${cues.map((cue) => cue.diagram).join("")}</div><div class="complete-chord-timeline" data-chord-timeline>${measures}${cues.map((cue) => cue.block).join("")}</div></div>`;
 }
 
 function pianoChordDiagram(chord) {
@@ -610,16 +620,13 @@ function pianoChordDiagram(chord) {
   const root = ({ C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 })[match[1]] + (match[2] === "#" ? 1 : match[2] === "b" ? -1 : 0);
   const quality = match[3];
   const intervals = /maj7/.test(quality) ? [0, 4, 7, 11] : /m7/.test(quality) ? [0, 3, 7, 10] : /m/.test(quality) ? [0, 3, 7] : /6/.test(quality) ? [0, 4, 7, 9] : /7/.test(quality) ? [0, 4, 7, 10] : [0, 4, 7];
-  // Start the displayed keyboard on the chord root (or the white key just
-  // below it). This makes the named root the lowest highlighted tone, e.g.
-  // Bb is voiced Bb–D–F rather than showing D below an upper Bb.
+  // Keep the displayed keyboard fixed at C3–B4, centered around middle C.
+  // Chord roots stay in octave 3 so the named root remains the lowest
+  // highlighted tone (for example Bb3–D4–F4).
   const rootMidi = 48 + ((root + 120) % 12);
   const naturalPitchClasses = new Set([0, 2, 4, 5, 7, 9, 11]);
-  let lowestWhite = rootMidi;
-  while (!naturalPitchClasses.has((lowestWhite + 120) % 12)) lowestWhite -= 1;
-  const whites = [];
-  for (let midi = lowestWhite; whites.length < 14; midi += 1)
-    if (naturalPitchClasses.has((midi + 120) % 12)) whites.push(midi);
+  const whites = Array.from({ length: 24 }, (_, index) => 48 + index)
+    .filter((midi) => naturalPitchClasses.has(midi % 12));
   const active = new Set(intervals.map((interval) => rootMidi + interval));
   const whiteWidth = 5.4;
   // Show one useful voicing only. Rendering both octaves doubles every pitch
@@ -638,13 +645,19 @@ function renderCompletePianoChordLane(chart, range) {
   const source = chart.pianoChordCues ?? [];
   const changes = source.filter((change) => change.timeMs >= range.startMs - .01 && change.timeMs < range.endMs - .01);
   if (!changes.length) return "";
-  return `<div class="complete-piano-chord-lane">${changes.map((change) => {
+  const theme = chordLaneTheme(chart);
+  const cues = changes.map((change) => {
     const index = source.indexOf(change), next = source[index + 1];
     const beat = change.beat ?? timeToBeat(chart, change.timeMs);
     const durationBeats = Math.max(1, Math.round((next?.beat ?? beat + 4) - beat));
     const endMs = next?.timeMs ?? change.timeMs + durationBeats * 60000 / tempoAt(chart, change.timeMs);
-    return `<div class="complete-piano-chord" data-beat="${beat}" data-duration-beats="${durationBeats}" data-start-time="${change.timeMs}" data-end-time="${endMs}" style="left:0"><div class="complete-piano-chord-marker"><b>${escapeHtml(change.chord)}</b>${pianoChordDiagram(change.chord)}</div><div class="complete-piano-chord-hold"><i class="complete-chord-progress"></i><span>${durationBeats} beats</span></div></div>`;
-  }).join("")}</div>`;
+    return { diagram: `<div class="complete-piano-chord-cue"><b>${escapeHtml(change.chord)}</b>${pianoChordDiagram(change.chord)}</div>`, block: `<div class="complete-piano-chord-block" data-beat="${beat}" data-duration-beats="${durationBeats}" data-start-time="${change.timeMs}" data-end-time="${endMs}"><i class="complete-chord-progress"></i><b>${escapeHtml(change.chord)}</b><span>${durationBeats} beats</span></div>` };
+  });
+  const measures = range.measures.slice(0, -1).map((time) => `<i class="complete-measure-line" data-beat="${timeToBeat(chart, time)}"><span>${Math.floor(timeToBeat(chart, time) / 4) + 1}</span></i>`).join("");
+  const cueRows = Math.ceil(cues.length / 6);
+  const timelineTop = cueRows * 70 + 2;
+  const laneHeight = timelineTop + 60;
+  return `<div class="complete-piano-chord-lane" style="--chord-tone:${theme.tone};--chord-tint:${theme.tint};--piano-lane-height:${laneHeight}px"><div class="complete-cue-row complete-piano-cue-row" data-cue-row style="grid-template-columns:repeat(${Math.min(cues.length, 6)},minmax(0,1fr))">${cues.map((cue) => cue.diagram).join("")}</div><div class="complete-piano-chord-timeline" data-chord-timeline style="top:${timelineTop}px">${measures}${cues.map((cue) => cue.block).join("")}</div></div>`;
 }
 
 function completeMelodyNotes(chart) {
@@ -878,29 +891,29 @@ function css() {
     .complete-empty-system { opacity:.35; }
     .complete-section { height:13px; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
     .complete-lyric-chord-lane { position:relative; width:${completeScoreWidth}px; max-width:100%; height:142px; }
-    .complete-chord-lane { position:relative; height:114px; width:${completeScoreWidth}px; max-width:100%; overflow:visible; }
-    .complete-piano-chord-lane { position:relative; height:116px; width:${completeScoreWidth}px; max-width:100%; overflow:visible; border-top:1px solid #d2dae5; }
+    .complete-chord-lane { position:relative; height:126px; width:${completeScoreWidth}px; max-width:100%; overflow:visible; }
+    .complete-piano-chord-lane { position:relative; height:132px; width:${completeScoreWidth}px; max-width:100%; overflow:visible; border-top:1px solid #d2dae5; }
     .complete-chord-empty { color:#999; font-size:10px; padding:12px 0 0 36px; }
-    .complete-chord { position:absolute; top:0; line-height:1; }
-    .complete-chord-marker { width:66px; transform:translateX(-50%); display:grid; justify-items:center; text-align:center; }
-    .complete-chord b { display:block; padding:0; font-size:9px; line-height:9px; white-space:nowrap; }
-    .complete-chord-hold { position:absolute; top:84px; left:0; box-sizing:border-box; height:13px; min-width:8px; border:1px solid #53667f; border-radius:2px; background:repeating-linear-gradient(135deg,#d9e5f2 0 4px,#f5f8fb 4px 8px); overflow:hidden; }
+    .complete-cue-row { position:absolute; top:0; display:grid; align-items:start; text-align:center; }
+    .complete-chord-cue,.complete-piano-chord-cue { min-width:0; display:grid; justify-items:center; line-height:1; }
+    .complete-chord-cue b,.complete-piano-chord-cue b { display:block; padding:0 0 2px; font-size:9px; line-height:10px; white-space:nowrap; }
+    .complete-chord-cue .guitar-chord-box { height:72px; overflow:visible; }
+    .complete-chord-cue .guitar-chord-box svg { width:58px !important; height:70px !important; }
+    .complete-chord-timeline,.complete-piano-chord-timeline { position:absolute; box-sizing:border-box; border:1px solid var(--chord-tone,#53667f); border-radius:3px; background:repeating-linear-gradient(135deg,var(--chord-tint,#d9e5f2) 0 5px,#fff 5px 10px); overflow:hidden; }
+    .complete-chord-timeline { top:88px; height:25px; }
+    .complete-piano-chord-timeline { top:72px; height:28px; }
+    .complete-chord-block,.complete-piano-chord-block { position:absolute; inset:0 auto 0 0; min-width:8px; border-right:1px solid var(--chord-tone,#53667f); background:var(--chord-tint,#dbeafe); overflow:hidden; }
+    .complete-chord-block b,.complete-piano-chord-block b { position:relative; z-index:1; display:block; padding:3px 5px 0; color:var(--chord-tone,#172435); font:900 12px/1 Arial,sans-serif; white-space:nowrap; }
+    .complete-chord-block span,.complete-piano-chord-block span { position:relative; z-index:1; display:block; padding:1px 5px; color:#172435; font:700 7px/1 Arial,sans-serif; white-space:nowrap; }
+    .complete-measure-line { position:absolute; top:0; bottom:0; width:1px; background:var(--chord-tone,#53667f); z-index:2; }
+    .complete-measure-line span { position:absolute; top:2px; left:2px; color:var(--chord-tone,#53667f); font:700 7px/1 Arial,sans-serif; font-style:normal; }
     .complete-chord-progress { position:absolute; inset:0 auto 0 0; width:0; background:#dc2626aa; transition:width 80ms linear; }
-    .complete-chord-hold span { display:block; padding:2px 4px; color:#172435; font:700 6px/1 Arial,sans-serif; white-space:nowrap; }
     .play-note-marker { display:none; fill:none; stroke:#dc2626; stroke-width:2.2px; pointer-events:none; }
     .play-note-marker.is-active { display:block; }
     .complete-chord i { font-size:16px; font-style:normal; line-height:21px; }
-    .complete-chord .guitar-chord-box { height:72px; margin-top:-1px; overflow:visible; }
-    /* Use the renderer's native size: scaling its SVG after it draws can clip
-       the low-E string and its open/muted marker. */
-    .complete-chord .guitar-chord-box svg { width:58px !important; height:70px !important; }
-    .complete-piano-chord { position:absolute; top:3px; line-height:1; }
-    .complete-piano-chord-marker { width:104px; transform:translateX(-50%); display:grid; justify-items:center; text-align:center; }
-    .complete-piano-chord b { display:block; padding-bottom:2px; font-size:9px; white-space:nowrap; }
-    .piano-chord-diagram { width:104px; height:48px; overflow:visible; }
-    .complete-piano-chord-hold { position:absolute; top:66px; left:0; box-sizing:border-box; height:15px; min-width:12px; border:1px solid #6b7280; border-radius:2px; background:repeating-linear-gradient(135deg,#eee6da 0 4px,#fffaf2 4px 8px); overflow:hidden; }
-    .complete-piano-chord-hold .complete-chord-progress { background:#c81e2baa; }
-    .complete-piano-chord-hold span { display:block; padding:3px 5px; color:#172435; font:700 7px/1 Arial,sans-serif; white-space:nowrap; }
+    .complete-piano-cue-row { grid-auto-rows:70px; }
+    .piano-chord-diagram { width:123px; height:57px; overflow:visible; }
+    .complete-piano-chord-timeline .complete-chord-progress { background:#c81e2baa; }
     .complete-system .vf-staff { width:${completeScoreWidth}px; min-height:86px; }
     .complete-system .vf-staff svg { width:100% !important; height:auto !important; }
     .complete-system .grand { margin:0; }
@@ -1190,12 +1203,18 @@ function browserVexFlowScript() {
             if (!staff?.dataset.activeStart) return;
             const start = Number(staff.dataset.activeStart), end = Number(staff.dataset.activeEnd);
             const beatStart = Number(staff.dataset.beatStart), beatEnd = Number(staff.dataset.beatEnd);
-            system.querySelectorAll(".complete-chord[data-beat], .complete-piano-chord[data-beat]").forEach(chord => {
+            system.querySelectorAll("[data-cue-row], [data-chord-timeline]").forEach(element => {
+              element.style.left = start + "px";
+              element.style.width = Math.max(1, end - start) + "px";
+            });
+            system.querySelectorAll(".complete-measure-line[data-beat]").forEach(line => {
+              line.style.left = (staffBeatX(staff, Number(line.dataset.beat), start, end) - start) + "px";
+            });
+            system.querySelectorAll(".complete-chord-block[data-beat], .complete-piano-chord-block[data-beat]").forEach(chord => {
               const chordStart = staffBeatX(staff, Number(chord.dataset.beat), start, end);
               const chordEnd = staffBeatX(staff, Math.min(beatEnd, Number(chord.dataset.beat) + Number(chord.dataset.durationBeats ?? 4)), start, end);
-              chord.style.left = chordStart + "px";
-              const hold = chord.querySelector(".complete-chord-hold");
-              if (hold) hold.style.width = Math.max(8, chordEnd - chordStart) + "px";
+              chord.style.left = (chordStart - start) + "px";
+              chord.style.width = Math.max(8, chordEnd - chordStart) + "px";
             });
             let previousLyricEnd = start - 8;
             system.querySelectorAll(".complete-lyric[data-beat]").forEach(lyric => {
@@ -1668,6 +1687,9 @@ if (!process.argv.includes("--web")) console.log(
 // The website uses these same rendered parts and the same compilation as PDFs.
 function writeWebScores() {
   const webDir = join(repoRoot, "public/rendered-scores");
+  const publicBase = (process.env.VITE_BASE ?? "/").replace(/\/?$/, "/");
+  const renderedScoreBase = `${publicBase}rendered-scores/`;
+  const userSongSourceBase = `${publicBase}user-songs/sources/`;
   mkdirSync(webDir, {recursive:true});
   copyFileSync(join(repoRoot,"node_modules/vexflow/build/cjs/vexflow-bravura.js"),join(webDir,"vexflow.js"));
   const entries=[];
@@ -1683,8 +1705,8 @@ function writeWebScores() {
       const modes=instrument==="guitar"?["music","chords"]:["music"];
       for(const mode of modes) {
         const html=`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${css()}body{padding:16px;background:#e7e9ed}.page{width:680px;min-height:0;margin:0 auto 20px;padding:22px;background:white;box-shadow:0 2px 12px #0002}.music-system{position:relative}.score-playhead{position:absolute;top:0;bottom:0;width:2px;background:#dc2626;z-index:10;pointer-events:none;box-shadow:0 0 3px #dc2626} .page:last-child{margin-bottom:0}</style></head><body>${partPages(song,index,instrument,label,mode)}${browserVexFlowScript()}${mode==="chords"?guitarChordScript():""}</body></html>`
-          .replaceAll(pathToFileURL(join(repoRoot,'node_modules/vexflow/build/cjs/vexflow-bravura.js')).href,'/rendered-scores/vexflow.js')
-          .replaceAll(pathToFileURL(join(repoRoot,"public/user-songs/sources/")).href+"/",'/user-songs/sources/');
+          .replaceAll(pathToFileURL(join(repoRoot,'node_modules/vexflow/build/cjs/vexflow-bravura.js')).href,`${renderedScoreBase}vexflow.js`)
+          .replaceAll(pathToFileURL(join(repoRoot,"public/user-songs/sources/")).href+"/",userSongSourceBase);
         writeFileSync(join(webDir,`${file}-${mode}.html`),html);
       }
       writeFileSync(join(webDir,`${file}.json`),JSON.stringify(chart));
@@ -1699,7 +1721,7 @@ function writeWebScores() {
     const songIndex = data.rehearsalSongs.findIndex((song) => song.id === songId);
     const song = data.rehearsalSongs[songIndex];
     const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(song.title)} complete reference</title><style>${css()}body{padding:16px;background:#e7e9ed}.page{width:680px;min-height:0;margin:0 auto 20px;padding:22px;background:white;box-shadow:0 2px 12px #0002}.complete-page{width:960px;min-height:0;box-sizing:border-box}</style></head><body>${completeReferencePages(song, songIndex)}${browserVexFlowScript()}${guitarChordScript()}</body></html>`
-      .replaceAll(pathToFileURL(join(repoRoot, "node_modules/vexflow/build/cjs/vexflow-bravura.js")).href, "/rendered-scores/vexflow.js");
+      .replaceAll(pathToFileURL(join(repoRoot, "node_modules/vexflow/build/cjs/vexflow-bravura.js")).href, `${renderedScoreBase}vexflow.js`);
     writeFileSync(join(webDir, filename), html);
   }
   writeFileSync(join(webDir,"index.json"),JSON.stringify(entries,null,2));

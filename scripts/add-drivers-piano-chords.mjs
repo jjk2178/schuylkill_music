@@ -22,16 +22,38 @@ const groups = [
 const timedGroups = chart.guitarArrangement.sections;
 if (groups.length !== timedGroups.length)
   throw new Error("Piano chord sheet does not match the Drivers License section form.");
+const rootPitchClass = (chord) => {
+  const match = /^([A-G])([#b]?)/.exec(chord);
+  const natural = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 };
+  return (natural[match[1]] + (match[2] === "#" ? 1 : match[2] === "b" ? -1 : 0) + 12) % 12;
+};
 let cursor = chart.guitarArrangement.startQuarter;
 chart.pianoChordCues = groups.flatMap((group, sectionIndex) => {
-  const sectionBeats = timedGroups[sectionIndex].chords.reduce((sum, timing) => sum + timing.beats, 0);
-  const start = cursor;
-  cursor += sectionBeats;
-  // The piano chart occasionally subdivides a lyric chord differently from
-  // the capo-relative guitar form. Preserve each supplied piano change and
-  // distribute it over the same measured section window.
+  const timings = timedGroups[sectionIndex].chords.map((timing) => {
+    const item = { ...timing, beat: cursor };
+    cursor += timing.beats;
+    return item;
+  });
+  const sectionStart = timings[0]?.beat ?? cursor;
+  const sectionBeats = timings.reduce((sum, timing) => sum + timing.beats, 0);
+  let searchFrom = 0;
+  let previousBeat = sectionStart - 1;
   return group.map((chord, chordIndex) => {
-    const beat = start + sectionBeats * chordIndex / group.length;
+    // The guitar chart is capo 3, so its chord roots sound three semitones
+    // higher. Match the concert-pitch piano chord to that real timed cue.
+    const matchIndex = timings.findIndex((timing, index) =>
+      index >= searchFrom && (rootPitchClass(timing.chord) + 3) % 12 === rootPitchClass(chord),
+    );
+    const usableMatch = matchIndex >= 0 && matchIndex - chordIndex <= 2;
+    if (usableMatch) searchFrom = matchIndex + 1;
+    // A few supplied piano spellings add a passing chord absent from the
+    // guitar sheet. Keep it on the nearest whole beat of that real section,
+    // never at an invented fractional/averaged timestamp.
+    const gridBeat = sectionStart + Math.round(sectionBeats * chordIndex / group.length);
+    const beat = usableMatch
+      ? timings[matchIndex].beat
+      : Math.max(Math.ceil(previousBeat), gridBeat);
+    previousBeat = beat;
     return { chord, timeMs: beat * 60000 / chart.guitarArrangement.bpm, beat };
   });
 });

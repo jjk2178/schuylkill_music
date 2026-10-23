@@ -16,28 +16,29 @@ type Song = {
 type Transport = "idle" | "playing" | "paused" | "complete";
 type StoredGuitarShape = { frets: number[]; barres: { fromString: number; toString: number; fret: number }[] };
 type TrackVisibility = { melody: boolean; rhythm: boolean; chords: boolean; pianoChords: boolean; lyrics: boolean };
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path}`;
 
 const songs: Song[] = [
   {
     id: "how-far-ill-go",
     title: "How Far I'll Go",
     artist: "Lin-Manuel Miranda / Alessia Cara",
-    chartUrl: "/user-songs/how-far-ill-go.json",
-    completeUrl: "/rendered-scores/moana-how-far-ill-go-complete.html",
+    chartUrl: assetUrl("user-songs/how-far-ill-go.json"),
+    completeUrl: assetUrl("rendered-scores/moana-how-far-ill-go-complete.html"),
   },
   {
     id: "drivers-license",
     title: "drivers license",
     artist: "Olivia Rodrigo",
-    chartUrl: "/user-songs/olivia-rodrigo-drivers-license-purchased.json",
-    completeUrl: "/rendered-scores/drivers-license-complete.html",
+    chartUrl: assetUrl("user-songs/olivia-rodrigo-drivers-license-purchased.json"),
+    completeUrl: assetUrl("rendered-scores/drivers-license-complete.html"),
   },
   {
     id: "fleetwood-mac-landslide",
     title: "Landslide",
     artist: "Fleetwood Mac",
-    chartUrl: "/user-songs/fleetwood-mac-landslide.json",
-    completeUrl: "/rendered-scores/landslide-complete.html",
+    chartUrl: assetUrl("user-songs/fleetwood-mac-landslide.json"),
+    completeUrl: assetUrl("rendered-scores/landslide-complete.html"),
   },
 ];
 
@@ -193,8 +194,8 @@ export function RehearsalPlayerApp() {
         .complete-empty-system { display:none !important; }
         .complete-system { position:relative; width:920px; height:auto !important; min-height:0; overflow:visible !important; border-right:0; }
         .complete-lyric-chord-lane { display:block !important; width:920px; height:150px !important; min-height:150px; overflow:visible !important; }
-        .complete-chord-lane { position:relative !important; inset:auto !important; width:920px; height:120px !important; overflow:visible !important; }
-        .complete-piano-chord-lane { position:relative !important; width:920px; height:116px !important; overflow:visible !important; }
+        .complete-chord-lane { position:relative !important; inset:auto !important; width:920px; height:126px !important; overflow:visible !important; }
+        .complete-piano-chord-lane { position:relative !important; width:920px; height:var(--piano-lane-height,132px) !important; overflow:visible !important; }
         .complete-system .beat-lyrics { position:relative !important; top:auto !important; left:auto !important; width:920px; height:30px !important; overflow:visible !important; }
         html[data-show-melody="false"] .complete-melody,
         html[data-show-rhythm="false"] .complete-rhythm,
@@ -215,7 +216,7 @@ export function RehearsalPlayerApp() {
       const end = Number(marker.dataset.end);
       marker.classList.toggle("is-active", playhead >= start && playhead < end);
     });
-    doc.querySelectorAll<HTMLElement>(".complete-chord[data-start-time], .complete-piano-chord[data-start-time]").forEach((chord) => {
+    doc.querySelectorAll<HTMLElement>(".complete-chord-block[data-start-time], .complete-piano-chord-block[data-start-time]").forEach((chord) => {
       const start = Number(chord.dataset.startTime);
       const end = Number(chord.dataset.endTime);
       const beats = Math.max(1, Number(chord.dataset.durationBeats ?? 4));
