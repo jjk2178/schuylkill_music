@@ -235,7 +235,8 @@ export function App() {
   return (
     <main className="app-shell trainer-shell">
       <aside className="side-panel">
-        <a className="score-player-link" href="/score-player">Browse & play instrument scores →</a>
+        <a className="score-player-link" href="/rehearsal-player">Open Complete rehearsal score →</a>
+        <a className="score-player-link" href="/score-player">Browse single-instrument scores →</a>
         <div>
           <p className="eyebrow">Pluck and Play</p>
           <h1>Retro play-along trainer</h1>

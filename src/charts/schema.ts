@@ -53,6 +53,10 @@ export const GuitarEventSchema = z.object({
   tiePrevious: z.array(z.number().int().min(0).max(127)).optional(),
   timeMs: z.number().nonnegative(),
   durationMs: z.number().nonnegative(),
+  // Canonical musical position. Time remains for playback/scoring; beats are
+  // the authoritative coordinate for score layout and lyric/chord alignment.
+  beat: z.number().nonnegative().optional(),
+  durationBeats: z.number().positive().optional(),
   strings: z.array(GuitarStringEventSchema).min(0).max(6),
   expected: z.object({
     kind: z.enum(["note", "chord", "rest", "mute"]),
@@ -104,8 +108,41 @@ export const ChartSchema = z.object({
     .array(
       z.object({
         timeMs: z.number().nonnegative(),
+        beat: z.number().nonnegative().optional(),
         text: z.string(),
-        verse: z.number().int().positive().optional(),
+        // Imported rehearsal sheets use human-readable form labels (for
+        // example, "Verse 1" and "Pre-chorus 1"); older practice charts use
+        // numeric verse numbers.
+        verse: z.union([z.number().int().positive(), z.string().min(1)]).optional(),
+      }),
+    )
+    .optional(),
+  // Chord placements extracted from the user-provided lyric/chord sheet.
+  lyricChordCues: z
+    .array(
+      z.object({
+        chord: z.string().min(1),
+        timeMs: z.number().nonnegative(),
+        beat: z.number().nonnegative().optional(),
+      }),
+    )
+    .optional(),
+  // Concert-pitch chord placements for keyboard/piano rehearsal lanes.
+  pianoChordCues: z
+    .array(
+      z.object({
+        chord: z.string().min(1),
+        timeMs: z.number().nonnegative(),
+        beat: z.number().nonnegative().optional(),
+      }),
+    )
+    .optional(),
+  // Rehearsal text is grouped by song form so it can accompany every part.
+  rehearsalLyrics: z
+    .array(
+      z.object({
+        label: z.string().min(1),
+        lines: z.array(z.string().min(1)).min(1),
       }),
     )
     .optional(),

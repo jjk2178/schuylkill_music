@@ -178,6 +178,12 @@
       "status": "Purchased local MusicXML imported; ensemble arrangement expanded",
       "roles": [
         {
+          "player": "Nana",
+          "instrument": "piano",
+          "part": "annotated grand-staff reference",
+          "notes": "play the imported piano reduction; lyric phrases and section labels are aligned below the staff for vocal coordination"
+        },
+        {
           "player": "Jack",
           "instrument": "guitar",
           "part": "guitar",
@@ -268,6 +274,32 @@
           "instrument": "vocals",
           "part": "harmony vocal",
           "notes": "soft harmony support and chorus doubles"
+        }
+      ]
+    },
+    {
+      "id": "fleetwood-mac-landslide",
+      "title": "Landslide",
+      "artist": "Fleetwood Mac",
+      "status": "User-owned MusicXML and supplied chord sheet imported for complete rehearsal playback",
+      "roles": [
+        {
+          "player": "Nana",
+          "instrument": "piano",
+          "part": "imported piano reference",
+          "notes": "Play the imported MusicXML piano reference under the supplied song form."
+        },
+        {
+          "player": "Jack",
+          "instrument": "guitar",
+          "part": "acoustic guitar chord form",
+          "notes": "Capo 3. Follow the two eighth-note chord blocks per 4/4 measure with either basic picking or Travis style."
+        },
+        {
+          "player": "Xinnia",
+          "instrument": "vocals",
+          "part": "lead vocal melody",
+          "notes": "The player provides a soft hummed guide from the owned MusicXML vocal part."
         }
       ]
     },

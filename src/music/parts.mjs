@@ -72,6 +72,8 @@ export function compilePart(events, instrument, title = "", indexOffset = 0) {
         sourceEventId: event.id,
         timeMs: event.timeMs,
         durationMs: event.durationMs,
+        beat: event.beat,
+        durationBeats: event.durationBeats,
         midi: pitches,
         tuplet:event.tuplet,
         tieNext:key === "drums" ? undefined : event.tieNext?.flatMap(p=>pitches.filter(n=>n%12===p%12)),
@@ -136,7 +138,7 @@ export function isPianoChordAccompaniment(chart, instrument) {
 }
 function compileTrackPart(events,instrument,title) {
   const key=instrumentKey(instrument);
-  const rests=events.filter(e=>e.expected.kind==="rest" || !e.expected.midi.length).map(e=>({id:`${key}-${e.id}`,sourceEventId:e.id,timeMs:e.timeMs,durationMs:e.durationMs,midi:[],measure:e.measure}));
+  const rests=events.filter(e=>e.expected.kind==="rest" || !e.expected.midi.length).map(e=>({id:`${key}-${e.id}`,sourceEventId:e.id,timeMs:e.timeMs,durationMs:e.durationMs,beat:e.beat,durationBeats:e.durationBeats,midi:[],measure:e.measure}));
   return [...compilePart(events,instrument,title),...rests].sort((a,b)=>a.timeMs-b.timeMs);
 }
 export function compileChartPart(chart, instrument) {
@@ -167,9 +169,14 @@ export function compileChartPart(chart, instrument) {
     });
   }
   if(instrumentKey(instrument)==="bass" && chart.tracks.some(t=>t.role==="piano-accompaniment" && t.clef==="bass")) return compileTrackPart(chart.tracks.find(t=>t.role==="piano-accompaniment" && t.clef==="bass").events,instrument,chart.title);
-  if (!isPianoChordAccompaniment(chart,instrument)) return compileTrackPart(chart.tracks[0]?.events ?? [],instrument,chart.title);
+  if (!isPianoChordAccompaniment(chart,instrument)) {
+    // Imported charts may place a vocal guide before the piano reduction.
+    // A piano request must never silently engrave that first non-piano track.
+    const source = chart.tracks.find((track) => instrumentKey(track.instrument) === instrumentKey(instrument)) ?? chart.tracks[0];
+    return compileTrackPart(source?.events ?? [],instrument,chart.title);
+  }
   return chart.tracks.filter(track=>track.role === "piano-accompaniment").flatMap(track=>track.events.map(event=>({
-    id:`piano-${event.id}`,sourceEventId:event.id,timeMs:event.timeMs,durationMs:event.durationMs,midi:event.expected.midi,
+    id:`piano-${event.id}`,sourceEventId:event.id,timeMs:event.timeMs,durationMs:event.durationMs,beat:event.beat,durationBeats:event.durationBeats,midi:event.expected.midi,
     staff:event.staff ?? (track.clef === "bass" ? "bass" : "treble"),voice:event.voice,stemDirection:event.stemDirection,measure:event.measure,
     tieNext:event.tieNext,tiePrevious:event.tiePrevious,
   }))).sort((a,b)=>a.timeMs-b.timeMs || b.durationMs-a.durationMs || a.id.localeCompare(b.id));

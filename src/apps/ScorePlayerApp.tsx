@@ -1,7 +1,7 @@
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {ArrangementAudioPlayer} from '../audio/arrangementPlayer';
 import {parseChart,type Chart} from '../charts/schema';
-import {scoreSystemIndex,scoreTimeX} from '../notation/scorePlayback';
+import {scoreSystemIndex} from '../notation/scorePlayback';
 import {midiName} from '../arrangements/arranger';
 import {writtenPitches} from '../music/parts.mjs';
 import '../app/styles.css';
@@ -84,16 +84,20 @@ export function ScorePlayerApp() {
  useEffect(()=>{
   if(!ready)return;
   const doc=frame.current?.contentDocument;if(!doc)return;
+  doc.querySelectorAll<SVGCircleElement>('.play-note-marker').forEach(marker=>{
+   const start=Number(marker.dataset.start),end=Number(marker.dataset.end);
+   marker.classList.toggle('is-active',playhead>=start&&playhead<end);
+  });
   const systems=Array.from(doc.querySelectorAll<HTMLElement>('.music-system:not(.empty-system)'));
   const staffs=systems.map(s=>s.querySelector<HTMLElement>('.vf-staff, .guitar-strum-grid'));
   const index=scoreSystemIndex(playhead,staffs.map(s=>({startMs:Number(s?.dataset.timeStart??0),endMs:Number(s?.dataset.timeEnd??0)})));
   systems.forEach((system,i)=>{
    let cursor=system.querySelector<HTMLElement>('.score-playhead');
    if(!cursor){cursor=doc.createElement('div');cursor.className='score-playhead';system.append(cursor);}
-   cursor.hidden=i!==index;
+   // Notes and held-chord blocks provide the playback indication directly.
+   // Do not interpolate a cursor between unrelated engraved positions.
+   cursor.hidden=true;
    const staff=staffs[i];if(i!==index||!staff)return;
-   const x=scoreTimeX(playhead,Number(staff.dataset.timeStart),Number(staff.dataset.timeEnd),Number(staff.dataset.activeStart??84),Number(staff.dataset.activeEnd??656),JSON.parse(staff.dataset.positions??'[]'));
-   cursor.style.left=`${staff.offsetLeft+x+5}px`;
    if(scrolledSystem.current!==system){const viewport=frame.current?.contentWindow;
     if(viewport)viewport.scrollTo({top:Math.max(0,system.getBoundingClientRect().top+viewport.scrollY-(viewport.innerHeight-system.offsetHeight)/2),behavior:'instant'});
     scrolledSystem.current=system;}
@@ -115,7 +119,7 @@ export function ScorePlayerApp() {
   seek(next?.timeMs??(direction>0?duration:0));
  }
  return <main className="score-player-shell">
-  <header className="score-player-heading"><div><p className="eyebrow">Set list music</p><h1>Score player</h1><p>Browse your instrument part and listen as the red line follows the notes.</p></div><a href="/">Back to app</a></header>
+  <header className="score-player-heading"><div><p className="eyebrow">Set list music</p><h1>Single-part practice</h1><p>Use the Complete rehearsal score for the synchronized multi-lane view. These pages remain available for isolated instrument practice, with the active note circled directly on the staff.</p></div><nav className="score-player-links"><a href="/rehearsal-player">Open Complete rehearsal score</a><a href="/">Back to app</a></nav></header>
   <section className="score-player-controls" aria-label="Score player controls">
    <label>Instrument<select aria-label="Instrument" value={instrument} onChange={e=>{stop('idle');setInstrument(e.target.value);setSongId('');setMode('music');}}>{instruments.map(([key,label])=><option key={key} value={key}>{label}</option>)}</select></label>
    <label>Song<select aria-label="Song" value={entry?.songId??''} onChange={e=>{stop('idle');setSongId(e.target.value);}}>{songs.map(e=><option key={e.songId} value={e.songId}>{e.title}</option>)}</select></label>

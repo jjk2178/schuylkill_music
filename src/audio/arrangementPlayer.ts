@@ -16,53 +16,56 @@ type ActiveNode = {
 export class ArrangementAudioPlayer {
   private context: AudioContext | null = null;
   private activeNodes: ActiveNode[] = [];
-  private playbackAnchor: {time:number;offsetMs:number} | null = null;
+  private playbackAnchor: {time:number;offsetMs:number;rate:number} | null = null;
 
-  async start(chart: Chart, playheadMs: number, compiled = false, shouldStart = () => true): Promise<void> {
+  async start(chart: Chart, playheadMs: number, compiled = false, shouldStart = () => true, enabledInstruments?: string[], playbackRate = 1, enabledTrackIds?: string[]): Promise<void> {
     await this.getContext().resume();
-    if (shouldStart()) this.play(chart, playheadMs, compiled);
+    if (shouldStart()) this.play(chart, playheadMs, compiled, enabledInstruments, playbackRate, enabledTrackIds);
   }
 
   getPlaybackTimeMs(): number | null {
     if (!this.context || !this.playbackAnchor) return null;
-    return this.playbackAnchor.offsetMs + Math.max(0,this.context.currentTime-this.playbackAnchor.time)*1000;
+    return this.playbackAnchor.offsetMs + Math.max(0,this.context.currentTime-this.playbackAnchor.time)*1000*this.playbackAnchor.rate;
   }
 
-  play(chart: Chart, playheadMs: number, compiled = false): void {
+  play(chart: Chart, playheadMs: number, compiled = false, enabledInstruments?: string[], playbackRate = 1, enabledTrackIds?: string[]): void {
     this.stop();
     const context = this.getContext();
     void context.resume();
     const arrangement = compiled
       ? {
-          parts: [
-            {
-              instrument: chart.instrument,
+          parts: chart.tracks
+            .filter((track) => (!enabledInstruments || enabledInstruments.includes(track.instrument)) && (!enabledTrackIds || enabledTrackIds.includes(track.id)))
+            .map((track) => ({
+              instrument: track.instrument,
               presentation:
-                chart.instrument === "drums" ? "drum-grid" : "melody-staff",
-              notes: chart.tracks[0].events.map((event) => ({
+                track.instrument === "drums" ? "drum-grid" : "melody-staff",
+              notes: track.events.map((event) => ({
                 timeMs: event.timeMs,
                 durationMs: event.durationMs,
                 midi: event.expected.midi,
                 staff:event.staff,tieNext:event.tieNext,tiePrevious:event.tiePrevious,
               })),
-            },
-          ],
+            })),
         }
       : arrangeForFivePlayers(chart);
+    const rate = Math.max(0.01, playbackRate);
     const startAt = context.currentTime + 0.04;
-    this.playbackAnchor = {time:startAt,offsetMs:playheadMs};
+    this.playbackAnchor = {time:startAt,offsetMs:playheadMs,rate};
 
     for (const part of arrangement.parts) {
       for (const note of soundingNotes(part.notes)) {
         const offsetMs = note.timeMs - playheadMs;
         if (offsetMs <= -note.durationMs) continue;
-        const when = startAt + Math.max(0, offsetMs) / 1000;
+        const when = startAt + Math.max(0, offsetMs) / 1000 / rate;
         const duration = Math.max(
           0.08,
-          (note.durationMs - Math.max(0, -offsetMs)) / 1000,
+          (note.durationMs - Math.max(0, -offsetMs)) / 1000 / rate,
         );
         if (part.presentation === "drum-grid")
           this.scheduleDrum(context, note.midi, when);
+        else if (part.instrument.toLowerCase().includes("vocal"))
+          this.scheduleHum(context, note.midi, when, duration);
         else this.scheduleNotes(context, part, note.midi, when, duration);
       }
     }
@@ -143,6 +146,35 @@ export class ArrangementAudioPlayer {
       oscillator.start(when);
       oscillator.stop(when + duration + 0.01);
       this.activeNodes.push({ node: oscillator, gain });
+    }
+  }
+
+  private scheduleHum(
+    context: AudioContext,
+    midi: number[],
+    when: number,
+    duration: number,
+  ): void {
+    for (const pitch of midi) {
+      const fundamental = context.createOscillator();
+      const overtone = context.createOscillator();
+      const gain = context.createGain();
+      const overtoneGain = context.createGain();
+      const frequency = midiToFrequency(pitch);
+      fundamental.type = "sine";
+      overtone.type = "sine";
+      fundamental.frequency.setValueAtTime(frequency, when);
+      overtone.frequency.setValueAtTime(frequency * 2, when);
+      gain.gain.setValueAtTime(0.0001, when);
+      gain.gain.exponentialRampToValueAtTime(0.032, when + 0.06);
+      gain.gain.setValueAtTime(0.032, when + Math.max(0.06, duration - 0.12));
+      gain.gain.exponentialRampToValueAtTime(0.0001, when + duration);
+      overtoneGain.gain.setValueAtTime(0.005, when);
+      fundamental.connect(gain).connect(context.destination);
+      overtone.connect(overtoneGain).connect(gain);
+      fundamental.start(when); overtone.start(when);
+      fundamental.stop(when + duration + 0.03); overtone.stop(when + duration + 0.03);
+      this.activeNodes.push({ node: fundamental, gain }, { node: overtone, gain: overtoneGain });
     }
   }
 }

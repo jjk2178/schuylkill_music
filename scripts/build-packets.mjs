@@ -15,6 +15,8 @@ import {
   writtenKey,
 } from "../src/music/parts.mjs";
 import { measureBoundaries, tempoAt, meterAt } from "../src/music/measures.mjs";
+import { timeToBeat } from "../src/music/beatTimeline.mjs";
+import { buildKaraokePhrases } from "../src/music/karaokePhrases.mjs";
 import { execFileSync } from "node:child_process";
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { basename, join, resolve } from "node:path";
@@ -31,6 +33,7 @@ const chromePath =
   process.env.CHROME_PATH ??
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 const scoreWidth = 680;
+const completeScoreWidth = 920;
 const eventsPerSystem = 24;
 const systemsPerPage = 4;
 
@@ -231,7 +234,10 @@ function renderStaff(
     startMs: notes[0]?.timeMs ?? 0,
     endMs: notes.at(-1)?.timeMs ?? 1,
   };
-  return `<div class="vf-staff" data-note-names="${noteNames ? 1 : 0}" data-diagram-gap="${diagramGap}" data-grand="${range.grand ? 1 : 0}" data-measures="${dataAttr(range.measures ?? [])}" data-quarter-ms="${range.quarterMs ?? 600}" data-clef="${escapeHtml(clef)}" data-height="${height}" data-width="${width}" data-compact="${compact ? "1" : "0"}" data-key="${dataAttr(keySignature)}" data-beats="${timeSignature.beats}" data-beat-unit="${timeSignature.beatUnit}" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-time-positioned="${timePositioned ? "1" : "0"}" data-notes="${dataAttr(notes)}"></div>`;
+  const beatStart = range.beatStart ?? notes[0]?.beat ?? 0;
+  const lastNote = notes.at(-1);
+  const beatEnd = range.beatEnd ?? (lastNote?.beat ?? beatStart) + (lastNote?.durationBeats ?? 1);
+  return `<div class="vf-staff" data-note-names="${noteNames ? 1 : 0}" data-diagram-gap="${diagramGap}" data-grand="${range.grand ? 1 : 0}" data-measures="${dataAttr(range.measures ?? [])}" data-quarter-ms="${range.quarterMs ?? 600}" data-clef="${escapeHtml(clef)}" data-height="${height}" data-width="${width}" data-compact="${compact ? "1" : "0"}" data-key="${dataAttr(keySignature)}" data-beats="${timeSignature.beats}" data-beat-unit="${timeSignature.beatUnit}" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-beat-start="${beatStart}" data-beat-end="${beatEnd}" data-time-positioned="${timePositioned ? "1" : "0"}" data-notes="${dataAttr(notes)}"></div>`;
 }
 
 function renderGrandStaff(
@@ -242,6 +248,8 @@ function renderGrandStaff(
   timeRange,
   timePositioned = false,
   noteNames = false,
+  height = 104,
+  width = scoreWidth,
 ) {
   timeRange = {...timeRange, grand:true};
   const treble = notes
@@ -250,8 +258,7 @@ function renderGrandStaff(
   const bass = notes
     .map((note) => ({ ...note, midi: note.midi.filter((midi) => note.staff ? note.staff === "bass" : midi < 60) }))
     .filter((note) => note.midi.length || note.staff === "bass");
-  const height = 104;
-  return `<div class="grand">${renderStaff(treble, { clef: "treble", height, compact: true, keySignature, timeSignature, timeRange, timePositioned, noteNames })}${renderStaff(bass, { clef: "bass", height, compact: true, keySignature, timeSignature, timeRange, timePositioned, noteNames })}</div>`;
+  return `<div class="grand">${renderStaff(treble, { clef: "treble", height, width, compact: true, keySignature, timeSignature, timeRange, timePositioned, noteNames })}${renderStaff(bass, { clef: "bass", height, width, compact: true, keySignature, timeSignature, timeRange, timePositioned, noteNames })}</div>`;
 }
 
 function masterNotes(events) {
@@ -484,6 +491,231 @@ function renderGuitarStrumSystem(chart,range,active) {
   return `<div class="packet-system music-system instrument-guitar compact-guitar"><div class="guitar-strum-grid" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-active-start="${left}" data-active-end="${x(range.endMs)}" data-positions="${dataAttr(positions)}"><svg viewBox="0 0 680 46" role="img" aria-label="Guitar chords and condensed strumming">${bars.map(t=>`<line x1="${x(t)}" x2="${x(t)}" y1="1" y2="44" stroke="#aaa"/>`).join("")}${columns}</svg></div><div class="strum-changes">${diagramHtml}</div></div>`;
 }
 
+function rehearsalSections(chart) {
+  const lyrics = chart.rehearsalLyrics ?? [];
+  const accompaniment = chart.guitarArrangement;
+  if (!lyrics.length || !accompaniment) return [];
+  const starts = [];
+  let quarter = accompaniment.startQuarter;
+  for (const section of accompaniment.sections) {
+    starts.push(quarter * 60000 / accompaniment.bpm);
+    quarter += section.chords.reduce((total, chord) => total + chord.beats, 0);
+  }
+  const sourceEnd = Math.max(1, ...chart.tracks.flatMap(track => track.events).map(event => event.timeMs + event.durationMs));
+  const arrangementEnd = Math.max(1, quarter * 60000 / accompaniment.bpm);
+  return lyrics.map((lyric, index) => ({
+    ...lyric,
+    startMs: (starts[index] ?? 0) / arrangementEnd * sourceEnd,
+    endMs: (starts[index + 1] ?? arrangementEnd) / arrangementEnd * sourceEnd,
+    chords: accompaniment.sections[index]?.chords ?? [],
+  }));
+}
+
+function rehearsalSectionForRange(chart, range) {
+  return rehearsalSections(chart).find(section =>
+    range.startMs < section.endMs && range.endMs > section.startMs,
+  );
+}
+
+function renderBeatLyrics(chart, range, width = scoreWidth, beatAligned = false) {
+  const phrases = buildKaraokePhrases(chart).filter(
+    (lyric) => lyric.timeMs >= range.startMs - 0.01 && lyric.timeMs < range.endMs - 0.01,
+  );
+  if (!phrases.length) return "";
+  const span = Math.max(1, range.endMs - range.startMs);
+  const positions = phrases.map((phrase, index) => {
+    const inset = Math.round(width * 0.04);
+    const usableWidth = width - inset * 2;
+    const idealStart = inset + ((phrase.timeMs - range.startMs) / span) * usableWidth;
+    // Keep a late lyric inside its system. The estimate is deliberately
+    // conservative so lyric text remains readable instead of being clipped.
+    const lyricWidth = phrase.text.length * 5.4;
+    const start = Math.min(idealStart, width - inset - lyricWidth);
+    return `<text${beatAligned ? ` class="complete-lyric" data-beat="${timeToBeat(chart, phrase.timeMs)}" data-time="${phrase.timeMs}"` : ""} x="${start.toFixed(1)}" y="12">${escapeHtml(phrase.text)}</text>`;
+  }).join("");
+  return `<svg class="beat-lyrics" viewBox="0 0 ${width} 19" role="img" aria-label="Lyrics aligned to reference timing">${positions}</svg>`;
+}
+
+function renderRehearsalReference(chart, range) {
+  const section = rehearsalSectionForRange(chart, range);
+  const heading = section ? `<b>${escapeHtml(section.label)}</b>` : "";
+  const lyrics = renderBeatLyrics(chart, range);
+  return heading || lyrics ? `<div class="rehearsal-reference">${heading}${lyrics}</div>` : "";
+}
+
+function renderGuitarSongSheet(chart) {
+  return `<div class="guitar-song-sheet">${rehearsalSections(chart).map(section => {
+    const seen = new Set();
+    const changes = section.chords.filter(change => !seen.has(change.chord) && seen.add(change.chord));
+    let elapsedBeats = 0;
+    const blocks = section.chords.map((change) => {
+      const startBar = Math.floor(elapsedBeats / 4) + 1;
+      const endBar = Math.floor((elapsedBeats + change.beats - 1) / 4) + 1;
+      const beatLabel = change.beats === 8
+        ? `bars ${startBar}–${endBar} · 8 beats`
+        : change.beats === 4
+          ? `bar ${startBar} · 4 beats`
+          : `bar ${startBar}, beat ${(elapsedBeats % 4) + 1} · ${change.beats} beats`;
+      elapsedBeats += change.beats;
+      return `<li><b>${escapeHtml(change.chord)}</b><span>${beatLabel}</span></li>`;
+    }).join("");
+    return `<section class="guitar-lyric-section"><h3>${escapeHtml(section.label)}</h3><ol class="guitar-chord-blocks">${blocks}</ol><div class="guitar-section-body"><div class="guitar-lyrics">${section.lines.map(line => `<p>${escapeHtml(line)}</p>`).join("")}</div><div class="guitar-section-chords">${changes.map(change => { const shape = guitarChordForChart(chart, change.chord); return `<div class="song-sheet-chord"><b>${escapeHtml(change.chord)}</b>${shape ? `<div class="guitar-chord-box" data-compact="1" data-chord="${dataAttr(shape)}"></div>` : ""}</div>`; }).join("")}</div></div></section>`;
+  }).join("")}</div>`;
+}
+
+function referenceChordChanges(chart) {
+  return rehearsalSections(chart).flatMap((section) => {
+    const totalBeats = section.chords.reduce((sum, chord) => sum + chord.beats, 0);
+    let elapsedBeats = 0;
+    return section.chords.map((chord) => {
+      const timeMs = section.startMs + ((section.endMs - section.startMs) * elapsedBeats) / totalBeats;
+      elapsedBeats += chord.beats;
+      return { ...chord, timeMs };
+    });
+  });
+}
+
+function renderCompleteChordLane(chart, range, width = completeScoreWidth) {
+  // The user-supplied chord sheets contain horizontal chord placement above
+  // each lyric. Prefer those cues in Complete view; fall back to the arranged
+  // beat map for charts without an imported chord sheet.
+  const source = chart.lyricChordCues?.length ? chart.lyricChordCues : referenceChordChanges(chart);
+  const changes = source.filter(
+    (change) => change.timeMs >= range.startMs - 0.01 && change.timeMs < range.endMs - 0.01,
+  );
+  if (!changes.length) return `<div class="complete-chord-lane complete-chord-empty"><span>—</span></div>`;
+  const span = Math.max(1, range.endMs - range.startMs);
+  return `<div class="complete-chord-lane">${changes.map((change) => {
+    const index = source.indexOf(change);
+    const beat = change.beat ?? timeToBeat(chart, change.timeMs);
+    const next = source[index + 1];
+    const durationBeats = Math.max(1, Math.round(change.beats ?? ((next?.beat ?? beat + 4) - beat)));
+    const startBar = Math.floor(beat / 4) + 1;
+    const endBar = Math.floor((beat + durationBeats - 1) / 4) + 1;
+    const durationLabel = durationBeats === 4
+      ? `M${startBar} · 4 beats`
+      : `M${startBar}–${endBar} · ${durationBeats} beats`;
+    const shape = guitarChordForChart(chart, change.chord);
+    const symbol = shape
+      ? `<div class="guitar-chord-box" data-complete="1" data-chord="${dataAttr(shape)}"></div>`
+      : "";
+    const endMs = next?.timeMs ?? change.timeMs + durationBeats * (60000 / tempoAt(chart, change.timeMs));
+    return `<div class="complete-chord" data-beat="${beat}" data-duration-beats="${durationBeats}" data-start-time="${change.timeMs}" data-end-time="${endMs}" style="left:0"><div class="complete-chord-marker"><b>${escapeHtml(change.chord)}</b>${symbol}</div><div class="complete-chord-hold" title="${escapeHtml(durationLabel)}"><i class="complete-chord-progress"></i><span>${durationLabel}</span></div></div>`;
+  }).join("")}</div>`;
+}
+
+function pianoChordDiagram(chord) {
+  const match = /^([A-G])([#b]?)(.*)$/.exec(chord);
+  if (!match) return "";
+  const root = ({ C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 })[match[1]] + (match[2] === "#" ? 1 : match[2] === "b" ? -1 : 0);
+  const quality = match[3];
+  const intervals = /maj7/.test(quality) ? [0, 4, 7, 11] : /m7/.test(quality) ? [0, 3, 7, 10] : /m/.test(quality) ? [0, 3, 7] : /6/.test(quality) ? [0, 4, 7, 9] : /7/.test(quality) ? [0, 4, 7, 10] : [0, 4, 7];
+  // Start the displayed keyboard on the chord root (or the white key just
+  // below it). This makes the named root the lowest highlighted tone, e.g.
+  // Bb is voiced Bb–D–F rather than showing D below an upper Bb.
+  const rootMidi = 48 + ((root + 120) % 12);
+  const naturalPitchClasses = new Set([0, 2, 4, 5, 7, 9, 11]);
+  let lowestWhite = rootMidi;
+  while (!naturalPitchClasses.has((lowestWhite + 120) % 12)) lowestWhite -= 1;
+  const whites = [];
+  for (let midi = lowestWhite; whites.length < 14; midi += 1)
+    if (naturalPitchClasses.has((midi + 120) % 12)) whites.push(midi);
+  const active = new Set(intervals.map((interval) => rootMidi + interval));
+  const whiteWidth = 5.4;
+  // Show one useful voicing only. Rendering both octaves doubles every pitch
+  // marker and reads as an over-stuffed chord rather than a playable shape.
+  const dot = (midi, x, y) => active.has(midi) ? `<circle cx="${x}" cy="${y}" r="${midi === rootMidi ? 2.35 : 1.9}" fill="${midi === rootMidi ? "#c81e2b" : "#38bdf8"}" stroke="#ffffff" stroke-width=".45"/>` : "";
+  const white = whites.map((midi, index) => `<rect x="${index * whiteWidth}" y="0" width="${whiteWidth - .35}" height="34" fill="#fff" stroke="#334155" stroke-width=".45"/>${dot(midi, index * whiteWidth + whiteWidth / 2, 27)}`).join("");
+  const black = whites.slice(0, -1).map((midi, index) => {
+    const sharp = midi + 1;
+    if (whites[index + 1] - midi !== 2) return "";
+    return `<rect x="${(index + 1) * whiteWidth - 1.7}" y="0" width="3.2" height="20" rx=".4" fill="#172435"/>${dot(sharp, (index + 1) * whiteWidth - .1, 16)}`;
+  }).join("");
+  return `<svg class="piano-chord-diagram" viewBox="0 0 76 35" role="img" aria-label="${escapeHtml(chord)} piano chord">${white}${black}</svg>`;
+}
+
+function renderCompletePianoChordLane(chart, range) {
+  const source = chart.pianoChordCues ?? [];
+  const changes = source.filter((change) => change.timeMs >= range.startMs - .01 && change.timeMs < range.endMs - .01);
+  if (!changes.length) return "";
+  return `<div class="complete-piano-chord-lane">${changes.map((change) => {
+    const index = source.indexOf(change), next = source[index + 1];
+    const beat = change.beat ?? timeToBeat(chart, change.timeMs);
+    const durationBeats = Math.max(1, Math.round((next?.beat ?? beat + 4) - beat));
+    const endMs = next?.timeMs ?? change.timeMs + durationBeats * 60000 / tempoAt(chart, change.timeMs);
+    return `<div class="complete-piano-chord" data-beat="${beat}" data-duration-beats="${durationBeats}" data-start-time="${change.timeMs}" data-end-time="${endMs}" style="left:0"><div class="complete-piano-chord-marker"><b>${escapeHtml(change.chord)}</b>${pianoChordDiagram(change.chord)}</div><div class="complete-piano-chord-hold"><i class="complete-chord-progress"></i><span>${durationBeats} beats</span></div></div>`;
+  }).join("")}</div>`;
+}
+
+function completeMelodyNotes(chart) {
+  const melodyTrack = chart.tracks.find((track) => track.instrument === "vocals");
+  if (!melodyTrack) return [];
+  return melodyTrack.events
+    .filter((event) => event.expected?.midi?.length)
+    .map((event) => ({
+      id: `melody-${event.id}`,
+      sourceEventId: event.id,
+      timeMs: event.timeMs,
+      durationMs: event.durationMs,
+      beat: event.beat,
+      durationBeats: event.durationBeats,
+      midi: [Math.max(...event.expected.midi)],
+      tuplet: event.tuplet,
+      tieNext: event.tieNext,
+      tiePrevious: event.tiePrevious,
+    }));
+}
+
+function renderCompleteSystem(chart, notes, melody, range) {
+  const key = writtenKey(keySignatureAt(chart, range.startMs), "piano");
+  const meter = meterAt(chart, range.startMs);
+  const melodyStaff = melody.length
+    ? `<div class="complete-melody"><div class="complete-part-label">Lead vocal melody — sing this line</div>${renderStaff(melody, { clef: "treble", height: 70, width: completeScoreWidth, compact: true, keySignature: key, timeSignature: meter, timeRange: range, timePositioned: true })}</div>`
+    : "";
+  return `<div class="complete-system" data-time-start="${range.startMs}" data-time-end="${range.endMs}" data-beat-start="${range.beatStart}" data-beat-end="${range.beatEnd}"><div class="complete-section">${escapeHtml(rehearsalSectionForRange(chart, range)?.label ?? "")}</div>${melodyStaff}<div class="complete-rhythm"><div class="complete-part-label">Rhythm Piano</div>${renderGrandStaff(notes, key, true, meter, range, true, false, 70, completeScoreWidth)}</div>${renderCompletePianoChordLane(chart, range)}<div class="complete-lyric-chord-lane">${renderCompleteChordLane(chart, range, completeScoreWidth)}${renderBeatLyrics(chart, range, completeScoreWidth, true)}</div></div>`;
+}
+
+function completeReferencePages(song, songIndex) {
+  const chart = chartForInstrument(loadChart(song), "piano");
+  if (!chart) throw new Error(`Complete view needs a piano chart: ${song.title}`);
+  const events = compileChartPart(chart, "piano");
+  const melodyEvents = completeMelodyNotes(chart);
+  const endMs = Math.max(...chart.tracks.flatMap((track) => track.events).map((event) => event.timeMs + event.durationMs));
+  const barLines = measureBoundaries(chart, endMs);
+  const lyricStarts = (chart.lyrics ?? []).map((lyric) => lyric.timeMs).sort((a, b) => a - b);
+  const systems = [];
+  for (let start = 0; start < endMs - 0.01;) {
+    const meter = meterAt(chart, start);
+    const targetEnd = Math.min(endMs, start + meter.beats * (60000 / tempoAt(chart, start)) * 3);
+    // Do not split a supplied lyric/chord line. This can make a system a
+    // little longer than three bars, but keeps source chord placement,
+    // words, and the music they reference together.
+    const nextLyricStart = lyricStarts.find((time) => time > targetEnd + 0.01);
+    const end = nextLyricStart ?? targetEnd;
+    const range = {
+      startMs: start,
+      endMs: end,
+      beatStart: timeToBeat(chart, start),
+      beatEnd: timeToBeat(chart, end),
+      measures: [start, ...barLines.filter((time) => time > start + 0.01 && time < end - 0.01), end],
+      quarterMs: 60000 / tempoAt(chart, start),
+    };
+    const notes = events.filter((note) => note.timeMs >= start - 0.01 && note.timeMs < end - 0.01);
+    const melody = melodyEvents.filter((note) => note.timeMs >= start - 0.01 && note.timeMs < end - 0.01);
+    systems.push({ range, notes: notes.length ? notes : [{ timeMs: range.startMs, durationMs: range.endMs - range.startMs, midi: [] }], melody });
+    start = end;
+  }
+  const pages = chunk(systems, 2);
+  return pages.map((page, pageIndex) => {
+    const lines = page.map(({ range, notes, melody }) => renderCompleteSystem(chart, notes, melody, range));
+    while (lines.length < 2) lines.push(`<div class="complete-system complete-empty-system"></div>`);
+    const referenceLabel = chart.guitarArrangement
+      ? "Complete piano / vocal / guitar reference"
+      : "Imported piano reference";
+    return `<div class="page complete-page"><div class="top"><div><h1>${songIndex + 1}. ${escapeHtml(song.title)}</h1><p>${escapeHtml(song.artist)} · ${referenceLabel} · page ${pageIndex + 1} of ${pages.length}</p></div><p>${meterAt(chart, 0).beats}/${meterAt(chart, 0).beatUnit} · ${chart.guitarArrangement?.bpm ?? tempoAt(chart, 0)} BPM</p></div><p class="part-note">About three to five bars per line; systems extend to keep supplied lyric/chord lines together. Every played chord is shown as a diagram.</p><section class="complete-score">${lines.join("")}</section></div>`;
+  }).join("");
+}
+
 function renderMusicSystem(
   notes,
   instrument,
@@ -578,7 +810,10 @@ function renderMusicSystem(
     } else if (["trumpet", "flute", "recorder"].includes(instrument))
       annotation = renderInstrumentAnnotation(notes, instrument, timeRange);
   }
-  return `<div class="packet-system music-system instrument-${instrument}">${staff}${annotation}</div>`;
+  const reference = ["piano", "keys", "vocals"].includes(instrument)
+    ? renderRehearsalReference(chart, timeRange)
+    : "";
+  return `<div class="packet-system music-system instrument-${instrument}">${reference}${staff}${annotation}</div>`;
 }
 
 function renderPacketBlock(title, content, timeSignature) {
@@ -588,6 +823,7 @@ function renderPacketBlock(title, content, timeSignature) {
 function css() {
   return `
     @page { size: letter; margin: 0.45in; }
+    @page complete { size: letter landscape; margin: 0.4in; }
     @font-face { font-family: "Bravura"; src: url("${Bravura}") format("woff2"); font-weight: 400; font-style: normal; }
     @font-face { font-family: "Academico"; src: url("${Academico}") format("woff2"); font-weight: 400; font-style: normal; }
     @font-face { font-family: "Academico"; src: url("${AcademicoBold}") format("woff2"); font-weight: 700; font-style: normal; }
@@ -616,6 +852,64 @@ function css() {
     .packet-part-block h3 { padding-right: 40px; }
     .packet-part-block .time-signature { position: absolute; top: 4px; right: 7px; font-size: 9px; font-weight: 700; }
     .lyrics-middle { font-size:10px; text-align:center; height:20px; line-height:20px; overflow:visible; }
+    .rehearsal-reference { margin: 2px 0 1px; color: #222; }
+    .rehearsal-reference b { display:block; font-size: 8px; text-transform: uppercase; letter-spacing: .06em; }
+    .beat-lyrics { display:block; width:680px; height:24px; overflow:visible; }
+    .beat-lyrics text { font-family:Arial,sans-serif !important; font-size:10px; font-weight:600; dominant-baseline:middle; }
+    .guitar-song-page { min-height: 0; }
+    .guitar-song-sheet { columns: 2; column-gap: 14px; font-size: 8px; line-height: 1.22; }
+    .guitar-lyric-section { break-inside: avoid; border-top: 1px solid #999; padding: 3px 0 5px; }
+    .guitar-lyric-section h3 { margin: 0 0 2px; font-size: 9px; }
+    .guitar-chord-blocks { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:2px 5px; padding:0; margin:0 0 4px; list-style:none; }
+    .guitar-chord-blocks li { border:1px solid #bbb; padding:2px 3px; font-size:7px; line-height:1.15; }
+    .guitar-chord-blocks b { display:block; font-size:8px; }
+    .guitar-chord-blocks span { color:#444; white-space:nowrap; }
+    .guitar-section-body { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px; }
+    .guitar-lyrics p { margin: 0 0 2px; }
+    .guitar-section-chords { display:flex; flex-wrap:wrap; align-content:start; gap:2px; max-width:102px; }
+    .song-sheet-chord { font-size:7px; text-align:center; min-width:26px; }
+    .song-sheet-chord .guitar-chord-box svg { width:29px !important; height:35px !important; }
+    .complete-page { page:complete; min-height:7.7in; }
+    .complete-page .top { margin-bottom: 5px; }
+    .complete-page .part-note { margin-bottom: 3px; }
+    .complete-score { border: 1px solid #aaa; padding: 4px 10px; }
+    .complete-system { position:relative; height:400px; box-sizing:border-box; border-bottom:1px solid #c8c8c8; overflow:hidden; }
+    .complete-system:last-child { border-bottom:0; }
+    .complete-empty-system { opacity:.35; }
+    .complete-section { height:13px; font-size:8px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+    .complete-lyric-chord-lane { position:relative; width:${completeScoreWidth}px; max-width:100%; height:142px; }
+    .complete-chord-lane { position:relative; height:114px; width:${completeScoreWidth}px; max-width:100%; overflow:visible; }
+    .complete-piano-chord-lane { position:relative; height:116px; width:${completeScoreWidth}px; max-width:100%; overflow:visible; border-top:1px solid #d2dae5; }
+    .complete-chord-empty { color:#999; font-size:10px; padding:12px 0 0 36px; }
+    .complete-chord { position:absolute; top:0; line-height:1; }
+    .complete-chord-marker { width:66px; transform:translateX(-50%); display:grid; justify-items:center; text-align:center; }
+    .complete-chord b { display:block; padding:0; font-size:9px; line-height:9px; white-space:nowrap; }
+    .complete-chord-hold { position:absolute; top:84px; left:0; box-sizing:border-box; height:13px; min-width:8px; border:1px solid #53667f; border-radius:2px; background:repeating-linear-gradient(135deg,#d9e5f2 0 4px,#f5f8fb 4px 8px); overflow:hidden; }
+    .complete-chord-progress { position:absolute; inset:0 auto 0 0; width:0; background:#dc2626aa; transition:width 80ms linear; }
+    .complete-chord-hold span { display:block; padding:2px 4px; color:#172435; font:700 6px/1 Arial,sans-serif; white-space:nowrap; }
+    .play-note-marker { display:none; fill:none; stroke:#dc2626; stroke-width:2.2px; pointer-events:none; }
+    .play-note-marker.is-active { display:block; }
+    .complete-chord i { font-size:16px; font-style:normal; line-height:21px; }
+    .complete-chord .guitar-chord-box { height:72px; margin-top:-1px; overflow:visible; }
+    /* Use the renderer's native size: scaling its SVG after it draws can clip
+       the low-E string and its open/muted marker. */
+    .complete-chord .guitar-chord-box svg { width:58px !important; height:70px !important; }
+    .complete-piano-chord { position:absolute; top:3px; line-height:1; }
+    .complete-piano-chord-marker { width:104px; transform:translateX(-50%); display:grid; justify-items:center; text-align:center; }
+    .complete-piano-chord b { display:block; padding-bottom:2px; font-size:9px; white-space:nowrap; }
+    .piano-chord-diagram { width:104px; height:48px; overflow:visible; }
+    .complete-piano-chord-hold { position:absolute; top:66px; left:0; box-sizing:border-box; height:15px; min-width:12px; border:1px solid #6b7280; border-radius:2px; background:repeating-linear-gradient(135deg,#eee6da 0 4px,#fffaf2 4px 8px); overflow:hidden; }
+    .complete-piano-chord-hold .complete-chord-progress { background:#c81e2baa; }
+    .complete-piano-chord-hold span { display:block; padding:3px 5px; color:#172435; font:700 7px/1 Arial,sans-serif; white-space:nowrap; }
+    .complete-system .vf-staff { width:${completeScoreWidth}px; min-height:86px; }
+    .complete-system .vf-staff svg { width:100% !important; height:auto !important; }
+    .complete-system .grand { margin:0; }
+    .complete-part-label { height:12px; padding:1px 0 0 3px; color:#555; font:700 8px/1.1 Arial,sans-serif; text-transform:uppercase; letter-spacing:.06em; }
+    .complete-melody { margin-bottom:2px; }
+    .complete-melody .vf-staff { min-height:66px; }
+    .complete-rhythm .vf-staff { min-height:70px; }
+    .complete-system .beat-lyrics { position:relative; top:auto; left:0; width:${completeScoreWidth}px; height:27px; margin:0; overflow:visible; }
+    .complete-system .beat-lyrics text { font-size:12px; }
     .guitar-strum-grid { width:680px; height:76px; }
     .guitar-strum-grid svg { width:680px; height:72px; }
     .strum-changes { display:flex; justify-content:space-around; height:116px; }
@@ -632,6 +926,7 @@ function css() {
     .packet-systems { display: grid; gap: 0; }
     .packet-system { min-height: 54px; padding: 4px 0; box-sizing: border-box; break-inside: avoid; }
     .packet-system.music-system { min-height: 0; height:194px; overflow:visible; border-bottom:1px solid #ddd; }
+    .packet-system.music-system.instrument-piano, .packet-system.music-system.instrument-keys, .packet-system.music-system.instrument-vocals { height:252px; }
     .packet-system .grand { margin-bottom: 2px; }
     .ensemble-block .tab-ann { margin: 0; padding: 3px 0; box-sizing: content-box; }
     .ensemble-block .labels, .ensemble-block .vocal, .ensemble-block .drums { gap: 5px; font-size: 7px; margin-top: 0; max-height: 16px; overflow: hidden; }
@@ -649,18 +944,6 @@ function css() {
     svg { max-width: 100%; height: auto; display:block; }
     svg text.piano-note-name { font-family:Arial,sans-serif !important; font-size:11px; font-weight:600; fill:#222; paint-order:stroke; stroke:white; stroke-width:1.6px; stroke-linejoin:round; }
     .guitar-chord-box svg text { font-family:Helvetica,Arial,sans-serif !important; }
-    .simple-guitar-page { break-after: page; }
-    .simple-guitar-box { border:2px solid #111; padding:12px; }
-    .simple-guitar-box > p { margin:3px 0 8px; font-size:10px; }
-    .simple-guitar-section { border-top:1px solid #999; padding:7px 0 4px; }
-    .simple-guitar-section h2 { font-size:13px; margin:0 0 5px; }
-    .simple-loop { display:grid; grid-template-columns:18px repeat(4, minmax(0, 1fr)); gap:5px; align-items:start; margin:3px 0; }
-    .simple-loop-number { font-size:9px; padding-top:8px; text-align:right; }
-    .simple-chord-cell { border:1px solid #bbb; min-height:160px; text-align:center; padding:3px 2px 0; overflow:visible; }
-    .simple-chord-cell b { display:block; font-size:12px; }
-    .simple-chord-cell .guitar-chord-box { display:flex; justify-content:center; width:130px; height:150px; margin:0 auto; overflow:visible; }
-    .simple-chord-cell .guitar-chord-box svg { width:130px; height:150px; max-width:none; overflow:visible; }
-    .simple-guitar-note { font-size:9px; margin-top:7px; }
     svg text { font-family: "Bravura", "Academico", Helvetica, Arial, sans-serif !important; }
     .vf-staff { width: ${scoreWidth}px; max-width: 100%; min-height: 104px; }
     .grand svg + svg { margin-top: 0; }
@@ -726,6 +1009,17 @@ function browserVexFlowScript() {
           }
           return right;
         }
+        function staffBeatX(host, beat, left, right) {
+          const start=Number(host.dataset.beatStart), end=Number(host.dataset.beatEnd);
+          const points=JSON.parse(host.dataset.beatPositions||"[]");
+          const all=new Map([[start,left],...points,[end,right]]);
+          const sorted=[...all].sort((a,b)=>a[0]-b[0]);
+          for(let i=1;i<sorted.length;i++) if(beat<=sorted[i][0]) {
+            const [a,x]=sorted[i-1],[b,y]=sorted[i];
+            return x+(beat-a)/Math.max(.0001,b-a)*(y-x);
+          }
+          return right;
+        }
         function addMeasureBars(host, stave) {
           const svg = host.querySelector("svg");
           if (!svg) return;
@@ -752,7 +1046,9 @@ function browserVexFlowScript() {
           svg.setAttribute("viewBox", "0 " + top + " " + width + " " + (bottom - top));
           svg.setAttribute("height", String(bottom - top));
           svg.style.height = "84px";
-          svg.setAttribute("preserveAspectRatio", "none");
+          // Keep VexFlow's natural proportions. Stretching the SVG to fill a
+          // short row makes noteheads and clefs look flattened.
+          svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
           svg.style.overflow = "visible";
         }
         const staffTieLinks = ${staffTieLinks.toString()};
@@ -801,16 +1097,20 @@ function browserVexFlowScript() {
           if (timePositioned) {
             const firstTime = Number(host.dataset.timeStart ?? notes[0]?.timeMs ?? 0);
             const lastTime = Number(host.dataset.timeEnd || notes.at(-1)?.timeMs || firstTime + 1);
+            const firstBeat = Number(host.dataset.beatStart ?? notes[0]?.beat ?? 0);
+            const lastBeat = Number(host.dataset.beatEnd || notes.at(-1)?.beat || firstBeat + 1);
             const timeSpan = Math.max(1, lastTime - firstTime);
+            const beatSpan = Math.max(.0001, lastBeat - firstBeat);
             const activeStart = stave.getNoteStartX();
             const activeEnd = stave.getX() + stave.getWidth() - 12;
             host.dataset.activeStart = String(activeStart);
             host.dataset.activeEnd = String(activeEnd);
-            const positions=notes.map(note=>activeStart+Math.max(0,Math.min(1,(note.timeMs-firstTime)/timeSpan))*(activeEnd-activeStart));
+            const positions=notes.map(note=>activeStart+Math.max(0,Math.min(1,((note.beat ?? firstBeat)-firstBeat)/beatSpan))*(activeEnd-activeStart));
             const gap=host.dataset.grand === "1" ? 0 : Math.min(Number(host.dataset.diagramGap)||(notes.some(n=>n.chord)?96:18),(activeEnd-activeStart)/Math.max(1,positions.length));
             for(let i=1;i<positions.length;i++)positions[i]=Math.max(positions[i],positions[i-1]+gap);
             if(positions.at(-1)>activeEnd-8){positions[positions.length-1]=activeEnd-8;for(let i=positions.length-2;i>=0;i--)positions[i]=Math.min(positions[i],positions[i+1]-gap);}
             host.dataset.positions=JSON.stringify(notes.map((note,i)=>[note.timeMs,positions[i]]));
+            host.dataset.beatPositions=JSON.stringify(notes.map((note,i)=>[note.beat ?? (firstBeat + (note.timeMs-firstTime)/timeSpan*beatSpan),positions[i]]));
             tickables.forEach((tickable,index)=>tickable.getTickContext().setX(positions[index]-activeStart-12));
           }
           const tuplets=[];
@@ -820,12 +1120,35 @@ function browserVexFlowScript() {
           beams.forEach(beam => beam.setContext(context).draw());
           tuplets.forEach(tuplet=>tuplet.setContext(context).draw());
           staffTieLinks(notes).forEach(link=>new VF.StaveTie({firstNote:link.from===null?undefined:tickables[link.from],lastNote:link.to===null?undefined:tickables[link.to],firstIndexes:link.fromIndices,lastIndexes:link.toIndices}).setContext(context).draw());
+          const playbackSvg = host.querySelector("svg");
+          if (playbackSvg) notes.forEach((note, noteIndex) => {
+            if (!note.midi?.length) return;
+            const heads = tickables[noteIndex].noteHeads || [];
+            const ys = tickables[noteIndex].getYs();
+            heads.forEach((head, headIndex) => {
+              const ring = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+              ring.setAttribute("class", "play-note-marker");
+              ring.dataset.start = String(note.timeMs);
+              ring.dataset.end = String(note.timeMs + note.durationMs);
+              ring.setAttribute("cx", String(head.getAbsoluteX() + head.getWidth() / 2));
+              ring.setAttribute("cy", String(ys[headIndex]));
+              ring.setAttribute("r", "7");
+              playbackSvg.appendChild(ring);
+            });
+          });
           if(host.dataset.noteNames === "1") {
             const svg=host.querySelector("svg");
+            const namedInMeasure=new Set();
             notes.forEach((note,index)=>{
               const heads=tickables[index].noteHeads, ys=tickables[index].getYs();
               const placed=[];
               (note.midi||[]).slice(0,6).forEach((midi,keyIndex)=>{
+                // An annotated practice score should identify the pitch, not
+                // stamp the same name on every repeated accompaniment hit.
+                const measure=note.measure ?? Math.floor((note.beat ?? 0)/4)+1;
+                const labelKey=measure+":"+midi;
+                if(namedInMeasure.has(labelKey)) return;
+                namedInMeasure.add(labelKey);
                 const spelling=spellMidi(midi,signature).key.split("/")[0];
                 const letter=spelling[0];
                 const modifier=spelling.length>1?spelling.slice(1):keyAccidentals(signature.fifths)[letter]===1?"#":keyAccidentals(signature.fifths)[letter]===-1?"b":"";
@@ -843,7 +1166,10 @@ function browserVexFlowScript() {
           fitStaffViewport(host, width, height, tickables);
         }
         async function renderAll() {
-          if (document.fonts?.ready) await document.fonts.ready;
+          // Do not block first paint on font downloads. The rehearsal player
+          // needs the staff geometry immediately for its synchronized cursor;
+          // VexFlow can render with the bundled music font while any optional
+          // web font continues to settle in the background.
           document.querySelectorAll(".vf-staff").forEach(renderStaff);
           document.querySelectorAll(".music-system").forEach(system => {
             const staff = system.querySelector(".vf-staff");
@@ -858,6 +1184,32 @@ function browserVexFlowScript() {
             });
             system.querySelectorAll('.tab-ann line').forEach(line => {line.setAttribute('x1',String(start));line.setAttribute('x2',String(end));});
             system.querySelectorAll('.tab-ann .tab-label').forEach(label => label.setAttribute('x',String(start-13)));
+          });
+          document.querySelectorAll(".complete-system").forEach(system => {
+            const staff = system.querySelector(".vf-staff");
+            if (!staff?.dataset.activeStart) return;
+            const start = Number(staff.dataset.activeStart), end = Number(staff.dataset.activeEnd);
+            const beatStart = Number(staff.dataset.beatStart), beatEnd = Number(staff.dataset.beatEnd);
+            system.querySelectorAll(".complete-chord[data-beat], .complete-piano-chord[data-beat]").forEach(chord => {
+              const chordStart = staffBeatX(staff, Number(chord.dataset.beat), start, end);
+              const chordEnd = staffBeatX(staff, Math.min(beatEnd, Number(chord.dataset.beat) + Number(chord.dataset.durationBeats ?? 4)), start, end);
+              chord.style.left = chordStart + "px";
+              const hold = chord.querySelector(".complete-chord-hold");
+              if (hold) hold.style.width = Math.max(8, chordEnd - chordStart) + "px";
+            });
+            let previousLyricEnd = start - 8;
+            system.querySelectorAll(".complete-lyric[data-beat]").forEach(lyric => {
+              let x = staffBeatX(staff, Number(lyric.dataset.beat), start, end);
+              let width = lyric.getComputedTextLength();
+              if (x < previousLyricEnd + 8) x = previousLyricEnd + 8;
+              if (x + width > end - 3) {
+                lyric.style.fontSize = "10px";
+                width = lyric.getComputedTextLength();
+                x = Math.min(x, end - width - 3);
+              }
+              lyric.setAttribute("x", String(Math.max(start, x)));
+              previousLyricEnd = Math.max(previousLyricEnd, x + width);
+            });
           });
           document.documentElement.dataset.vexflowReady = "true";
         }
@@ -919,6 +1271,9 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
   const suppliedGuitar=instrument === "guitar" && chart.guitarArrangement;
   const accompaniment = isPianoChordAccompaniment(chart,instrument) || suppliedGuitar;
   const compiledAccompaniment = compileChartPart(chart,instrument);
+  if (instrument === "guitar" && mode === "chords" && chart.rehearsalLyrics?.length) {
+    return `<div class="page ensemble-page part-page guitar-song-page" data-instrument="guitar" data-mode="chords"><div class="top"><div><h1>${songIndex + 1}. ${escapeHtml(song.title)}</h1><p>${escapeHtml(song.artist)} · ${escapeHtml(label)} · capo ${chart.capo ?? 0}</p></div><p>Guitar chord sheet</p></div><p class="part-note">Each chord block states exactly where to hold it. “Bars 1–2 · 8 beats” means repeat the 4/4 strum pattern for both bars; four-beat blocks use it once.</p>${renderGuitarSongSheet(chart)}</div>`;
+  }
   let systems = musicSystemsForInstrument(events, instrument, song.title);
   if(instrument === "guitar" && mode === "chords") {
     const end=suppliedGuitar?Math.max(...compiledAccompaniment.map(n=>n.timeMs+n.durationMs)):Math.max(...events.map(e=>e.timeMs+e.durationMs));
@@ -942,7 +1297,10 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
       slice.startMs=startMs;slice.endMs=endMs;return slice;
     });
   }
-  const pages = chunk(systems, systemsPerPage);
+  // A grand staff is materially taller than a single staff. Two systems keep
+  // the engraved piano/vocal reference inside letter-page margins.
+  const systemsOnPage = ["piano", "keys", "vocals"].includes(instrument) ? 2 : systemsPerPage;
+  const pages = chunk(systems, systemsOnPage);
   const guide=suppliedGuitar ? `<div class="page part-page"><h1>${escapeHtml(song.title)} — guitar chord guide</h1><p>Capo ${chart.capo}. All shapes and TAB relative to capo. Timed notation below is an estimated practice guide; follow the supplied sheet for lyric alignment.</p>${chart.guitarArrangement.sections.map(section=>`<p><b>${escapeHtml(section.label)}</b>: ${section.chords.map(c=>escapeHtml(c.chord)).join(" · ")}</p>`).join("")}${chart.guitarArrangement.riffs.map(r=>`<p>${escapeHtml(r.label)}</p><pre>${escapeHtml(r.tab)}</pre>`).join("")}<p>Source: ${escapeHtml(chart.guitarArrangement.sourceUrl.split("/").at(-1))}</p></div>` : "";
   return guide + pages
     .map((pageEvents, pageIndex) => {
@@ -973,7 +1331,7 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
           mode,
         );
       });
-      while (content.length < systemsPerPage)
+      while (content.length < systemsOnPage)
         content.push(
           `<div class="packet-system music-system empty-system">${renderMusicSystem([], instrument, writtenKey(keySignatureAt(chart, 0), instrument), meterAt(chart, 0), { startMs: 0, endMs: 1, quarterMs: 60000 / tempoAt(chart, 0), measures: [] }, chart, mode).replace(/^<div[^>]*>|<\/div>$/g, "")}</div>`,
         );
@@ -991,11 +1349,13 @@ function partPages(song, songIndex, instrument, label, mode = "music") {
             : instrument === "drums"
               ? "Drum key: kick = bottom space; snare = third space; hi-hat/crash = × above staff."
               : "";
-      return `<div class="page ensemble-page part-page" data-instrument="${instrument}" data-mode="${mode}"><div class="top"><div><h1>${songIndex + 1}. ${escapeHtml(song.title)}</h1><p>${escapeHtml(song.artist)} · ${escapeHtml(label)} · page ${pageIndex + 1} of ${pages.length}</p></div><p>${escapeHtml(instrument)}${mode === "chords" ? " chords" : instrument === "guitar" ? " + TAB" : ""}</p></div><p class="part-note">${escapeHtml(note || "Four systems per page · follow the printed meter and measure bars.")}</p>${renderPacketBlock(label, content.join(""), meterAt(chart, 0))}</div>`;
+      const layoutNote = ["piano", "keys", "vocals"].includes(instrument)
+        ? "Two grand-staff systems per page · lyric phrases are aligned to the supplied chord-section timing."
+        : "Four systems per page · follow the printed meter and measure bars.";
+      return `<div class="page ensemble-page part-page" data-instrument="${instrument}" data-mode="${mode}"><div class="top"><div><h1>${songIndex + 1}. ${escapeHtml(song.title)}</h1><p>${escapeHtml(song.artist)} · ${escapeHtml(label)} · page ${pageIndex + 1} of ${pages.length}</p></div><p>${escapeHtml(instrument)}${mode === "chords" ? " chords" : instrument === "guitar" ? " + TAB" : ""}</p></div><p class="part-note">${escapeHtml(note || layoutNote)}</p>${renderPacketBlock(label, content.join(""), meterAt(chart, 0))}</div>`;
     })
     .join("");
 }
-
 function simplifiedGuitarChartPage(song, { capo = 0, titleSuffix = "" } = {}) {
   const chart = loadChart(song);
   const guide = chart?.simplifiedGuitarArrangement;
@@ -1012,14 +1372,6 @@ function simplifiedGuitarChartPage(song, { capo = 0, titleSuffix = "" } = {}) {
     return `<section class="simple-guitar-section"><h2>${escapeHtml(section.label)}</h2>${loops}</section>`;
   }).join("");
   return `<div class="page simple-guitar-page"><div class="top"><div><h1>${escapeHtml(song.title)} — simplified guitar chords${escapeHtml(titleSuffix)}</h1><p>Four-chord practice chart · capo ${capo} · ${guide.tempoBpm} BPM</p></div><p>Guitar</p></div><div class="simple-guitar-box"><p><b>Section loops:</b> verses and choruses use four simplified chords; pre-choruses use the alternate four-chord turn; the final chorus lifts.</p><p>${escapeHtml(guide.strumPattern)} All chord names and diagrams are relative to capo ${capo}.</p>${sections}</div><p class="simple-guitar-note">${escapeHtml(guide.note)}</p></div>`;
-}
-
-function writeSimplifiedMoanaPdf(filename, options = {}) {
-  const song = data.rehearsalSongs.find((candidate) => candidate.id === "how-far-ill-go");
-  if (!song) throw new Error("How Far I'll Go is not present in the rehearsal set");
-  const htmlPath = join(htmlDir, `${slugify(filename)}.html`);
-  writeFileSync(htmlPath, `<!doctype html><html><head><meta charset="utf-8"><style>${css()}</style></head><body>${simplifiedGuitarChartPage(song, options)}${guitarChordScript()}</body></html>`);
-  printPdf(htmlPath, join(outputDir, `${filename}.pdf`));
 }
 
 function songPages(member) {
@@ -1116,7 +1468,7 @@ function guitarChordScript() {
     globalName: "vexchords",
     minify: true,
   }).outputFiles[0].text;
-  return `<script>${library}</script><script>const vexChordData = ${vexChordData.toString()}; const vexChordOptions = ${vexChordOptions.toString()}; document.querySelectorAll('.guitar-chord-box').forEach(host => { const chord = JSON.parse(host.dataset.chord); vexchords.draw(host, vexChordData(chord), host.dataset.compact ? {...vexChordOptions(true),width:58,height:70} : vexChordOptions(!!host.dataset.small)); });</script>`;
+  return `<script>${library}</script><script>const vexChordData = ${vexChordData.toString()}; const vexChordOptions = ${vexChordOptions.toString()}; document.querySelectorAll('.guitar-chord-box').forEach(host => { const chord = JSON.parse(host.dataset.chord); vexchords.draw(host, vexChordData(chord), host.dataset.complete ? {...vexChordOptions(true),width:58,height:70} : host.dataset.compact ? {...vexChordOptions(true),width:58,height:70} : vexChordOptions(!!host.dataset.small)); });</script>`;
 }
 
 function packetHtml(member) {
@@ -1136,6 +1488,27 @@ function printPdf(htmlPath, pdfPath) {
   if (!existsSync(chromePath)) {
     throw new Error(`Chrome not found at ${chromePath}`);
   }
+  // Snap Chromium is confined to the user's home directory and cannot load
+  // file:// assets under /repos. Stage both the page and VexFlow when needed.
+  const stageForSnap = chromePath.startsWith("/snap/");
+  let printableHtml = htmlPath;
+  let printablePdf = pdfPath;
+  if (stageForSnap) {
+    const stagingDir = resolve(process.env.PDF_STAGING_DIR ?? "/home/jjk/pluck-n-play-pdf-build");
+    const vexflowSource = join(repoRoot, "node_modules/vexflow/build/cjs/vexflow-bravura.js");
+    const stagedVexflow = join(stagingDir, "vexflow-bravura.js");
+    mkdirSync(stagingDir, { recursive: true });
+    copyFileSync(vexflowSource, stagedVexflow);
+    printableHtml = join(stagingDir, basename(htmlPath));
+    printablePdf = join(stagingDir, basename(pdfPath));
+    writeFileSync(
+      printableHtml,
+      readFileSync(htmlPath, "utf8").replaceAll(
+        pathToFileURL(vexflowSource).href,
+        pathToFileURL(stagedVexflow).href,
+      ),
+    );
+  }
   execFileSync(
     chromePath,
     [
@@ -1145,11 +1518,12 @@ function printPdf(htmlPath, pdfPath) {
       "--run-all-compositor-stages-before-draw",
       "--virtual-time-budget=3000",
       "--no-pdf-header-footer",
-      `--print-to-pdf=${pdfPath}`,
-      pathToFileURL(htmlPath).href,
+      `--print-to-pdf=${printablePdf}`,
+      pathToFileURL(printableHtml).href,
     ],
     { stdio: "ignore" },
   );
+  if (stageForSnap) copyFileSync(printablePdf, pdfPath);
 }
 
 const instrumentPackets = [
@@ -1162,11 +1536,6 @@ const instrumentPackets = [
   ["flute", "Flute"],
   ["recorder", "Recorder"],
 ];
-if (process.argv.includes("--simple-moana-capo4")) {
-  writeSimplifiedMoanaPdf("how-far-ill-go-simple-guitar-capo-4", { capo: 4, titleSuffix: " · capo 4" });
-  console.log(`Wrote ${join(outputDir, "how-far-ill-go-simple-guitar-capo-4.pdf")}`);
-  process.exit(0);
-}
 const selectedArg=process.argv.find(arg=>arg.startsWith("--instruments="));
 const selected=selectedArg?.split("=")[1].split(",");
 if(selected) {
@@ -1228,6 +1597,59 @@ if (simpleMoana) {
   writeFileSync(simpleMoanaHtmlPath, `<!doctype html><html><head><meta charset="utf-8"><style>${css()}</style></head><body>${simplifiedGuitarChartPage(simpleMoana)}${guitarChordScript()}</body></html>`);
   printPdf(simpleMoanaHtmlPath, join(outputDir, "how-far-ill-go-simple-guitar-chords.pdf"));
 }
+
+// A shared rehearsal booklet: the imported piano score, vocal reference, and
+// supplied guitar chord diagrams for the two songs that have all three sources.
+const pianoVocalReferenceSongs = new Set(["how-far-ill-go", "olivia-rodrigo-drivers-license"]);
+const pianoVocalReferenceHtml = data.rehearsalSongs
+  .flatMap((song, index) => {
+    if (!pianoVocalReferenceSongs.has(song.id)) return [];
+    return [
+      partPages(song, index, "piano", "Piano — grand staff with lyric reference"),
+      partPages(song, index, "vocals", "Vocals — lyric reference"),
+      partPages(song, index, "guitar", "Guitar — chord diagrams", "chords"),
+    ];
+  })
+  .join("");
+const pianoVocalReferencePath = join(htmlDir, "moana-drivers-license-piano-vocal-reference.html");
+writeFileSync(
+  pianoVocalReferencePath,
+  `<!doctype html><html><head><meta charset="utf-8"><title>Piano and vocal reference</title><style>${css()}</style></head><body>${pianoVocalReferenceHtml}${browserVexFlowScript()}${guitarChordScript()}</body></html>`,
+);
+printPdf(pianoVocalReferencePath, join(outputDir, "moana-drivers-license-piano-vocal-reference.pdf"));
+
+for (const [songId, filename] of [
+  ["how-far-ill-go", "moana-how-far-ill-go-complete.pdf"],
+  ["olivia-rodrigo-drivers-license", "drivers-license-complete.pdf"],
+  ["fleetwood-mac-landslide", "landslide-complete.pdf"],
+]) {
+  const songIndex = data.rehearsalSongs.findIndex((song) => song.id === songId);
+  const song = data.rehearsalSongs[songIndex];
+  const htmlPath = join(htmlDir, filename.replace(/\.pdf$/, ".html"));
+  writeFileSync(
+    htmlPath,
+    `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(song.title)} complete reference</title><style>${css()}</style></head><body>${completeReferencePages(song, songIndex)}${browserVexFlowScript()}${guitarChordScript()}</body></html>`,
+  );
+  printPdf(htmlPath, join(outputDir, filename));
+}
+
+// Standalone piano practice scores. Piano rendering includes note-name labels
+// on the engraved grand staff, making these the annotated counterparts to the
+// Complete piano/vocal/guitar references above.
+for (const [songId, filename] of [
+  ["how-far-ill-go", "moana-how-far-ill-go-piano-annotated.pdf"],
+  ["olivia-rodrigo-drivers-license", "drivers-license-piano-annotated.pdf"],
+  ["fleetwood-mac-landslide", "landslide-piano-annotated.pdf"],
+]) {
+  const songIndex = data.rehearsalSongs.findIndex((song) => song.id === songId);
+  const song = data.rehearsalSongs[songIndex];
+  const htmlPath = join(htmlDir, filename.replace(/\.pdf$/, ".html"));
+  writeFileSync(
+    htmlPath,
+    `<!doctype html><html><head><meta charset="utf-8"><title>${escapeHtml(song.title)} annotated piano</title><style>${css()}</style></head><body>${partPages(song, songIndex, "piano", "Piano — annotated note names")}${browserVexFlowScript()}${guitarChordScript()}</body></html>`,
+  );
+  printPdf(htmlPath, join(outputDir, filename));
+}
 writeFileSync(
   masterPartsPath,
   masterPartsHtml.replace(
@@ -1268,6 +1690,17 @@ function writeWebScores() {
       writeFileSync(join(webDir,`${file}.json`),JSON.stringify(chart));
       entries.push({instrument,label,songId:song.id,title:song.title,artist:song.artist,url:`/rendered-scores/${file}-music.html`,chordsUrl:instrument==="guitar"?`/rendered-scores/${file}-chords.html`:undefined,chartUrl:`/rendered-scores/${file}.json`,durationMs:Math.max(...compiled.map(note=>note.timeMs+note.durationMs))});
     }
+  }
+  for (const [songId, filename] of [
+    ["how-far-ill-go", "moana-how-far-ill-go-complete.html"],
+    ["olivia-rodrigo-drivers-license", "drivers-license-complete.html"],
+    ["fleetwood-mac-landslide", "landslide-complete.html"],
+  ]) {
+    const songIndex = data.rehearsalSongs.findIndex((song) => song.id === songId);
+    const song = data.rehearsalSongs[songIndex];
+    const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(song.title)} complete reference</title><style>${css()}body{padding:16px;background:#e7e9ed}.page{width:680px;min-height:0;margin:0 auto 20px;padding:22px;background:white;box-shadow:0 2px 12px #0002}.complete-page{width:960px;min-height:0;box-sizing:border-box}</style></head><body>${completeReferencePages(song, songIndex)}${browserVexFlowScript()}${guitarChordScript()}</body></html>`
+      .replaceAll(pathToFileURL(join(repoRoot, "node_modules/vexflow/build/cjs/vexflow-bravura.js")).href, "/rendered-scores/vexflow.js");
+    writeFileSync(join(webDir, filename), html);
   }
   writeFileSync(join(webDir,"index.json"),JSON.stringify(entries,null,2));
   console.log(`Wrote ${entries.length} playable instrument scores to ${webDir}`);
